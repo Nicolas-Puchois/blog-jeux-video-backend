@@ -76,9 +76,8 @@ CREATE TABLE articles (
     title VARCHAR(255) NOT NULL,
     slug VARCHAR(255) NOT NULL UNIQUE,
     content TEXT NOT NULL,
-    id_users INT NOT NULL,
+    id_users INT,
     FOREIGN KEY (id_users) REFERENCES users(id_users) ON DELETE SET NULL
-
 );
 
 CREATE TABLE categories (
