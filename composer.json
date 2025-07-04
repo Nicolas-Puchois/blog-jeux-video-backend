@@ -2,7 +2,7 @@
   "name": "nicol/backend",
   "autoload": {
     "psr-4": {
-      "Nicol\\Backend\\": "src/"
+      "App\\": "src/"
     }
   },
   "require": {
