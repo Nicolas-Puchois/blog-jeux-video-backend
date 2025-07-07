@@ -10,7 +10,7 @@ use App\model\User;
 use App\services\MailService;
 use App\core\attributes\Route;
 use App\repository\UserRepository;
-use App\services\JWTService;
+use App\services\JWTServices;
 
 class UserController
 {
@@ -109,35 +109,49 @@ class UserController
     {
         try {
             $data = json_decode(file_get_contents('php://input'), true);
-            if (!$data) throw new Exception('JSON invalide');
+            if (!$data) {
+                throw new Exception('Données invalides');
+            }
+
+            if (empty($data['email']) || empty($data['password'])) {
+                throw new Exception('Email et mot de passe requis');
+            }
 
             $user = $this->userRepository->findUserByEmail($data['email']);
-            if (!$user) throw new Exception('Email ou mot de passe incorrect !');
-            if (!password_verify($data['password'], $user->getPassword()))  throw new Exception('Email ou mot de passe incorrect');
-            if (!$user->getIsVerified()) throw new Exception("Veuillez vérifier votre email avant de  vous connecter ");
+            if (!$user) {
+                throw new Exception('Identifiants incorrects');
+            }
 
-            // générer le token JWT
-            $token = JWTService::generate([
-                "id_user" => $user->getId(),
-                "role" => $user->getRoles(),
-                "email" => $user->getEmail()
+            if (!password_verify($data['password'], $user->getPassword())) {
+                throw new Exception('Identifiants incorrects');
+            }
+
+            if (!$user->getIsVerified()) {
+                throw new Exception('Veuillez vérifier votre email avant de vous connecter');
+            }
+
+            $jwtService = new JWTServices();
+            $token = $jwtService->generate([
+                'id' => $user->getId(),
+                'email' => $user->getEmail(),
+                'role' => $user->getRoles()
             ]);
 
             echo json_encode([
                 'success' => true,
                 'token' => $token,
                 'user' => [
+                    'id' => $user->getId(),
                     'email' => $user->getEmail(),
                     'username' => $user->getUsername(),
                     'role' => $user->getRoles()
                 ]
             ]);
-        } catch (\Exception $e) {
-            error_log('Erreur inscription: ' . $e->getMessage());
-            http_response_code(400);
+        } catch (Exception $e) {
+            http_response_code(401);
             echo json_encode([
-                "success" => false,
-                "error" => $e->getMessage()
+                'success' => false,
+                'error' => $e->getMessage()
             ]);
         }
     }

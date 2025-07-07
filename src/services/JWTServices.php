@@ -6,7 +6,7 @@ namespace App\services;
 
 use Exception;
 
-class JWTService
+class JWTServices
 {
     public static ?string $key = null;
 
