@@ -143,7 +143,7 @@ class UserController
     }
 
 
-    #[Route('/api/verify-email', 'GET')]
+    #[Route('/api/valider-email', 'GET')]
     public function verifyEmail()
     {
         try {

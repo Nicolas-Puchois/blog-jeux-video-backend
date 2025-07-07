@@ -17,7 +17,7 @@ class MailService
     {
         self::initMailSettings();
 
-        $link = "http://localhost:3001/verify-email?token=" . $token;
+        $link = "http://localhost:3001/validateEmail?token=" . $token;
         $subject = "Verify Your Email Address";
         $message = "
         <html>

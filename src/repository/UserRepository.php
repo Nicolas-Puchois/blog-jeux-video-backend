@@ -41,7 +41,7 @@ class UserRepository
     {
         try {
             $stmt = $this->pdo->prepare('SELECT * FROM `user` WHERE email_token = ?');
-            $stmt->setFetchMode(PDO::FETCH_ASSOC); // Force le mode de récupération en tableau associatif
+            $stmt->setFetchMode(PDO::FETCH_ASSOC);
             $stmt->execute([$token]);
 
             $data = $stmt->fetch();
@@ -52,8 +52,7 @@ class UserRepository
             $userData = [
                 'username' => $data['username'],
                 'email' => $data['email'],
-                'password' => $data['password'],
-                'avatar' => $data['avatar'],
+                'password' => $data['password_hash'],
                 'email_token' => $data['email_token'],
                 'is_verified' => (bool)$data['is_verified']
             ];
@@ -63,11 +62,11 @@ class UserRepository
             $user->setVerifiedAt((new DateTime())->format('Y-m-d H:i:s'));
 
             // Décodage sécurisé des rôles
-            $roles = json_decode($data['roles'], true);
-            if (!is_array($roles)) {
-                $roles = ['ROLE_USER']; // Rôle par défaut si le décodage échoue
+            $role = json_decode($data['role'], true);
+            if (!is_array($role)) {
+                $role = ['ROLE_USER']; // Rôle par défaut si le décodage échoue
             }
-            $user->setRoles($roles);
+            $user->setRoles($role);
 
             return $user;
         } catch (\PDOException $e) {
@@ -93,8 +92,7 @@ class UserRepository
             $userData = [
                 'username' => $data['username'],
                 'email' => $data['email'],
-                'password' => $data['password'],
-                'avatar' => $data['avatar'],
+                'password' => $data['password_hash'],
                 'email_token' => $data['email_token'],
                 'is_verified' => (bool)$data['is_verified']
             ];
@@ -107,7 +105,7 @@ class UserRepository
             }
 
             // Décodage sécurisé des rôles
-            $roles = json_decode($data['roles'], true);
+            $roles = json_decode($data['role'], true);
             if (!is_array($roles)) {
                 $roles = ['ROLE_USER'];
             }
@@ -137,8 +135,7 @@ class UserRepository
             $userData = [
                 'username' => $data['username'],
                 'email' => $data['email'],
-                'password' => $data['password'],
-                'avatar' => $data['avatar'],
+                'password' => $data['password_hash'],
                 'email_token' => $data['email_token'],
                 'is_verified' => (bool)$data['is_verified']
             ];
@@ -151,7 +148,7 @@ class UserRepository
             }
 
             // Décodage sécurisé des rôles
-            $roles = json_decode($data['roles'], true);
+            $roles = json_decode($data['role'], true);
             if (!is_array($roles)) {
                 $roles = ['ROLE_USER'];
             }
@@ -182,17 +179,16 @@ class UserRepository
             "UPDATE user SET 
             username = ?, 
             email = ?, 
-            roles = ?, 
+            role = ?, 
             is_verified = ?, 
             email_token = ?,
             verified_at = ?,
-            password = ?,
-            avatar = ?
+            password_hash = ?
             WHERE id_user = ?"
         );
 
         return $stmt->execute([
-            $user->getUserName(),
+            $user->getUsername(),
             $user->getEmail(),
             json_encode($user->getRoles()),
             (int)$user->getIsVerified(),

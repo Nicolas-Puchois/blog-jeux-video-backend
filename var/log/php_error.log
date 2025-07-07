@@ -1,0 +1,172 @@
+[Fri Jul  4 10:32:09 2025] PHP 8.4.10 Development Server (http://localhost:8000) started
+[Fri Jul  4 10:43:09 2025] [::1]:63874 Accepted
+[Fri Jul  4 10:43:09 2025] [::1]:63874 [200]: OPTIONS /api/register
+[Fri Jul  4 10:43:09 2025] [::1]:63874 Closing
+[Fri Jul  4 10:43:09 2025] [::1]:63875 Accepted
+[Fri Jul  4 10:43:10 2025] Validation data: {"username":"toto","email":"toto@mail.com","password":"Azertyuiop12345&&"}
+[Fri Jul  4 10:43:10 2025] Current user: toto / toto@mail.com
+[Fri Jul  4 10:43:10 2025] Checking username: toto
+[Fri Jul  4 10:43:10 2025] Username same as current user, skipping check
+[Fri Jul  4 10:43:10 2025] Checking email: toto@mail.com
+[Fri Jul  4 10:43:10 2025] Email same as current user, skipping check
+[Fri Jul  4 10:43:10 2025] [::1]:63875 [200]: POST /api/register
+[Fri Jul  4 10:43:10 2025] [::1]:63875 Closing
+[Fri Jul  4 10:48:08 2025] [::1]:64105 Accepted
+[Fri Jul  4 10:48:08 2025] [::1]:64105 [200]: OPTIONS /api/register
+[Fri Jul  4 10:48:08 2025] [::1]:64105 Closing
+[Fri Jul  4 10:48:08 2025] [::1]:64106 Accepted
+[Fri Jul  4 10:48:08 2025] Validation data: {"username":"toto","email":"toto@mail.com","password":"Azertyuiop12345&&"}
+[Fri Jul  4 10:48:08 2025] Current user: toto / toto@mail.com
+[Fri Jul  4 10:48:08 2025] Checking username: toto
+[Fri Jul  4 10:48:08 2025] Username same as current user, skipping check
+[Fri Jul  4 10:48:08 2025] Checking email: toto@mail.com
+[Fri Jul  4 10:48:08 2025] Email same as current user, skipping check
+[Fri Jul  4 10:48:08 2025] [::1]:64106 [200]: POST /api/register
+[Fri Jul  4 10:48:08 2025] [::1]:64106 Closing
+[Fri Jul  4 10:53:44 2025] [::1]:64343 Accepted
+[Fri Jul  4 10:53:44 2025] [::1]:64343 [200]: OPTIONS /api/register
+[Fri Jul  4 10:53:44 2025] [::1]:64343 Closing
+[Fri Jul  4 10:53:44 2025] [::1]:64344 Accepted
+[Fri Jul  4 10:53:44 2025] Validation data: {"username":"toto","email":"toto@mail.com","password":"Azertyuiop12345&&"}
+[Fri Jul  4 10:53:44 2025] Current user: toto / toto@mail.com
+[Fri Jul  4 10:53:44 2025] Checking username: toto
+[Fri Jul  4 10:53:44 2025] Username same as current user, skipping check
+[Fri Jul  4 10:53:44 2025] Checking email: toto@mail.com
+[Fri Jul  4 10:53:44 2025] Email same as current user, skipping check
+[Fri Jul  4 10:53:44 2025] [::1]:64344 [200]: POST /api/register
+[Fri Jul  4 10:53:44 2025] [::1]:64344 Closing
+[Fri Jul  4 10:56:17 2025] [::1]:64612 Accepted
+[Fri Jul  4 10:56:17 2025] [::1]:64612 [200]: OPTIONS /api/valider-email?token=9a25bcb68d33e3d92c68cf5a014514157e3c3cc09f6dcf9bf146aa0d1a549d1b
+[Fri Jul  4 10:56:17 2025] [::1]:64612 Closing
+[Fri Jul  4 10:56:17 2025] [::1]:64613 Accepted
+[Fri Jul  4 10:56:17 2025] PHP Warning:  Undefined array key "password" in D:\blog_jeux_video\backend\src\repository\UserRepository.php on line 55
+[Fri Jul  4 10:56:17 2025] PHP Warning:  Undefined array key "avatar" in D:\blog_jeux_video\backend\src\repository\UserRepository.php on line 56
+[Fri Jul  4 10:56:17 2025] PHP Fatal error:  Uncaught TypeError: Cannot assign null to property App\model\User::$password of type string in D:\blog_jeux_video\backend\src\model\User.php:28
+Stack trace:
+#0 D:\blog_jeux_video\backend\src\repository\UserRepository.php(61): App\model\User->__construct()
+#1 D:\blog_jeux_video\backend\src\controller\UserController.php(154): App\repository\UserRepository->findUserByToken()
+#2 D:\blog_jeux_video\backend\src\core\Router.php(27): App\controller\UserController->verifyEmail()
+#3 D:\blog_jeux_video\backend\public\index.php(20): App\core\Router->dispatch()
+#4 {main}
+  thrown in D:\blog_jeux_video\backend\src\model\User.php on line 28
+[Fri Jul  4 10:56:17 2025] [::1]:64613 [200]: GET /api/valider-email?token=9a25bcb68d33e3d92c68cf5a014514157e3c3cc09f6dcf9bf146aa0d1a549d1b - Uncaught TypeError: Cannot assign null to property App\model\User::$password of type string in D:\blog_jeux_video\backend\src\model\User.php:28
+Stack trace:
+#0 D:\blog_jeux_video\backend\src\repository\UserRepository.php(61): App\model\User->__construct()
+#1 D:\blog_jeux_video\backend\src\controller\UserController.php(154): App\repository\UserRepository->findUserByToken()
+#2 D:\blog_jeux_video\backend\src\core\Router.php(27): App\controller\UserController->verifyEmail()
+#3 D:\blog_jeux_video\backend\public\index.php(20): App\core\Router->dispatch()
+#4 {main}
+  thrown in D:\blog_jeux_video\backend\src\model\User.php on line 28
+[Fri Jul  4 10:56:17 2025] [::1]:64613 Closing
+[Fri Jul  4 10:56:26 2025] [::1]:64633 Accepted
+[Fri Jul  4 10:56:26 2025] [::1]:64633 [200]: OPTIONS /api/valider-email?token=9a25bcb68d33e3d92c68cf5a014514157e3c3cc09f6dcf9bf146aa0d1a549d1b
+[Fri Jul  4 10:56:26 2025] [::1]:64633 Closing
+[Fri Jul  4 10:56:26 2025] [::1]:64634 Accepted
+[Fri Jul  4 10:56:26 2025] PHP Warning:  Undefined array key "password" in D:\blog_jeux_video\backend\src\repository\UserRepository.php on line 55
+[Fri Jul  4 10:56:26 2025] PHP Warning:  Undefined array key "avatar" in D:\blog_jeux_video\backend\src\repository\UserRepository.php on line 56
+[Fri Jul  4 10:56:26 2025] PHP Fatal error:  Uncaught TypeError: Cannot assign null to property App\model\User::$password of type string in D:\blog_jeux_video\backend\src\model\User.php:28
+Stack trace:
+#0 D:\blog_jeux_video\backend\src\repository\UserRepository.php(61): App\model\User->__construct()
+#1 D:\blog_jeux_video\backend\src\controller\UserController.php(154): App\repository\UserRepository->findUserByToken()
+#2 D:\blog_jeux_video\backend\src\core\Router.php(27): App\controller\UserController->verifyEmail()
+#3 D:\blog_jeux_video\backend\public\index.php(20): App\core\Router->dispatch()
+#4 {main}
+  thrown in D:\blog_jeux_video\backend\src\model\User.php on line 28
+[Fri Jul  4 10:56:26 2025] [::1]:64634 [200]: GET /api/valider-email?token=9a25bcb68d33e3d92c68cf5a014514157e3c3cc09f6dcf9bf146aa0d1a549d1b - Uncaught TypeError: Cannot assign null to property App\model\User::$password of type string in D:\blog_jeux_video\backend\src\model\User.php:28
+Stack trace:
+#0 D:\blog_jeux_video\backend\src\repository\UserRepository.php(61): App\model\User->__construct()
+#1 D:\blog_jeux_video\backend\src\controller\UserController.php(154): App\repository\UserRepository->findUserByToken()
+#2 D:\blog_jeux_video\backend\src\core\Router.php(27): App\controller\UserController->verifyEmail()
+#3 D:\blog_jeux_video\backend\public\index.php(20): App\core\Router->dispatch()
+#4 {main}
+  thrown in D:\blog_jeux_video\backend\src\model\User.php on line 28
+[Fri Jul  4 10:56:26 2025] [::1]:64634 Closing
+[Fri Jul  4 10:56:42 2025] [::1]:64660 Accepted
+[Fri Jul  4 10:56:42 2025] [::1]:64660 [200]: OPTIONS /api/valider-email?token=9a25bcb68d33e3d92c68cf5a014514157e3c3cc09f6dcf9bf146aa0d1a549d1b
+[Fri Jul  4 10:56:42 2025] [::1]:64660 Closing
+[Fri Jul  4 10:56:42 2025] [::1]:64661 Accepted
+[Fri Jul  4 10:56:42 2025] PHP Warning:  Undefined array key "password" in D:\blog_jeux_video\backend\src\repository\UserRepository.php on line 55
+[Fri Jul  4 10:56:42 2025] PHP Warning:  Undefined array key "avatar" in D:\blog_jeux_video\backend\src\repository\UserRepository.php on line 56
+[Fri Jul  4 10:56:42 2025] PHP Fatal error:  Uncaught TypeError: Cannot assign null to property App\model\User::$password of type string in D:\blog_jeux_video\backend\src\model\User.php:28
+Stack trace:
+#0 D:\blog_jeux_video\backend\src\repository\UserRepository.php(61): App\model\User->__construct()
+#1 D:\blog_jeux_video\backend\src\controller\UserController.php(154): App\repository\UserRepository->findUserByToken()
+#2 D:\blog_jeux_video\backend\src\core\Router.php(27): App\controller\UserController->verifyEmail()
+#3 D:\blog_jeux_video\backend\public\index.php(20): App\core\Router->dispatch()
+#4 {main}
+  thrown in D:\blog_jeux_video\backend\src\model\User.php on line 28
+[Fri Jul  4 10:56:42 2025] [::1]:64661 [200]: GET /api/valider-email?token=9a25bcb68d33e3d92c68cf5a014514157e3c3cc09f6dcf9bf146aa0d1a549d1b - Uncaught TypeError: Cannot assign null to property App\model\User::$password of type string in D:\blog_jeux_video\backend\src\model\User.php:28
+Stack trace:
+#0 D:\blog_jeux_video\backend\src\repository\UserRepository.php(61): App\model\User->__construct()
+#1 D:\blog_jeux_video\backend\src\controller\UserController.php(154): App\repository\UserRepository->findUserByToken()
+#2 D:\blog_jeux_video\backend\src\core\Router.php(27): App\controller\UserController->verifyEmail()
+#3 D:\blog_jeux_video\backend\public\index.php(20): App\core\Router->dispatch()
+#4 {main}
+  thrown in D:\blog_jeux_video\backend\src\model\User.php on line 28
+[Fri Jul  4 10:56:42 2025] [::1]:64661 Closing
+[Fri Jul  4 11:02:23 2025] [::1]:64809 Accepted
+[Fri Jul  4 11:02:23 2025] [::1]:64809 [200]: OPTIONS /api/valider-email?token=9a25bcb68d33e3d92c68cf5a014514157e3c3cc09f6dcf9bf146aa0d1a549d1b
+[Fri Jul  4 11:02:23 2025] [::1]:64809 Closing
+[Fri Jul  4 11:02:24 2025] [::1]:64810 Accepted
+[Fri Jul  4 11:02:24 2025] PHP Warning:  Undefined array key "password" in D:\blog_jeux_video\backend\src\repository\UserRepository.php on line 55
+[Fri Jul  4 11:02:24 2025] PHP Warning:  Undefined array key "avatar" in D:\blog_jeux_video\backend\src\repository\UserRepository.php on line 56
+[Fri Jul  4 11:02:24 2025] PHP Warning:  Undefined array key "password" in D:\blog_jeux_video\backend\src\model\User.php on line 28
+[Fri Jul  4 11:02:24 2025] PHP Fatal error:  Uncaught TypeError: Cannot assign null to property App\model\User::$password of type string in D:\blog_jeux_video\backend\src\model\User.php:28
+Stack trace:
+#0 D:\blog_jeux_video\backend\src\repository\UserRepository.php(61): App\model\User->__construct()
+#1 D:\blog_jeux_video\backend\src\controller\UserController.php(154): App\repository\UserRepository->findUserByToken()
+#2 D:\blog_jeux_video\backend\src\core\Router.php(27): App\controller\UserController->verifyEmail()
+#3 D:\blog_jeux_video\backend\public\index.php(20): App\core\Router->dispatch()
+#4 {main}
+  thrown in D:\blog_jeux_video\backend\src\model\User.php on line 28
+[Fri Jul  4 11:02:24 2025] [::1]:64810 [200]: GET /api/valider-email?token=9a25bcb68d33e3d92c68cf5a014514157e3c3cc09f6dcf9bf146aa0d1a549d1b - Uncaught TypeError: Cannot assign null to property App\model\User::$password of type string in D:\blog_jeux_video\backend\src\model\User.php:28
+Stack trace:
+#0 D:\blog_jeux_video\backend\src\repository\UserRepository.php(61): App\model\User->__construct()
+#1 D:\blog_jeux_video\backend\src\controller\UserController.php(154): App\repository\UserRepository->findUserByToken()
+#2 D:\blog_jeux_video\backend\src\core\Router.php(27): App\controller\UserController->verifyEmail()
+#3 D:\blog_jeux_video\backend\public\index.php(20): App\core\Router->dispatch()
+#4 {main}
+  thrown in D:\blog_jeux_video\backend\src\model\User.php on line 28
+[Fri Jul  4 11:02:24 2025] [::1]:64810 Closing
+[Fri Jul  4 11:03:38 2025] [::1]:64865 Accepted
+[Fri Jul  4 11:03:38 2025] [::1]:64865 [200]: OPTIONS /api/valider-email?token=9a25bcb68d33e3d92c68cf5a014514157e3c3cc09f6dcf9bf146aa0d1a549d1b
+[Fri Jul  4 11:03:38 2025] [::1]:64865 Closing
+[Fri Jul  4 11:03:38 2025] [::1]:64866 Accepted
+[Fri Jul  4 11:03:38 2025] PHP Warning:  Undefined array key "roles" in D:\blog_jeux_video\backend\src\repository\UserRepository.php on line 65
+[Fri Jul  4 11:03:38 2025] PHP Fatal error:  Uncaught TypeError: json_decode(): Argument #1 ($json) must be of type string, null given in D:\blog_jeux_video\backend\src\repository\UserRepository.php:65
+Stack trace:
+#0 D:\blog_jeux_video\backend\src\repository\UserRepository.php(65): json_decode()
+#1 D:\blog_jeux_video\backend\src\controller\UserController.php(154): App\repository\UserRepository->findUserByToken()
+#2 D:\blog_jeux_video\backend\src\core\Router.php(27): App\controller\UserController->verifyEmail()
+#3 D:\blog_jeux_video\backend\public\index.php(20): App\core\Router->dispatch()
+#4 {main}
+  thrown in D:\blog_jeux_video\backend\src\repository\UserRepository.php on line 65
+[Fri Jul  4 11:03:38 2025] [::1]:64866 [200]: GET /api/valider-email?token=9a25bcb68d33e3d92c68cf5a014514157e3c3cc09f6dcf9bf146aa0d1a549d1b - Uncaught TypeError: json_decode(): Argument #1 ($json) must be of type string, null given in D:\blog_jeux_video\backend\src\repository\UserRepository.php:65
+Stack trace:
+#0 D:\blog_jeux_video\backend\src\repository\UserRepository.php(65): json_decode()
+#1 D:\blog_jeux_video\backend\src\controller\UserController.php(154): App\repository\UserRepository->findUserByToken()
+#2 D:\blog_jeux_video\backend\src\core\Router.php(27): App\controller\UserController->verifyEmail()
+#3 D:\blog_jeux_video\backend\public\index.php(20): App\core\Router->dispatch()
+#4 {main}
+  thrown in D:\blog_jeux_video\backend\src\repository\UserRepository.php on line 65
+[Fri Jul  4 11:03:38 2025] [::1]:64866 Closing
+[Fri Jul  4 11:04:08 2025] [::1]:64889 Accepted
+[Fri Jul  4 11:04:08 2025] [::1]:64889 [200]: OPTIONS /api/valider-email?token=9a25bcb68d33e3d92c68cf5a014514157e3c3cc09f6dcf9bf146aa0d1a549d1b
+[Fri Jul  4 11:04:08 2025] [::1]:64889 Closing
+[Fri Jul  4 11:04:08 2025] [::1]:64892 Accepted
+[Fri Jul  4 11:04:08 2025] Erreur inscription: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+[Fri Jul  4 11:04:08 2025] [::1]:64892 [400]: GET /api/valider-email?token=9a25bcb68d33e3d92c68cf5a014514157e3c3cc09f6dcf9bf146aa0d1a549d1b
+[Fri Jul  4 11:04:08 2025] [::1]:64892 Closing
+[Fri Jul  4 11:04:28 2025] [::1]:64916 Accepted
+[Fri Jul  4 11:04:28 2025] [::1]:64916 [200]: OPTIONS /api/valider-email?token=9a25bcb68d33e3d92c68cf5a014514157e3c3cc09f6dcf9bf146aa0d1a549d1b
+[Fri Jul  4 11:04:28 2025] [::1]:64916 Closing
+[Fri Jul  4 11:04:28 2025] [::1]:64917 Accepted
+[Fri Jul  4 11:04:28 2025] Erreur inscription: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+[Fri Jul  4 11:04:28 2025] [::1]:64917 [400]: GET /api/valider-email?token=9a25bcb68d33e3d92c68cf5a014514157e3c3cc09f6dcf9bf146aa0d1a549d1b
+[Fri Jul  4 11:04:28 2025] [::1]:64917 Closing
+[Fri Jul  4 11:06:39 2025] [::1]:65012 Accepted
+[Fri Jul  4 11:06:39 2025] [::1]:65012 [200]: OPTIONS /api/valider-email?token=9a25bcb68d33e3d92c68cf5a014514157e3c3cc09f6dcf9bf146aa0d1a549d1b
+[Fri Jul  4 11:06:39 2025] [::1]:65012 Closing
+[Fri Jul  4 11:06:39 2025] [::1]:65014 Accepted
+[Fri Jul  4 11:06:39 2025] [::1]:65014 [200]: GET /api/valider-email?token=9a25bcb68d33e3d92c68cf5a014514157e3c3cc09f6dcf9bf146aa0d1a549d1b
+[Fri Jul  4 11:06:39 2025] [::1]:65014 Closing
