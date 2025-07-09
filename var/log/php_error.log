@@ -1,131 +1,58 @@
-[Mon Jul  7 09:21:06 2025] PHP 8.4.10 Development Server (http://localhost:8000) started
-[Mon Jul  7 10:00:40 2025] [::1]:61558 Accepted
-[Mon Jul  7 10:00:40 2025] [::1]:61558 [200]: OPTIONS /api/api/login
-[Mon Jul  7 10:00:40 2025] [::1]:61558 Closing
-[Mon Jul  7 10:00:40 2025] [::1]:61559 Accepted
-[Mon Jul  7 10:00:40 2025] [::1]:61559 [200]: POST /api/api/login
-[Mon Jul  7 10:00:40 2025] [::1]:61559 Closing
-[Mon Jul  7 10:02:15 2025] [::1]:61622 Accepted
-[Mon Jul  7 10:02:15 2025] [::1]:61622 [200]: OPTIONS /api/api/login
-[Mon Jul  7 10:02:15 2025] [::1]:61622 Closing
-[Mon Jul  7 10:02:15 2025] [::1]:61623 Accepted
-[Mon Jul  7 10:02:15 2025] [::1]:61623 [200]: POST /api/api/login
-[Mon Jul  7 10:02:15 2025] [::1]:61623 Closing
-[Mon Jul  7 10:02:57 2025] [::1]:61664 Accepted
-[Mon Jul  7 10:02:57 2025] [::1]:61664 [200]: OPTIONS /api/api/login
-[Mon Jul  7 10:02:57 2025] [::1]:61664 Closing
-[Mon Jul  7 10:02:57 2025] [::1]:61665 Accepted
-[Mon Jul  7 10:02:57 2025] [::1]:61665 [200]: POST /api/api/login
-[Mon Jul  7 10:02:57 2025] [::1]:61665 Closing
-[Mon Jul  7 10:04:05 2025] [::1]:61735 Accepted
-[Mon Jul  7 10:04:05 2025] [::1]:61735 [200]: OPTIONS /api/api/login
-[Mon Jul  7 10:04:05 2025] [::1]:61735 Closing
-[Mon Jul  7 10:04:05 2025] [::1]:61736 Accepted
-[Mon Jul  7 10:04:05 2025] [::1]:61736 [200]: POST /api/api/login
-[Mon Jul  7 10:04:05 2025] [::1]:61736 Closing
-[Mon Jul  7 10:05:08 2025] [::1]:61780 Accepted
-[Mon Jul  7 10:05:08 2025] [::1]:61780 [200]: OPTIONS /api/api/login
-[Mon Jul  7 10:05:08 2025] [::1]:61780 Closing
-[Mon Jul  7 10:05:08 2025] [::1]:61781 Accepted
-[Mon Jul  7 10:05:08 2025] [::1]:61781 [200]: POST /api/api/login
-[Mon Jul  7 10:05:08 2025] [::1]:61781 Closing
-[Mon Jul  7 10:10:04 2025] [::1]:61964 Accepted
-[Mon Jul  7 10:10:04 2025] [::1]:61964 [200]: OPTIONS /api/api/login
-[Mon Jul  7 10:10:04 2025] [::1]:61964 Closing
-[Mon Jul  7 10:10:04 2025] [::1]:61965 Accepted
-[Mon Jul  7 10:10:04 2025] [::1]:61965 [200]: POST /api/api/login
-[Mon Jul  7 10:10:04 2025] [::1]:61965 Closing
-[Mon Jul  7 10:10:18 2025] [::1]:61995 Accepted
-[Mon Jul  7 10:10:18 2025] [::1]:61995 [200]: OPTIONS /api/api/login
-[Mon Jul  7 10:10:18 2025] [::1]:61995 Closing
-[Mon Jul  7 10:10:18 2025] [::1]:61996 Accepted
-[Mon Jul  7 10:10:18 2025] [::1]:61996 [200]: POST /api/api/login
-[Mon Jul  7 10:10:18 2025] [::1]:61996 Closing
-[Mon Jul  7 10:10:31 2025] [::1]:62023 Accepted
-[Mon Jul  7 10:10:31 2025] [::1]:62023 [200]: OPTIONS /api/login
-[Mon Jul  7 10:10:31 2025] [::1]:62023 Closing
-[Mon Jul  7 10:10:31 2025] [::1]:62024 Accepted
-[Mon Jul  7 10:10:31 2025] PHP Fatal error:  Uncaught Error: Class "App\services\JWTService" not found in D:\blog_jeux_video\backend\src\controller\UserController.php:133
-Stack trace:
-#0 D:\blog_jeux_video\backend\src\core\Router.php(27): App\controller\UserController->login()
-#1 D:\blog_jeux_video\backend\public\index.php(20): App\core\Router->dispatch()
-#2 {main}
-  thrown in D:\blog_jeux_video\backend\src\controller\UserController.php on line 133
-[Mon Jul  7 10:10:31 2025] [::1]:62024 [200]: POST /api/login - Uncaught Error: Class "App\services\JWTService" not found in D:\blog_jeux_video\backend\src\controller\UserController.php:133
-Stack trace:
-#0 D:\blog_jeux_video\backend\src\core\Router.php(27): App\controller\UserController->login()
-#1 D:\blog_jeux_video\backend\public\index.php(20): App\core\Router->dispatch()
-#2 {main}
-  thrown in D:\blog_jeux_video\backend\src\controller\UserController.php on line 133
-[Mon Jul  7 10:10:31 2025] [::1]:62024 Closing
-[Mon Jul  7 10:10:55 2025] [::1]:62057 Accepted
-[Mon Jul  7 10:10:55 2025] [::1]:62057 [200]: OPTIONS /api/login
-[Mon Jul  7 10:10:55 2025] [::1]:62057 Closing
-[Mon Jul  7 10:10:55 2025] [::1]:62058 Accepted
-[Mon Jul  7 10:10:55 2025] PHP Fatal error:  Uncaught Error: Class "App\services\JWTService" not found in D:\blog_jeux_video\backend\src\controller\UserController.php:133
-Stack trace:
-#0 D:\blog_jeux_video\backend\src\core\Router.php(27): App\controller\UserController->login()
-#1 D:\blog_jeux_video\backend\public\index.php(20): App\core\Router->dispatch()
-#2 {main}
-  thrown in D:\blog_jeux_video\backend\src\controller\UserController.php on line 133
-[Mon Jul  7 10:10:55 2025] [::1]:62058 [200]: POST /api/login - Uncaught Error: Class "App\services\JWTService" not found in D:\blog_jeux_video\backend\src\controller\UserController.php:133
-Stack trace:
-#0 D:\blog_jeux_video\backend\src\core\Router.php(27): App\controller\UserController->login()
-#1 D:\blog_jeux_video\backend\public\index.php(20): App\core\Router->dispatch()
-#2 {main}
-  thrown in D:\blog_jeux_video\backend\src\controller\UserController.php on line 133
-[Mon Jul  7 10:10:55 2025] [::1]:62058 Closing
-[Mon Jul  7 10:11:38 2025] [::1]:62106 Accepted
-[Mon Jul  7 10:11:38 2025] [::1]:62106 [200]: OPTIONS /api/login
-[Mon Jul  7 10:11:38 2025] [::1]:62106 Closing
-[Mon Jul  7 10:11:38 2025] [::1]:62107 Accepted
-[Mon Jul  7 10:11:38 2025] [::1]:62107 [200]: POST /api/login
-[Mon Jul  7 10:11:38 2025] [::1]:62107 Closing
-[Mon Jul  7 10:19:15 2025] [::1]:62362 Accepted
-[Mon Jul  7 10:19:16 2025] [::1]:62362 [200]: OPTIONS /api/login
-[Mon Jul  7 10:19:16 2025] [::1]:62362 Closing
-[Mon Jul  7 10:19:16 2025] [::1]:62363 Accepted
-[Mon Jul  7 10:19:16 2025] [::1]:62363 [200]: POST /api/login
-[Mon Jul  7 10:19:16 2025] [::1]:62363 Closing
-[Mon Jul  7 10:21:03 2025] [::1]:62460 Accepted
-[Mon Jul  7 10:21:03 2025] [::1]:62460 [200]: OPTIONS /api/login
-[Mon Jul  7 10:21:03 2025] [::1]:62460 Closing
-[Mon Jul  7 10:21:03 2025] [::1]:62461 Accepted
-[Mon Jul  7 10:21:04 2025] [::1]:62461 [200]: POST /api/login
-[Mon Jul  7 10:21:04 2025] [::1]:62461 Closing
-[Mon Jul  7 10:24:28 2025] [::1]:62654 Accepted
-[Mon Jul  7 10:24:28 2025] [::1]:62654 [200]: OPTIONS /api/login
-[Mon Jul  7 10:24:28 2025] [::1]:62654 Closing
-[Mon Jul  7 10:24:28 2025] [::1]:62655 Accepted
-[Mon Jul  7 10:24:29 2025] [::1]:62655 [200]: POST /api/login
-[Mon Jul  7 10:24:29 2025] [::1]:62655 Closing
-[Mon Jul  7 10:28:48 2025] [::1]:62832 Accepted
-[Mon Jul  7 10:28:48 2025] [::1]:62832 [200]: OPTIONS /api/login
-[Mon Jul  7 10:28:48 2025] [::1]:62832 Closing
-[Mon Jul  7 10:28:48 2025] [::1]:62833 Accepted
-[Mon Jul  7 10:28:48 2025] [::1]:62833 [200]: POST /api/login
-[Mon Jul  7 10:28:48 2025] [::1]:62833 Closing
-[Mon Jul  7 10:29:26 2025] [::1]:62908 Accepted
-[Mon Jul  7 10:29:26 2025] [::1]:62908 [200]: OPTIONS /api/login
-[Mon Jul  7 10:29:26 2025] [::1]:62908 Closing
-[Mon Jul  7 10:29:26 2025] [::1]:62909 Accepted
-[Mon Jul  7 10:29:27 2025] [::1]:62909 [200]: POST /api/login
-[Mon Jul  7 10:29:27 2025] [::1]:62909 Closing
-[Mon Jul  7 10:38:25 2025] [::1]:63386 Accepted
-[Mon Jul  7 10:38:25 2025] [::1]:63386 [200]: OPTIONS /api/login
-[Mon Jul  7 10:38:25 2025] [::1]:63386 Closing
-[Mon Jul  7 10:38:25 2025] [::1]:63387 Accepted
-[Mon Jul  7 10:38:25 2025] [::1]:63387 [200]: POST /api/login
-[Mon Jul  7 10:38:25 2025] [::1]:63387 Closing
-[Mon Jul  7 10:38:58 2025] [::1]:63464 Accepted
-[Mon Jul  7 10:38:58 2025] [::1]:63464 [200]: OPTIONS /api/login
-[Mon Jul  7 10:38:58 2025] [::1]:63464 Closing
-[Mon Jul  7 10:38:58 2025] [::1]:63465 Accepted
-[Mon Jul  7 10:38:58 2025] [::1]:63465 [200]: POST /api/login
-[Mon Jul  7 10:38:58 2025] [::1]:63465 Closing
-[Mon Jul  7 10:39:36 2025] [::1]:63528 Accepted
-[Mon Jul  7 10:39:36 2025] [::1]:63528 [200]: OPTIONS /api/login
-[Mon Jul  7 10:39:36 2025] [::1]:63528 Closing
-[Mon Jul  7 10:39:36 2025] [::1]:63529 Accepted
-[Mon Jul  7 10:39:37 2025] [::1]:63529 [200]: POST /api/login
-[Mon Jul  7 10:39:37 2025] [::1]:63529 Closing
+[Wed Jul  9 09:14:29 2025] PHP 8.4.10 Development Server (http://localhost:8000) started
+[Wed Jul  9 09:15:30 2025] [::1]:63203 Accepted
+[Wed Jul  9 09:15:30 2025] [::1]:63203 [200]: OPTIONS /api/register
+[Wed Jul  9 09:15:30 2025] [::1]:63203 Closing
+[Wed Jul  9 09:15:30 2025] [::1]:63204 Accepted
+[Wed Jul  9 09:15:31 2025] Validation data: {"username":"John Doe","email":"john@auteur.com","password":"87lMXR1bzMw5*9"}
+[Wed Jul  9 09:15:31 2025] Current user: John Doe / john@auteur.com
+[Wed Jul  9 09:15:31 2025] Checking username: John Doe
+[Wed Jul  9 09:15:31 2025] Username same as current user, skipping check
+[Wed Jul  9 09:15:31 2025] Checking email: john@auteur.com
+[Wed Jul  9 09:15:31 2025] Email same as current user, skipping check
+[Wed Jul  9 09:15:31 2025] [::1]:63204 [200]: POST /api/register
+[Wed Jul  9 09:15:31 2025] [::1]:63204 Closing
+[Wed Jul  9 09:15:38 2025] [::1]:63235 Accepted
+[Wed Jul  9 09:15:38 2025] [::1]:63235 [200]: OPTIONS /api/valider-email?token=093e2900bb521bb887a0acce492e248ca81415a553c228bd3b6ec57ce4139ecb
+[Wed Jul  9 09:15:38 2025] [::1]:63235 Closing
+[Wed Jul  9 09:15:38 2025] [::1]:63239 Accepted
+[Wed Jul  9 09:15:38 2025] [::1]:63239 [200]: GET /api/valider-email?token=093e2900bb521bb887a0acce492e248ca81415a553c228bd3b6ec57ce4139ecb
+[Wed Jul  9 09:15:38 2025] [::1]:63239 Closing
+[Wed Jul  9 09:39:37 2025] [::1]:64155 Accepted
+[Wed Jul  9 09:39:37 2025] [::1]:64155 [200]: OPTIONS /api/login
+[Wed Jul  9 09:39:37 2025] [::1]:64155 Closing
+[Wed Jul  9 09:39:37 2025] [::1]:64156 Accepted
+[Wed Jul  9 09:39:37 2025] [::1]:64156 [401]: POST /api/login
+[Wed Jul  9 09:39:37 2025] [::1]:64156 Closing
+[Wed Jul  9 09:39:41 2025] [::1]:64159 Accepted
+[Wed Jul  9 09:39:41 2025] [::1]:64159 [200]: POST /api/login
+[Wed Jul  9 09:39:41 2025] [::1]:64159 Closing
+[Wed Jul  9 09:57:01 2025] [::1]:65291 Accepted
+[Wed Jul  9 09:57:01 2025] [::1]:65291 [200]: OPTIONS /api/login
+[Wed Jul  9 09:57:01 2025] [::1]:65291 Closing
+[Wed Jul  9 09:57:01 2025] [::1]:65292 Accepted
+[Wed Jul  9 09:57:02 2025] [::1]:65292 [200]: POST /api/login
+[Wed Jul  9 09:57:02 2025] [::1]:65292 Closing
+[Wed Jul  9 09:57:26 2025] [::1]:65407 Accepted
+[Wed Jul  9 09:57:26 2025] [::1]:65407 [200]: OPTIONS /api/login
+[Wed Jul  9 09:57:26 2025] [::1]:65407 Closing
+[Wed Jul  9 09:57:26 2025] [::1]:65408 Accepted
+[Wed Jul  9 09:57:27 2025] [::1]:65408 [200]: POST /api/login
+[Wed Jul  9 09:57:27 2025] [::1]:65408 Closing
+[Wed Jul  9 10:00:07 2025] [::1]:49407 Accepted
+[Wed Jul  9 10:00:07 2025] [::1]:49407 [200]: OPTIONS /api/login
+[Wed Jul  9 10:00:07 2025] [::1]:49407 Closing
+[Wed Jul  9 10:00:07 2025] [::1]:49408 Accepted
+[Wed Jul  9 10:00:08 2025] [::1]:49408 [200]: POST /api/login
+[Wed Jul  9 10:00:08 2025] [::1]:49408 Closing
+[Wed Jul  9 10:00:31 2025] [::1]:49571 Accepted
+[Wed Jul  9 10:00:31 2025] [::1]:49571 [200]: OPTIONS /api/login
+[Wed Jul  9 10:00:31 2025] [::1]:49571 Closing
+[Wed Jul  9 10:00:31 2025] [::1]:49572 Accepted
+[Wed Jul  9 10:00:32 2025] [::1]:49572 [200]: POST /api/login
+[Wed Jul  9 10:00:32 2025] [::1]:49572 Closing
+[Wed Jul  9 10:05:42 2025] [::1]:50408 Accepted
+[Wed Jul  9 10:05:42 2025] [::1]:50408 [200]: OPTIONS /api/login
+[Wed Jul  9 10:05:42 2025] [::1]:50408 Closing
+[Wed Jul  9 10:05:42 2025] [::1]:50409 Accepted
+[Wed Jul  9 10:05:42 2025] [::1]:50409 [200]: POST /api/login
+[Wed Jul  9 10:05:42 2025] [::1]:50409 Closing
