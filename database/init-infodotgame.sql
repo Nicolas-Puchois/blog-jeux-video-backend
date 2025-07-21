@@ -70,7 +70,7 @@ CREATE TABLE review_comment (
 );
 
 CREATE TABLE article (
-    id_articles INT AUTO_INCREMENT PRIMARY KEY,
+    id_article INT AUTO_INCREMENT PRIMARY KEY,
     cover_image VARCHAR(255),
     published_at TIMESTAMP NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,

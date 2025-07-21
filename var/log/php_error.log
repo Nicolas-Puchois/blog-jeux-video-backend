@@ -1,58 +1,41 @@
-[Wed Jul  9 09:14:29 2025] PHP 8.4.10 Development Server (http://localhost:8000) started
-[Wed Jul  9 09:15:30 2025] [::1]:63203 Accepted
-[Wed Jul  9 09:15:30 2025] [::1]:63203 [200]: OPTIONS /api/register
-[Wed Jul  9 09:15:30 2025] [::1]:63203 Closing
-[Wed Jul  9 09:15:30 2025] [::1]:63204 Accepted
-[Wed Jul  9 09:15:31 2025] Validation data: {"username":"John Doe","email":"john@auteur.com","password":"87lMXR1bzMw5*9"}
-[Wed Jul  9 09:15:31 2025] Current user: John Doe / john@auteur.com
-[Wed Jul  9 09:15:31 2025] Checking username: John Doe
-[Wed Jul  9 09:15:31 2025] Username same as current user, skipping check
-[Wed Jul  9 09:15:31 2025] Checking email: john@auteur.com
-[Wed Jul  9 09:15:31 2025] Email same as current user, skipping check
-[Wed Jul  9 09:15:31 2025] [::1]:63204 [200]: POST /api/register
-[Wed Jul  9 09:15:31 2025] [::1]:63204 Closing
-[Wed Jul  9 09:15:38 2025] [::1]:63235 Accepted
-[Wed Jul  9 09:15:38 2025] [::1]:63235 [200]: OPTIONS /api/valider-email?token=093e2900bb521bb887a0acce492e248ca81415a553c228bd3b6ec57ce4139ecb
-[Wed Jul  9 09:15:38 2025] [::1]:63235 Closing
-[Wed Jul  9 09:15:38 2025] [::1]:63239 Accepted
-[Wed Jul  9 09:15:38 2025] [::1]:63239 [200]: GET /api/valider-email?token=093e2900bb521bb887a0acce492e248ca81415a553c228bd3b6ec57ce4139ecb
-[Wed Jul  9 09:15:38 2025] [::1]:63239 Closing
-[Wed Jul  9 09:39:37 2025] [::1]:64155 Accepted
-[Wed Jul  9 09:39:37 2025] [::1]:64155 [200]: OPTIONS /api/login
-[Wed Jul  9 09:39:37 2025] [::1]:64155 Closing
-[Wed Jul  9 09:39:37 2025] [::1]:64156 Accepted
-[Wed Jul  9 09:39:37 2025] [::1]:64156 [401]: POST /api/login
-[Wed Jul  9 09:39:37 2025] [::1]:64156 Closing
-[Wed Jul  9 09:39:41 2025] [::1]:64159 Accepted
-[Wed Jul  9 09:39:41 2025] [::1]:64159 [200]: POST /api/login
-[Wed Jul  9 09:39:41 2025] [::1]:64159 Closing
-[Wed Jul  9 09:57:01 2025] [::1]:65291 Accepted
-[Wed Jul  9 09:57:01 2025] [::1]:65291 [200]: OPTIONS /api/login
-[Wed Jul  9 09:57:01 2025] [::1]:65291 Closing
-[Wed Jul  9 09:57:01 2025] [::1]:65292 Accepted
-[Wed Jul  9 09:57:02 2025] [::1]:65292 [200]: POST /api/login
-[Wed Jul  9 09:57:02 2025] [::1]:65292 Closing
-[Wed Jul  9 09:57:26 2025] [::1]:65407 Accepted
-[Wed Jul  9 09:57:26 2025] [::1]:65407 [200]: OPTIONS /api/login
-[Wed Jul  9 09:57:26 2025] [::1]:65407 Closing
-[Wed Jul  9 09:57:26 2025] [::1]:65408 Accepted
-[Wed Jul  9 09:57:27 2025] [::1]:65408 [200]: POST /api/login
-[Wed Jul  9 09:57:27 2025] [::1]:65408 Closing
-[Wed Jul  9 10:00:07 2025] [::1]:49407 Accepted
-[Wed Jul  9 10:00:07 2025] [::1]:49407 [200]: OPTIONS /api/login
-[Wed Jul  9 10:00:07 2025] [::1]:49407 Closing
-[Wed Jul  9 10:00:07 2025] [::1]:49408 Accepted
-[Wed Jul  9 10:00:08 2025] [::1]:49408 [200]: POST /api/login
-[Wed Jul  9 10:00:08 2025] [::1]:49408 Closing
-[Wed Jul  9 10:00:31 2025] [::1]:49571 Accepted
-[Wed Jul  9 10:00:31 2025] [::1]:49571 [200]: OPTIONS /api/login
-[Wed Jul  9 10:00:31 2025] [::1]:49571 Closing
-[Wed Jul  9 10:00:31 2025] [::1]:49572 Accepted
-[Wed Jul  9 10:00:32 2025] [::1]:49572 [200]: POST /api/login
-[Wed Jul  9 10:00:32 2025] [::1]:49572 Closing
-[Wed Jul  9 10:05:42 2025] [::1]:50408 Accepted
-[Wed Jul  9 10:05:42 2025] [::1]:50408 [200]: OPTIONS /api/login
-[Wed Jul  9 10:05:42 2025] [::1]:50408 Closing
-[Wed Jul  9 10:05:42 2025] [::1]:50409 Accepted
-[Wed Jul  9 10:05:42 2025] [::1]:50409 [200]: POST /api/login
-[Wed Jul  9 10:05:42 2025] [::1]:50409 Closing
+[Mon Jul 21 20:27:48 2025] PHP 8.4.10 Development Server (http://localhost:8000) started
+[Mon Jul 21 20:28:07 2025] [::1]:56798 Accepted
+[Mon Jul 21 20:28:07 2025] Tentative d'accès à la route: POST /api/articles
+[Mon Jul 21 20:28:07 2025] Routes disponibles: Array
+(
+    [POST] => Array
+        (
+            [/articles] => Array
+                (
+                    [0] => App\controller\ArticleController
+                    [1] => create
+                )
+
+            [/api/register] => Array
+                (
+                    [0] => App\controller\UserController
+                    [1] => register
+                )
+
+            [/api/login] => Array
+                (
+                    [0] => App\controller\UserController
+                    [1] => login
+                )
+
+        )
+
+    [GET] => Array
+        (
+            [/api/valider-email] => Array
+                (
+                    [0] => App\controller\UserController
+                    [1] => verifyEmail
+                )
+
+        )
+
+)
+
+[Mon Jul 21 20:28:07 2025] [::1]:56798 [200]: POST /api/articles
+[Mon Jul 21 20:28:07 2025] [::1]:56798 Closing

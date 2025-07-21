@@ -21,7 +21,7 @@ class UserRepository
 
     public function save(User $user): bool
     {
-        // requête préparé obligatoire!!!!
+        // requête préparé 
         $stmt = $this->pdo->prepare("INSERT INTO `user`
         (username, email, password_hash, role, email_token, is_verified, created_at)
         VALUES(?,?,?,?,?,?,?);");

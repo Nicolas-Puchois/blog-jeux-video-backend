@@ -15,7 +15,7 @@ class RouteResolver
         $controllersPath = __DIR__ . "/../controller";
         $controllersFiles = glob($controllersPath . '/*Controller.php');
         foreach ($controllersFiles as $controllersFile) {
-            $className = "App\\Controller\\" . basename($controllersFile, ".php");
+            $className = "App\\controller\\" . basename($controllersFile, ".php");
             $reflection = new ReflectionClass($className);
 
             foreach ($reflection->getMethods() as $method) {
