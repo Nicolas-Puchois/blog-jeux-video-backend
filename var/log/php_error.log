@@ -39,3 +39,125 @@
 
 [Mon Jul 21 20:28:07 2025] [::1]:56798 [200]: POST /api/articles
 [Mon Jul 21 20:28:07 2025] [::1]:56798 Closing
+[Mon Jul 21 20:30:06 2025] [::1]:56861 Accepted
+[Mon Jul 21 20:30:06 2025] Tentative d'accès à la route: POST /api/articles
+[Mon Jul 21 20:30:06 2025] Routes disponibles: Array
+(
+    [POST] => Array
+        (
+            [/api/articles] => Array
+                (
+                    [0] => App\controller\ArticleController
+                    [1] => create
+                )
+
+            [/api/register] => Array
+                (
+                    [0] => App\controller\UserController
+                    [1] => register
+                )
+
+            [/api/login] => Array
+                (
+                    [0] => App\controller\UserController
+                    [1] => login
+                )
+
+        )
+
+    [GET] => Array
+        (
+            [/api/valider-email] => Array
+                (
+                    [0] => App\controller\UserController
+                    [1] => verifyEmail
+                )
+
+        )
+
+)
+
+[Mon Jul 21 20:30:06 2025] Appel du contrôleur: App\controller\ArticleController::create
+[Mon Jul 21 20:30:06 2025] === Début de la requête de création d'article ===
+[Mon Jul 21 20:30:06 2025] Données POST reçues : Array
+(
+    [title] => testtt
+    [tags] => ["test","blabla"]
+    [introduction] => gerzhtrehtejrytejktey
+    [content] => tshe564tesjjrj4yt4k4ru1k151yt564kl
+sthj48ryj48yt4j68tu4984k684uylk69l4t6
+jyrd6848j64yt886f4k9684uf864k68gfk46kugkl86
+jyd7tj468ytk4f68uf4k68j4h6f8k4j65g4k4h68fg4ku68g4jk
+)
+
+[Mon Jul 21 20:30:06 2025] Fichiers reçus : Array
+(
+)
+
+[Mon Jul 21 20:30:06 2025] Taille maximale autorisée : 2M
+[Mon Jul 21 20:30:06 2025] Taille maximale du POST : 8M
+[Mon Jul 21 20:30:06 2025] Aucun fichier reçu
+[Mon Jul 21 20:30:06 2025] POST reçu : Array
+(
+    [title] => testtt
+    [tags] => ["test","blabla"]
+    [introduction] => gerzhtrehtejrytejktey
+    [content] => tshe564tesjjrj4yt4k4ru1k151yt564kl
+sthj48ryj48yt4j68tu4984k684uylk69l4t6
+jyrd6848j64yt886f4k9684uf864k68gfk46kugkl86
+jyd7tj468ytk4f68uf4k68j4h6f8k4j65g4k4h68fg4ku68g4jk
+)
+
+[Mon Jul 21 20:30:06 2025] Tags reçus : ["test","blabla"]
+[Mon Jul 21 20:30:06 2025] Tags décodés : Array
+(
+    [0] => test
+    [1] => blabla
+)
+
+[Mon Jul 21 20:30:06 2025] Tentative d'insertion d'article : App\model\Article Object
+(
+    [id_article:App\model\Article:private] => 
+    [cover_image:App\model\Article:private] => 
+    [published_at:App\model\Article:private] => 2025-07-21 18:30:06
+    [created_at:App\model\Article:private] => 2025-07-21 18:30:06
+    [title:App\model\Article:private] => testtt
+    [slug:App\model\Article:private] => testtt
+    [content:App\model\Article:private] => tshe564tesjjrj4yt4k4ru1k151yt564kl
+sthj48ryj48yt4j68tu4984k684uylk69l4t6
+jyrd6848j64yt886f4k9684uf864k68gfk46kugkl86
+jyd7tj468ytk4f68uf4k68j4h6f8k4j65g4k4h68fg4ku68g4jk
+    [introduction:App\model\Article:private] => gerzhtrehtejrytejktey
+    [id_user:App\model\Article:private] => 1
+    [categories:App\model\Article:private] => 
+    [tags:App\model\Article:private] => Array
+        (
+            [0] => test
+            [1] => blabla
+        )
+
+)
+
+[Mon Jul 21 20:30:06 2025] Paramètres de la requête : Array
+(
+    [cover_image] => 
+    [title] => testtt
+    [slug] => testtt
+    [introduction] => gerzhtrehtejrytejktey
+    [content] => tshe564tesjjrj4yt4k4ru1k151yt564kl
+sthj48ryj48yt4j68tu4984k684uylk69l4t6
+jyrd6848j64yt886f4k9684uf864k68gfk46kugkl86
+jyd7tj468ytk4f68uf4k68j4h6f8k4j65g4k4h68fg4ku68g4jk
+    [id_user] => 1
+    [published_at] => 2025-07-21 18:30:06
+    [tags] => ["test","blabla"]
+)
+
+[Mon Jul 21 20:30:06 2025] Erreur lors de la création de l'article : SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`infodotgame`.`article`, CONSTRAINT `article_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`) ON DELETE SET NULL)
+[Mon Jul 21 20:30:06 2025] Erreur dans ArticleController::create : Erreur lors de la création de l'article
+[Mon Jul 21 20:30:06 2025] Stack trace : #0 D:\blog_jeux_video\backend\src\core\Router.php(32): App\controller\ArticleController->create()
+#1 D:\blog_jeux_video\backend\public\index.php(20): App\core\Router->dispatch()
+#2 {main}
+[Mon Jul 21 20:30:06 2025] Réponse d'erreur envoyée : {"success":false,"error":"Une erreur est survenue lors de la cr\u00e9ation de l'article","details":"Erreur lors de la cr\u00e9ation de l'article"}
+[Mon Jul 21 20:30:06 2025] [::1]:56861 [500]: POST /api/articles
+[Mon Jul 21 20:30:06 2025] [::1]:56861 Closing
