@@ -62,7 +62,7 @@ class ArticleRepository
 
             // Si des catégories sont spécifiées, on les insère
             if ($article->getCategories()) {
-                $queryCategories = "INSERT INTO articles_categories (id_articles, id_categories) 
+                $queryCategories = "INSERT INTO articles_categories (id_article, id_categories) 
                                   VALUES (:article_id, :category_id)";
                 $stmtCategories = $this->db->prepare($queryCategories);
 
@@ -98,7 +98,7 @@ class ArticleRepository
             $query = "SELECT a.*, u.username as author_name 
                      FROM article a 
                      LEFT JOIN user u ON a.id_user = u.id_user 
-                     WHERE a.id_articles = :id";
+                     WHERE a.id_article = :id";
 
             $stmt = $this->db->prepare($query);
             $stmt->execute(['id' => $id]);
@@ -113,7 +113,7 @@ class ArticleRepository
             $queryCategories = "SELECT c.* 
                               FROM categories c 
                               JOIN articles_categories ac ON c.id_categories = ac.id_categories 
-                              WHERE ac.id_articles = :article_id";
+                              WHERE ac.id_article = :article_id";
 
             $stmtCategories = $this->db->prepare($queryCategories);
             $stmtCategories->execute(['article_id' => $id]);
@@ -160,10 +160,10 @@ class ArticleRepository
             $queryCategories = "SELECT c.* 
                               FROM categories c 
                               JOIN articles_categories ac ON c.id_categories = ac.id_categories 
-                              WHERE ac.id_articles = :article_id";
+                              WHERE ac.id_article = :article_id";
 
             $stmtCategories = $this->db->prepare($queryCategories);
-            $stmtCategories->execute(['article_id' => $articleData['id_articles']]);
+            $stmtCategories->execute(['article_id' => $articleData['id_article']]);
 
             $categories = $stmtCategories->fetchAll(PDO::FETCH_ASSOC);
 
@@ -200,7 +200,7 @@ class ArticleRepository
 
             // Ajout des conditions de filtrage
             if (!empty($filters['category'])) {
-                $baseQuery .= " JOIN articles_categories ac ON a.id_articles = ac.id_articles";
+                $baseQuery .= " JOIN articles_categories ac ON a.id_article = ac.id_article";
                 $whereConditions[] = "ac.id_categories = :category_id";
                 $params['category_id'] = $filters['category'];
             }
@@ -221,7 +221,7 @@ class ArticleRepository
                 : "";
 
             // Compte total des articles
-            $countQuery = "SELECT COUNT(DISTINCT a.id_articles) as total " . $baseQuery . " " . $whereClause;
+            $countQuery = "SELECT COUNT(DISTINCT a.id_article) as total " . $baseQuery . " " . $whereClause;
             $stmtCount = $this->db->prepare($countQuery);
             $stmtCount->execute($params);
             $total = (int)$stmtCount->fetch(PDO::FETCH_ASSOC)['total'];
@@ -250,10 +250,10 @@ class ArticleRepository
                 $queryCategories = "SELECT c.* 
                                   FROM categories c 
                                   JOIN articles_categories ac ON c.id_categories = ac.id_categories 
-                                  WHERE ac.id_articles = :article_id";
+                                  WHERE ac.id_article = :article_id";
 
                 $stmtCategories = $this->db->prepare($queryCategories);
-                $stmtCategories->execute(['article_id' => $articleData['id_articles']]);
+                $stmtCategories->execute(['article_id' => $articleData['id_article']]);
 
                 $categories = $stmtCategories->fetchAll(PDO::FETCH_ASSOC);
 
@@ -274,6 +274,76 @@ class ArticleRepository
                 'articles' => [],
                 'total' => 0
             ];
+        }
+    }
+
+    /**
+     * Met à jour un article dans la base de données
+     * @param Article $article L'article à mettre à jour
+     * @return bool True si la mise à jour a réussi, false sinon
+     */
+    public function update(Article $article): bool
+    {
+        try {
+            $this->db->beginTransaction();
+
+            // Log des données avant mise à jour
+            error_log("Tentative de mise à jour de l'article : " . print_r($article, true));
+
+            $query = "UPDATE article SET 
+                     cover_image = :cover_image,
+                     title = :title,
+                     slug = :slug,
+                     introduction = :introduction,
+                     content = :content,
+                     published_at = :published_at,
+                     tags = :tags
+                     WHERE id_article = :id";
+
+            $stmt = $this->db->prepare($query);
+
+            $params = [
+                'id' => $article->getId(),
+                'cover_image' => $article->getCoverImage(),
+                'title' => $article->getTitle(),
+                'slug' => $article->getSlug(),
+                'introduction' => $article->getIntroduction(),
+                'content' => $article->getContent(),
+                'published_at' => $article->getPublishedAt(),
+                'tags' => $article->getTags() ? json_encode($article->getTags()) : null
+            ];
+
+            // Log des paramètres de la requête
+            error_log("Paramètres de la requête de mise à jour : " . print_r($params, true));
+
+            $success = $stmt->execute($params);
+
+            // Mise à jour des catégories si nécessaire
+            if ($article->getCategories() !== null) {
+                error_log("Mise à jour des catégories pour l'article ID " . $article->getId());
+                // Suppression des anciennes catégories
+                $deleteStmt = $this->db->prepare("DELETE FROM articles_categories WHERE id_article = :article_id");
+                $deleteStmt->execute(['article_id' => $article->getId()]);
+                error_log("Anciennes catégories supprimées");
+
+                // Insertion des nouvelles catégories
+                $insertStmt = $this->db->prepare("INSERT INTO articles_categories (id_article, id_categories) VALUES (:article_id, :category_id)");
+                foreach ($article->getCategories() as $categoryId) {
+                    $insertStmt->execute([
+                        'article_id' => $article->getId(),
+                        'category_id' => $categoryId
+                    ]);
+                    error_log("Catégorie ID $categoryId ajoutée à l'article");
+                }
+                error_log("Toutes les nouvelles catégories ont été ajoutées");
+            }
+
+            $this->db->commit();
+            return $success;
+        } catch (\Exception $e) {
+            $this->db->rollBack();
+            error_log("Erreur lors de la mise à jour de l'article : " . $e->getMessage());
+            return false;
         }
     }
 }

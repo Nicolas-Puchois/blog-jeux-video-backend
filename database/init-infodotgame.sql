@@ -78,8 +78,11 @@ CREATE TABLE article (
     slug VARCHAR(255) NOT NULL UNIQUE,
     content TEXT NOT NULL,
     id_user INT,
+    tags JSON,
+    introduction VARCHAR(255),
     FOREIGN KEY (id_user) REFERENCES user(id_user) ON DELETE SET NULL
 );
+
 
 CREATE TABLE categories (
     id_categories INT AUTO_INCREMENT PRIMARY KEY,
@@ -88,17 +91,17 @@ CREATE TABLE categories (
 );
 
 CREATE TABLE articles_categories (
-    id_articles_categories INT AUTO_INCREMENT PRIMARY KEY,
+    id_article_categories INT AUTO_INCREMENT PRIMARY KEY,
     id_categories INT NOT NULL,
-    id_articles INT NOT NULL,
+    id_article INT NOT NULL,
     FOREIGN KEY (id_categories) REFERENCES categories(id_categories) ON DELETE CASCADE,
-    FOREIGN KEY (id_articles) REFERENCES article(id_articles) ON DELETE CASCADE
+    FOREIGN KEY (id_article) REFERENCES article(id_article) ON DELETE CASCADE
 );
 
 CREATE TABLE article_comment (
     id_article_comment INT AUTO_INCREMENT PRIMARY KEY,
-    id_articles INT NOT NULL,
+    id_article INT NOT NULL,
     id_comments INT NOT NULL,
-    FOREIGN KEY (id_articles) REFERENCES article(id_articles) ON DELETE CASCADE,
+    FOREIGN KEY (id_article) REFERENCES article(id_article) ON DELETE CASCADE,
     FOREIGN KEY (id_comments) REFERENCES comments(id_comments) ON DELETE CASCADE
 );

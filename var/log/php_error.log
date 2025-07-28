@@ -1,66 +1,36 @@
-[Mon Jul 21 20:27:48 2025] PHP 8.4.10 Development Server (http://localhost:8000) started
-[Mon Jul 21 20:28:07 2025] [::1]:56798 Accepted
-[Mon Jul 21 20:28:07 2025] Tentative d'accès à la route: POST /api/articles
-[Mon Jul 21 20:28:07 2025] Routes disponibles: Array
-(
-    [POST] => Array
-        (
-            [/articles] => Array
-                (
-                    [0] => App\controller\ArticleController
-                    [1] => create
-                )
-
-            [/api/register] => Array
-                (
-                    [0] => App\controller\UserController
-                    [1] => register
-                )
-
-            [/api/login] => Array
-                (
-                    [0] => App\controller\UserController
-                    [1] => login
-                )
-
-        )
-
-    [GET] => Array
-        (
-            [/api/valider-email] => Array
-                (
-                    [0] => App\controller\UserController
-                    [1] => verifyEmail
-                )
-
-        )
-
-)
-
-[Mon Jul 21 20:28:07 2025] [::1]:56798 [200]: POST /api/articles
-[Mon Jul 21 20:28:07 2025] [::1]:56798 Closing
-[Mon Jul 21 20:30:06 2025] [::1]:56861 Accepted
-[Mon Jul 21 20:30:06 2025] Tentative d'accès à la route: POST /api/articles
-[Mon Jul 21 20:30:06 2025] Routes disponibles: Array
+[Mon Jul 28 15:02:13 2025] PHP 8.4.10 Development Server (http://localhost:8000) started
+[Mon Jul 28 15:02:20 2025] [::1]:54277 Accepted
+[Mon Jul 28 15:02:20 2025] Tentative d'accès à la route: POST /api/articles
+[Mon Jul 28 15:02:20 2025] Routes disponibles: Array
 (
     [POST] => Array
         (
             [/api/articles] => Array
                 (
-                    [0] => App\controller\ArticleController
-                    [1] => create
+                    [className] => App\controller\ArticleController
+                    [methodName] => create
+                    [originalPath] => /api/articles
+                )
+
+            [/api/articles/(?P<id>[^/]+)/image] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => uploadImage
+                    [originalPath] => /api/articles/{id}/image
                 )
 
             [/api/register] => Array
                 (
-                    [0] => App\controller\UserController
-                    [1] => register
+                    [className] => App\controller\UserController
+                    [methodName] => register
+                    [originalPath] => /api/register
                 )
 
             [/api/login] => Array
                 (
-                    [0] => App\controller\UserController
-                    [1] => login
+                    [className] => App\controller\UserController
+                    [methodName] => login
+                    [originalPath] => /api/login
                 )
 
         )
@@ -69,95 +39,602 @@
         (
             [/api/valider-email] => Array
                 (
-                    [0] => App\controller\UserController
-                    [1] => verifyEmail
+                    [className] => App\controller\UserController
+                    [methodName] => verifyEmail
+                    [originalPath] => /api/valider-email
                 )
 
         )
 
 )
 
-[Mon Jul 21 20:30:06 2025] Appel du contrôleur: App\controller\ArticleController::create
-[Mon Jul 21 20:30:06 2025] === Début de la requête de création d'article ===
-[Mon Jul 21 20:30:06 2025] Données POST reçues : Array
+[Mon Jul 28 15:02:20 2025] Route trouvée : /api/articles
+[Mon Jul 28 15:02:20 2025] Appel du contrôleur: App\controller\ArticleController::create
+[Mon Jul 28 15:02:20 2025] === Début de la requête de création d'article ===
+[Mon Jul 28 15:02:20 2025] Données JSON reçues : Array
 (
-    [title] => testtt
-    [tags] => ["test","blabla"]
-    [introduction] => gerzhtrehtejrytejktey
-    [content] => tshe564tesjjrj4yt4k4ru1k151yt564kl
-sthj48ryj48yt4j68tu4984k684uylk69l4t6
-jyrd6848j64yt886f4k9684uf864k68gfk46kugkl86
-jyd7tj468ytk4f68uf4k68j4h6f8k4j65g4k4h68fg4ku68g4jk
+    [title] => les jeux vidéals avec abonnement
+    [content] => Au début des année 2000, world of warcraft se lance dans le monde du jeux vidéos avec un système unique à l'époque : un abonnement pour jouer. 
+
+Aujourd'hui les abonnement se multiplie comme de simple jeux vidéos  (final fantasy 14) ou des services de jeux (gamepass de xbox, playsation plus). 
+
+Si à l'origine ce système peut sembler bien, cela pose des questions :
+
+L'obligation de payer un abonnement pour jouer en ligne sur console, le fait de ne pas posséder le jeu (même si ajd on ne les possède plus vraiment).
+    [introduction] => final fantasy 14, world of warcraft ou le gamepass ... : les abonnement dans le jeux vidéos
+    [tags] => ["gaming","budget","avis"]
 )
 
-[Mon Jul 21 20:30:06 2025] Fichiers reçus : Array
+[Mon Jul 28 15:02:20 2025] Tags reçus : ["gaming","budget","avis"]
+[Mon Jul 28 15:02:20 2025] Tags décodés : Array
 (
+    [0] => gaming
+    [1] => budget
+    [2] => avis
 )
 
-[Mon Jul 21 20:30:06 2025] Taille maximale autorisée : 2M
-[Mon Jul 21 20:30:06 2025] Taille maximale du POST : 8M
-[Mon Jul 21 20:30:06 2025] Aucun fichier reçu
-[Mon Jul 21 20:30:06 2025] POST reçu : Array
-(
-    [title] => testtt
-    [tags] => ["test","blabla"]
-    [introduction] => gerzhtrehtejrytejktey
-    [content] => tshe564tesjjrj4yt4k4ru1k151yt564kl
-sthj48ryj48yt4j68tu4984k684uylk69l4t6
-jyrd6848j64yt886f4k9684uf864k68gfk46kugkl86
-jyd7tj468ytk4f68uf4k68j4h6f8k4j65g4k4h68fg4ku68g4jk
-)
-
-[Mon Jul 21 20:30:06 2025] Tags reçus : ["test","blabla"]
-[Mon Jul 21 20:30:06 2025] Tags décodés : Array
-(
-    [0] => test
-    [1] => blabla
-)
-
-[Mon Jul 21 20:30:06 2025] Tentative d'insertion d'article : App\model\Article Object
+[Mon Jul 28 15:02:20 2025] Tentative d'insertion d'article : App\model\Article Object
 (
     [id_article:App\model\Article:private] => 
     [cover_image:App\model\Article:private] => 
-    [published_at:App\model\Article:private] => 2025-07-21 18:30:06
-    [created_at:App\model\Article:private] => 2025-07-21 18:30:06
-    [title:App\model\Article:private] => testtt
-    [slug:App\model\Article:private] => testtt
-    [content:App\model\Article:private] => tshe564tesjjrj4yt4k4ru1k151yt564kl
-sthj48ryj48yt4j68tu4984k684uylk69l4t6
-jyrd6848j64yt886f4k9684uf864k68gfk46kugkl86
-jyd7tj468ytk4f68uf4k68j4h6f8k4j65g4k4h68fg4ku68g4jk
-    [introduction:App\model\Article:private] => gerzhtrehtejrytejktey
+    [published_at:App\model\Article:private] => 2025-07-28 13:02:20
+    [created_at:App\model\Article:private] => 2025-07-28 13:02:20
+    [title:App\model\Article:private] => les jeux vidéals avec abonnement
+    [slug:App\model\Article:private] => les-jeux-vid-als-avec-abonnement
+    [content:App\model\Article:private] => Au début des année 2000, world of warcraft se lance dans le monde du jeux vidéos avec un système unique à l'époque : un abonnement pour jouer. 
+
+Aujourd'hui les abonnement se multiplie comme de simple jeux vidéos  (final fantasy 14) ou des services de jeux (gamepass de xbox, playsation plus). 
+
+Si à l'origine ce système peut sembler bien, cela pose des questions :
+
+L'obligation de payer un abonnement pour jouer en ligne sur console, le fait de ne pas posséder le jeu (même si ajd on ne les possède plus vraiment).
+    [introduction:App\model\Article:private] => final fantasy 14, world of warcraft ou le gamepass ... : les abonnement dans le jeux vidéos
     [id_user:App\model\Article:private] => 1
     [categories:App\model\Article:private] => 
     [tags:App\model\Article:private] => Array
         (
-            [0] => test
-            [1] => blabla
+            [0] => gaming
+            [1] => budget
+            [2] => avis
         )
 
 )
 
-[Mon Jul 21 20:30:06 2025] Paramètres de la requête : Array
+[Mon Jul 28 15:02:20 2025] Paramètres de la requête : Array
 (
     [cover_image] => 
-    [title] => testtt
-    [slug] => testtt
-    [introduction] => gerzhtrehtejrytejktey
-    [content] => tshe564tesjjrj4yt4k4ru1k151yt564kl
-sthj48ryj48yt4j68tu4984k684uylk69l4t6
-jyrd6848j64yt886f4k9684uf864k68gfk46kugkl86
-jyd7tj468ytk4f68uf4k68j4h6f8k4j65g4k4h68fg4ku68g4jk
+    [title] => les jeux vidéals avec abonnement
+    [slug] => les-jeux-vid-als-avec-abonnement
+    [introduction] => final fantasy 14, world of warcraft ou le gamepass ... : les abonnement dans le jeux vidéos
+    [content] => Au début des année 2000, world of warcraft se lance dans le monde du jeux vidéos avec un système unique à l'époque : un abonnement pour jouer. 
+
+Aujourd'hui les abonnement se multiplie comme de simple jeux vidéos  (final fantasy 14) ou des services de jeux (gamepass de xbox, playsation plus). 
+
+Si à l'origine ce système peut sembler bien, cela pose des questions :
+
+L'obligation de payer un abonnement pour jouer en ligne sur console, le fait de ne pas posséder le jeu (même si ajd on ne les possède plus vraiment).
     [id_user] => 1
-    [published_at] => 2025-07-21 18:30:06
-    [tags] => ["test","blabla"]
+    [published_at] => 2025-07-28 13:02:20
+    [tags] => ["gaming","budget","avis"]
 )
 
-[Mon Jul 21 20:30:06 2025] Erreur lors de la création de l'article : SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`infodotgame`.`article`, CONSTRAINT `article_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`) ON DELETE SET NULL)
-[Mon Jul 21 20:30:06 2025] Erreur dans ArticleController::create : Erreur lors de la création de l'article
-[Mon Jul 21 20:30:06 2025] Stack trace : #0 D:\blog_jeux_video\backend\src\core\Router.php(32): App\controller\ArticleController->create()
+[Mon Jul 28 15:02:20 2025] Réponse envoyée : {"success":true,"message":"Article cr\u00e9\u00e9 avec succ\u00e8s","articleId":2}
+[Mon Jul 28 15:02:20 2025] [::1]:54277 [201]: POST /api/articles
+[Mon Jul 28 15:02:20 2025] [::1]:54277 Closing
+[Mon Jul 28 15:02:20 2025] [::1]:54279 Accepted
+[Mon Jul 28 15:02:20 2025] Tentative d'accès à la route: POST /api/articles/2/image
+[Mon Jul 28 15:02:20 2025] Routes disponibles: Array
+(
+    [POST] => Array
+        (
+            [/api/articles] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => create
+                    [originalPath] => /api/articles
+                )
+
+            [/api/articles/(?P<id>[^/]+)/image] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => uploadImage
+                    [originalPath] => /api/articles/{id}/image
+                )
+
+            [/api/register] => Array
+                (
+                    [className] => App\controller\UserController
+                    [methodName] => register
+                    [originalPath] => /api/register
+                )
+
+            [/api/login] => Array
+                (
+                    [className] => App\controller\UserController
+                    [methodName] => login
+                    [originalPath] => /api/login
+                )
+
+        )
+
+    [GET] => Array
+        (
+            [/api/valider-email] => Array
+                (
+                    [className] => App\controller\UserController
+                    [methodName] => verifyEmail
+                    [originalPath] => /api/valider-email
+                )
+
+        )
+
+)
+
+[Mon Jul 28 15:02:20 2025] Route trouvée : /api/articles/{id}/image
+[Mon Jul 28 15:02:20 2025] Appel du contrôleur: App\controller\ArticleController::uploadImage
+[Mon Jul 28 15:02:20 2025] === Début de l'upload d'image pour l'article 2 ===
+[Mon Jul 28 15:02:20 2025] Fichiers reçus : Array
+(
+    [image] => Array
+        (
+            [name] => Capture d'écran 2025-07-01 144220.png
+            [full_path] => Capture d'écran 2025-07-01 144220.png
+            [type] => image/png
+            [tmp_name] => C:\Users\nicol\AppData\Local\Temp\phpCF2.tmp
+            [error] => 0
+            [size] => 1998
+        )
+
+)
+
+[Mon Jul 28 15:02:20 2025] PHP Fatal error:  Uncaught TypeError: App\model\Article::setTags(): Argument #1 ($tags) must be of type ?array, string given, called in D:\blog_jeux_video\backend\src\model\Article.php on line 32 and defined in D:\blog_jeux_video\backend\src\model\Article.php:155
+Stack trace:
+#0 D:\blog_jeux_video\backend\src\model\Article.php(32): App\model\Article->setTags()
+#1 D:\blog_jeux_video\backend\src\model\Article.php(24): App\model\Article->hydrate()
+#2 D:\blog_jeux_video\backend\src\repository\ArticleRepository.php(129): App\model\Article->__construct()
+#3 D:\blog_jeux_video\backend\src\controller\ArticleController.php(197): App\repository\ArticleRepository->getById()
+#4 D:\blog_jeux_video\backend\src\core\Router.php(47): App\controller\ArticleController->uploadImage()
+#5 D:\blog_jeux_video\backend\public\index.php(20): App\core\Router->dispatch()
+#6 {main}
+  thrown in D:\blog_jeux_video\backend\src\model\Article.php on line 155
+[Mon Jul 28 15:02:20 2025] [::1]:54279 [200]: POST /api/articles/2/image - Uncaught TypeError: App\model\Article::setTags(): Argument #1 ($tags) must be of type ?array, string given, called in D:\blog_jeux_video\backend\src\model\Article.php on line 32 and defined in D:\blog_jeux_video\backend\src\model\Article.php:155
+Stack trace:
+#0 D:\blog_jeux_video\backend\src\model\Article.php(32): App\model\Article->setTags()
+#1 D:\blog_jeux_video\backend\src\model\Article.php(24): App\model\Article->hydrate()
+#2 D:\blog_jeux_video\backend\src\repository\ArticleRepository.php(129): App\model\Article->__construct()
+#3 D:\blog_jeux_video\backend\src\controller\ArticleController.php(197): App\repository\ArticleRepository->getById()
+#4 D:\blog_jeux_video\backend\src\core\Router.php(47): App\controller\ArticleController->uploadImage()
+#5 D:\blog_jeux_video\backend\public\index.php(20): App\core\Router->dispatch()
+#6 {main}
+  thrown in D:\blog_jeux_video\backend\src\model\Article.php on line 155
+[Mon Jul 28 15:02:20 2025] [::1]:54279 Closing
+[Mon Jul 28 15:03:44 2025] [::1]:54330 Accepted
+[Mon Jul 28 15:03:44 2025] Tentative d'accès à la route: POST /api/articles
+[Mon Jul 28 15:03:44 2025] Routes disponibles: Array
+(
+    [POST] => Array
+        (
+            [/api/articles] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => create
+                    [originalPath] => /api/articles
+                )
+
+            [/api/articles/(?P<id>[^/]+)/image] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => uploadImage
+                    [originalPath] => /api/articles/{id}/image
+                )
+
+            [/api/register] => Array
+                (
+                    [className] => App\controller\UserController
+                    [methodName] => register
+                    [originalPath] => /api/register
+                )
+
+            [/api/login] => Array
+                (
+                    [className] => App\controller\UserController
+                    [methodName] => login
+                    [originalPath] => /api/login
+                )
+
+        )
+
+    [GET] => Array
+        (
+            [/api/valider-email] => Array
+                (
+                    [className] => App\controller\UserController
+                    [methodName] => verifyEmail
+                    [originalPath] => /api/valider-email
+                )
+
+        )
+
+)
+
+[Mon Jul 28 15:03:44 2025] Route trouvée : /api/articles
+[Mon Jul 28 15:03:44 2025] Appel du contrôleur: App\controller\ArticleController::create
+[Mon Jul 28 15:03:44 2025] === Début de la requête de création d'article ===
+[Mon Jul 28 15:03:44 2025] Données JSON reçues : Array
+(
+    [title] => les jeux vidéals avec abonnement
+    [content] => Au début des année 2000, world of warcraft se lance dans le monde du jeux vidéos avec un système unique à l'époque : un abonnement pour jouer. 
+
+Aujourd'hui les abonnement se multiplie comme de simple jeux vidéos  (final fantasy 14) ou des services de jeux (gamepass de xbox, playsation plus). 
+
+Si à l'origine ce système peut sembler bien, cela pose des questions :
+
+L'obligation de payer un abonnement pour jouer en ligne sur console, le fait de ne pas posséder le jeu (même si ajd on ne les possède plus vraiment).
+    [introduction] => final fantasy 14, world of warcraft ou le gamepass ... : les abonnement dans le jeux vidéos
+    [tags] => ["gaming","budget","avis"]
+)
+
+[Mon Jul 28 15:03:44 2025] Tags reçus : ["gaming","budget","avis"]
+[Mon Jul 28 15:03:44 2025] Tags décodés : Array
+(
+    [0] => gaming
+    [1] => budget
+    [2] => avis
+)
+
+[Mon Jul 28 15:03:44 2025] Tentative d'insertion d'article : App\model\Article Object
+(
+    [id_article:App\model\Article:private] => 
+    [cover_image:App\model\Article:private] => 
+    [published_at:App\model\Article:private] => 2025-07-28 13:03:44
+    [created_at:App\model\Article:private] => 2025-07-28 13:03:44
+    [title:App\model\Article:private] => les jeux vidéals avec abonnement
+    [slug:App\model\Article:private] => les-jeux-vid-als-avec-abonnement
+    [content:App\model\Article:private] => Au début des année 2000, world of warcraft se lance dans le monde du jeux vidéos avec un système unique à l'époque : un abonnement pour jouer. 
+
+Aujourd'hui les abonnement se multiplie comme de simple jeux vidéos  (final fantasy 14) ou des services de jeux (gamepass de xbox, playsation plus). 
+
+Si à l'origine ce système peut sembler bien, cela pose des questions :
+
+L'obligation de payer un abonnement pour jouer en ligne sur console, le fait de ne pas posséder le jeu (même si ajd on ne les possède plus vraiment).
+    [introduction:App\model\Article:private] => final fantasy 14, world of warcraft ou le gamepass ... : les abonnement dans le jeux vidéos
+    [id_user:App\model\Article:private] => 1
+    [categories:App\model\Article:private] => 
+    [tags:App\model\Article:private] => Array
+        (
+            [0] => gaming
+            [1] => budget
+            [2] => avis
+        )
+
+)
+
+[Mon Jul 28 15:03:44 2025] Paramètres de la requête : Array
+(
+    [cover_image] => 
+    [title] => les jeux vidéals avec abonnement
+    [slug] => les-jeux-vid-als-avec-abonnement
+    [introduction] => final fantasy 14, world of warcraft ou le gamepass ... : les abonnement dans le jeux vidéos
+    [content] => Au début des année 2000, world of warcraft se lance dans le monde du jeux vidéos avec un système unique à l'époque : un abonnement pour jouer. 
+
+Aujourd'hui les abonnement se multiplie comme de simple jeux vidéos  (final fantasy 14) ou des services de jeux (gamepass de xbox, playsation plus). 
+
+Si à l'origine ce système peut sembler bien, cela pose des questions :
+
+L'obligation de payer un abonnement pour jouer en ligne sur console, le fait de ne pas posséder le jeu (même si ajd on ne les possède plus vraiment).
+    [id_user] => 1
+    [published_at] => 2025-07-28 13:03:44
+    [tags] => ["gaming","budget","avis"]
+)
+
+[Mon Jul 28 15:03:44 2025] Erreur lors de la création de l'article : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'les-jeux-vid-als-avec-abonnement' for key 'slug'
+[Mon Jul 28 15:03:44 2025] Erreur dans ArticleController::create : Erreur lors de la création de l'article
+[Mon Jul 28 15:03:44 2025] Stack trace : #0 D:\blog_jeux_video\backend\src\core\Router.php(47): App\controller\ArticleController->create()
 #1 D:\blog_jeux_video\backend\public\index.php(20): App\core\Router->dispatch()
 #2 {main}
-[Mon Jul 21 20:30:06 2025] Réponse d'erreur envoyée : {"success":false,"error":"Une erreur est survenue lors de la cr\u00e9ation de l'article","details":"Erreur lors de la cr\u00e9ation de l'article"}
-[Mon Jul 21 20:30:06 2025] [::1]:56861 [500]: POST /api/articles
-[Mon Jul 21 20:30:06 2025] [::1]:56861 Closing
+[Mon Jul 28 15:03:44 2025] Réponse d'erreur envoyée : {"success":false,"error":"Une erreur est survenue lors de la cr\u00e9ation de l'article","details":"Erreur lors de la cr\u00e9ation de l'article"}
+[Mon Jul 28 15:03:44 2025] [::1]:54330 [500]: POST /api/articles
+[Mon Jul 28 15:03:44 2025] [::1]:54330 Closing
+[Mon Jul 28 15:05:49 2025] [::1]:54390 Accepted
+[Mon Jul 28 15:05:49 2025] Tentative d'accès à la route: POST /api/articles
+[Mon Jul 28 15:05:49 2025] Routes disponibles: Array
+(
+    [POST] => Array
+        (
+            [/api/articles] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => create
+                    [originalPath] => /api/articles
+                )
+
+            [/api/articles/(?P<id>[^/]+)/image] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => uploadImage
+                    [originalPath] => /api/articles/{id}/image
+                )
+
+            [/api/register] => Array
+                (
+                    [className] => App\controller\UserController
+                    [methodName] => register
+                    [originalPath] => /api/register
+                )
+
+            [/api/login] => Array
+                (
+                    [className] => App\controller\UserController
+                    [methodName] => login
+                    [originalPath] => /api/login
+                )
+
+        )
+
+    [GET] => Array
+        (
+            [/api/valider-email] => Array
+                (
+                    [className] => App\controller\UserController
+                    [methodName] => verifyEmail
+                    [originalPath] => /api/valider-email
+                )
+
+        )
+
+)
+
+[Mon Jul 28 15:05:49 2025] Route trouvée : /api/articles
+[Mon Jul 28 15:05:49 2025] Appel du contrôleur: App\controller\ArticleController::create
+[Mon Jul 28 15:05:49 2025] === Début de la requête de création d'article ===
+[Mon Jul 28 15:05:49 2025] Données JSON reçues : Array
+(
+    [title] => les jeux vidéals avec abonnement
+    [content] => Au début des année 2000, world of warcraft se lance dans le monde du jeux vidéos avec un système unique à l'époque : un abonnement pour jouer. 
+
+Aujourd'hui les abonnement se multiplie comme de simple jeux vidéos  (final fantasy 14) ou des services de jeux (gamepass de xbox, playsation plus). 
+
+Si à l'origine ce système peut sembler bien, cela pose des questions :
+
+L'obligation de payer un abonnement pour jouer en ligne sur console, le fait de ne pas posséder le jeu (même si ajd on ne les possède plus vraiment).
+    [introduction] => final fantasy 14, world of warcraft ou le gamepass ... : les abonnement dans le jeux vidéos
+    [tags] => ["gaming","budget","avis"]
+)
+
+[Mon Jul 28 15:05:49 2025] Tags reçus : ["gaming","budget","avis"]
+[Mon Jul 28 15:05:49 2025] Tags décodés : Array
+(
+    [0] => gaming
+    [1] => budget
+    [2] => avis
+)
+
+[Mon Jul 28 15:05:49 2025] Tentative d'insertion d'article : App\model\Article Object
+(
+    [id_article:App\model\Article:private] => 
+    [cover_image:App\model\Article:private] => 
+    [published_at:App\model\Article:private] => 2025-07-28 13:05:49
+    [created_at:App\model\Article:private] => 2025-07-28 13:05:49
+    [title:App\model\Article:private] => les jeux vidéals avec abonnement
+    [slug:App\model\Article:private] => les-jeux-vid-als-avec-abonnement-7949
+    [content:App\model\Article:private] => Au début des année 2000, world of warcraft se lance dans le monde du jeux vidéos avec un système unique à l'époque : un abonnement pour jouer. 
+
+Aujourd'hui les abonnement se multiplie comme de simple jeux vidéos  (final fantasy 14) ou des services de jeux (gamepass de xbox, playsation plus). 
+
+Si à l'origine ce système peut sembler bien, cela pose des questions :
+
+L'obligation de payer un abonnement pour jouer en ligne sur console, le fait de ne pas posséder le jeu (même si ajd on ne les possède plus vraiment).
+    [introduction:App\model\Article:private] => final fantasy 14, world of warcraft ou le gamepass ... : les abonnement dans le jeux vidéos
+    [id_user:App\model\Article:private] => 1
+    [categories:App\model\Article:private] => 
+    [tags:App\model\Article:private] => Array
+        (
+            [0] => gaming
+            [1] => budget
+            [2] => avis
+        )
+
+)
+
+[Mon Jul 28 15:05:49 2025] Paramètres de la requête : Array
+(
+    [cover_image] => 
+    [title] => les jeux vidéals avec abonnement
+    [slug] => les-jeux-vid-als-avec-abonnement-7949
+    [introduction] => final fantasy 14, world of warcraft ou le gamepass ... : les abonnement dans le jeux vidéos
+    [content] => Au début des année 2000, world of warcraft se lance dans le monde du jeux vidéos avec un système unique à l'époque : un abonnement pour jouer. 
+
+Aujourd'hui les abonnement se multiplie comme de simple jeux vidéos  (final fantasy 14) ou des services de jeux (gamepass de xbox, playsation plus). 
+
+Si à l'origine ce système peut sembler bien, cela pose des questions :
+
+L'obligation de payer un abonnement pour jouer en ligne sur console, le fait de ne pas posséder le jeu (même si ajd on ne les possède plus vraiment).
+    [id_user] => 1
+    [published_at] => 2025-07-28 13:05:49
+    [tags] => ["gaming","budget","avis"]
+)
+
+[Mon Jul 28 15:05:49 2025] Réponse envoyée : {"success":true,"message":"Article cr\u00e9\u00e9 avec succ\u00e8s","articleId":4}
+[Mon Jul 28 15:05:49 2025] [::1]:54390 [201]: POST /api/articles
+[Mon Jul 28 15:05:49 2025] [::1]:54390 Closing
+[Mon Jul 28 15:05:49 2025] [::1]:54394 Accepted
+[Mon Jul 28 15:05:49 2025] Tentative d'accès à la route: POST /api/articles/4/image
+[Mon Jul 28 15:05:49 2025] Routes disponibles: Array
+(
+    [POST] => Array
+        (
+            [/api/articles] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => create
+                    [originalPath] => /api/articles
+                )
+
+            [/api/articles/(?P<id>[^/]+)/image] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => uploadImage
+                    [originalPath] => /api/articles/{id}/image
+                )
+
+            [/api/register] => Array
+                (
+                    [className] => App\controller\UserController
+                    [methodName] => register
+                    [originalPath] => /api/register
+                )
+
+            [/api/login] => Array
+                (
+                    [className] => App\controller\UserController
+                    [methodName] => login
+                    [originalPath] => /api/login
+                )
+
+        )
+
+    [GET] => Array
+        (
+            [/api/valider-email] => Array
+                (
+                    [className] => App\controller\UserController
+                    [methodName] => verifyEmail
+                    [originalPath] => /api/valider-email
+                )
+
+        )
+
+)
+
+[Mon Jul 28 15:05:49 2025] Route trouvée : /api/articles/{id}/image
+[Mon Jul 28 15:05:49 2025] Appel du contrôleur: App\controller\ArticleController::uploadImage
+[Mon Jul 28 15:05:49 2025] === Début de l'upload d'image pour l'article 4 ===
+[Mon Jul 28 15:05:49 2025] Fichiers reçus : Array
+(
+    [image] => Array
+        (
+            [name] => Capture d'écran 2025-07-01 144220.png
+            [full_path] => Capture d'écran 2025-07-01 144220.png
+            [type] => image/png
+            [tmp_name] => C:\Users\nicol\AppData\Local\Temp\php3D3C.tmp
+            [error] => 0
+            [size] => 1998
+        )
+
+)
+
+[Mon Jul 28 15:05:49 2025] Article récupéré : App\model\Article Object
+(
+    [id_article:App\model\Article:private] => 4
+    [cover_image:App\model\Article:private] => 
+    [published_at:App\model\Article:private] => 2025-07-28 13:05:49
+    [created_at:App\model\Article:private] => 2025-07-28 13:05:49
+    [title:App\model\Article:private] => les jeux vidéals avec abonnement
+    [slug:App\model\Article:private] => les-jeux-vid-als-avec-abonnement-7949
+    [content:App\model\Article:private] => Au début des année 2000, world of warcraft se lance dans le monde du jeux vidéos avec un système unique à l'époque : un abonnement pour jouer. 
+
+Aujourd'hui les abonnement se multiplie comme de simple jeux vidéos  (final fantasy 14) ou des services de jeux (gamepass de xbox, playsation plus). 
+
+Si à l'origine ce système peut sembler bien, cela pose des questions :
+
+L'obligation de payer un abonnement pour jouer en ligne sur console, le fait de ne pas posséder le jeu (même si ajd on ne les possède plus vraiment).
+    [introduction:App\model\Article:private] => final fantasy 14, world of warcraft ou le gamepass ... : les abonnement dans le jeux vidéos
+    [id_user:App\model\Article:private] => 1
+    [categories:App\model\Article:private] => Array
+        (
+        )
+
+    [tags:App\model\Article:private] => Array
+        (
+            [0] => gaming
+            [1] => budget
+            [2] => avis
+        )
+
+)
+
+[Mon Jul 28 15:05:49 2025] Chemin de l'image à sauvegarder : /uploads/articles/article_4_688775ad5bdd2.png
+[Mon Jul 28 15:05:49 2025] Article avant update : App\model\Article Object
+(
+    [id_article:App\model\Article:private] => 4
+    [cover_image:App\model\Article:private] => /uploads/articles/article_4_688775ad5bdd2.png
+    [published_at:App\model\Article:private] => 2025-07-28 13:05:49
+    [created_at:App\model\Article:private] => 2025-07-28 13:05:49
+    [title:App\model\Article:private] => les jeux vidéals avec abonnement
+    [slug:App\model\Article:private] => les-jeux-vid-als-avec-abonnement-7949
+    [content:App\model\Article:private] => Au début des année 2000, world of warcraft se lance dans le monde du jeux vidéos avec un système unique à l'époque : un abonnement pour jouer. 
+
+Aujourd'hui les abonnement se multiplie comme de simple jeux vidéos  (final fantasy 14) ou des services de jeux (gamepass de xbox, playsation plus). 
+
+Si à l'origine ce système peut sembler bien, cela pose des questions :
+
+L'obligation de payer un abonnement pour jouer en ligne sur console, le fait de ne pas posséder le jeu (même si ajd on ne les possède plus vraiment).
+    [introduction:App\model\Article:private] => final fantasy 14, world of warcraft ou le gamepass ... : les abonnement dans le jeux vidéos
+    [id_user:App\model\Article:private] => 1
+    [categories:App\model\Article:private] => Array
+        (
+        )
+
+    [tags:App\model\Article:private] => Array
+        (
+            [0] => gaming
+            [1] => budget
+            [2] => avis
+        )
+
+)
+
+[Mon Jul 28 15:05:49 2025] Tentative de mise à jour de l'article : App\model\Article Object
+(
+    [id_article:App\model\Article:private] => 4
+    [cover_image:App\model\Article:private] => /uploads/articles/article_4_688775ad5bdd2.png
+    [published_at:App\model\Article:private] => 2025-07-28 13:05:49
+    [created_at:App\model\Article:private] => 2025-07-28 13:05:49
+    [title:App\model\Article:private] => les jeux vidéals avec abonnement
+    [slug:App\model\Article:private] => les-jeux-vid-als-avec-abonnement-7949
+    [content:App\model\Article:private] => Au début des année 2000, world of warcraft se lance dans le monde du jeux vidéos avec un système unique à l'époque : un abonnement pour jouer. 
+
+Aujourd'hui les abonnement se multiplie comme de simple jeux vidéos  (final fantasy 14) ou des services de jeux (gamepass de xbox, playsation plus). 
+
+Si à l'origine ce système peut sembler bien, cela pose des questions :
+
+L'obligation de payer un abonnement pour jouer en ligne sur console, le fait de ne pas posséder le jeu (même si ajd on ne les possède plus vraiment).
+    [introduction:App\model\Article:private] => final fantasy 14, world of warcraft ou le gamepass ... : les abonnement dans le jeux vidéos
+    [id_user:App\model\Article:private] => 1
+    [categories:App\model\Article:private] => Array
+        (
+        )
+
+    [tags:App\model\Article:private] => Array
+        (
+            [0] => gaming
+            [1] => budget
+            [2] => avis
+        )
+
+)
+
+[Mon Jul 28 15:05:49 2025] Paramètres de la requête de mise à jour : Array
+(
+    [id] => 4
+    [cover_image] => /uploads/articles/article_4_688775ad5bdd2.png
+    [title] => les jeux vidéals avec abonnement
+    [slug] => les-jeux-vid-als-avec-abonnement-7949
+    [introduction] => final fantasy 14, world of warcraft ou le gamepass ... : les abonnement dans le jeux vidéos
+    [content] => Au début des année 2000, world of warcraft se lance dans le monde du jeux vidéos avec un système unique à l'époque : un abonnement pour jouer. 
+
+Aujourd'hui les abonnement se multiplie comme de simple jeux vidéos  (final fantasy 14) ou des services de jeux (gamepass de xbox, playsation plus). 
+
+Si à l'origine ce système peut sembler bien, cela pose des questions :
+
+L'obligation de payer un abonnement pour jouer en ligne sur console, le fait de ne pas posséder le jeu (même si ajd on ne les possède plus vraiment).
+    [published_at] => 2025-07-28 13:05:49
+    [tags] => ["gaming","budget","avis"]
+)
+
+[Mon Jul 28 15:05:49 2025] Mise à jour des catégories pour l'article ID 4
+[Mon Jul 28 15:05:49 2025] Anciennes catégories supprimées
+[Mon Jul 28 15:05:49 2025] Toutes les nouvelles catégories ont été ajoutées
+[Mon Jul 28 15:05:49 2025] Résultat de la mise à jour : succès
+[Mon Jul 28 15:05:49 2025] [::1]:54394 [200]: POST /api/articles/4/image
+[Mon Jul 28 15:05:49 2025] [::1]:54394 Closing

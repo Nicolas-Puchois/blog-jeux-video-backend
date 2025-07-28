@@ -81,7 +81,7 @@ class Article
     }
 
     // Setters
-    public function setId_articles(?int $id_article): self
+    public function setId_article(?int $id_article): self
     {
         $this->id_article = $id_article;
         return $this;
@@ -152,9 +152,16 @@ class Article
         return $this->tags;
     }
 
-    public function setTags(?array $tags): self
+    public function setTags($tags): self
     {
-        $this->tags = $tags;
+        if (is_string($tags)) {
+            // Si c'est une chaîne JSON, on la décode
+            $decoded = json_decode($tags, true);
+            $this->tags = $decoded !== null ? $decoded : null;
+        } else {
+            // Si c'est déjà un tableau ou null
+            $this->tags = $tags;
+        }
         return $this;
     }
 
@@ -179,10 +186,13 @@ class Article
     public function generateSlug(): void
     {
         if (!empty($this->title)) {
-            $slug = strtolower($this->title);
-            $slug = preg_replace('/[^a-z0-9]+/', '-', $slug);
-            $slug = trim($slug, '-');
-            $this->setSlug($slug);
+            $baseSlug = strtolower($this->title);
+            $baseSlug = preg_replace('/[^a-z0-9]+/', '-', $baseSlug);
+            $baseSlug = trim($baseSlug, '-');
+
+            // Ajoute un timestamp court pour rendre le slug unique
+            $timestamp = substr((string)time(), -4);
+            $this->setSlug($baseSlug . '-' . $timestamp);
         }
     }
 }

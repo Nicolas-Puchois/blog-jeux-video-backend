@@ -21,14 +21,34 @@ class Router
         error_log("Tentative d'accès à la route: {$method} {$uri}");
         error_log("Routes disponibles: " . print_r($this->routes, true));
 
-        if (!isset($this->routes[$method][$uri])) {
-            throw new Exception("Route not found for {$method} {$uri}");
+        // Chercher une route correspondante avec des paramètres dynamiques
+        foreach ($this->routes[$method] as $pattern => $routeInfo) {
+            $pattern = '#^' . $pattern . '$#';
+            if (preg_match($pattern, $uri, $matches)) {
+                $controllerClass = $routeInfo['className'];
+                $action = $routeInfo['methodName'];
+
+                error_log("Route trouvée : {$routeInfo['originalPath']}");
+                error_log("Appel du contrôleur: {$controllerClass}::{$action}");
+
+                // Extraire les paramètres de l'URL
+                $params = array_filter($matches, 'is_string', ARRAY_FILTER_USE_KEY);
+                unset($params[0]); // Supprimer la correspondance complète
+
+                // Convertir les types de paramètres si nécessaire
+                $params = array_map(function ($param) {
+                    if (is_numeric($param)) {
+                        return is_float($param * 1) ? (float)$param : (int)$param;
+                    }
+                    return $param;
+                }, $params);
+
+                $controller = new $controllerClass();
+                $controller->$action(...array_values($params));
+                return;
+            }
         }
 
-        [$controllerClass, $action] = $this->routes[$method][$uri];
-        error_log("Appel du contrôleur: {$controllerClass}::{$action}");
-
-        $controller = new $controllerClass();
-        $controller->$action();
+        throw new Exception("Route not found for {$method} {$uri}");
     }
 }

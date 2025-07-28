@@ -23,9 +23,12 @@ class RouteResolver
 
                 foreach ($attributes as $attribute) {
                     $route = $attribute->newInstance();
-                    $routes[$route->method][$route->path] = [
-                        $className,
-                        $method->getName()
+                    // Convertir le chemin en pattern regex pour les paramètres dynamiques
+                    $pattern = preg_replace('/\{([^}]+)\}/', '(?P<$1>[^/]+)', $route->path);
+                    $routes[$route->method][$pattern] = [
+                        'className' => $className,
+                        'methodName' => $method->getName(),
+                        'originalPath' => $route->path
                     ];
                 }
             }
