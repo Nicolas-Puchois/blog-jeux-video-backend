@@ -24,3 +24,23 @@ try {
         "message" => $e->getMessage()
     ]);
 }
+
+// Servir les fichiers statiques depuis le dossier uploads
+if (preg_match('/^\/public\/uploads\//', $_SERVER['REQUEST_URI'])) {
+    $file = __DIR__ . $_SERVER['REQUEST_URI'];
+    if (file_exists($file)) {
+        $extension = pathinfo($file, PATHINFO_EXTENSION);
+        $contentTypes = [
+            'png' => 'image/png',
+            'jpg' => 'image/jpeg',
+            'jpeg' => 'image/jpeg',
+            'gif' => 'image/gif'
+        ];
+
+        if (isset($contentTypes[$extension])) {
+            header('Content-Type: ' . $contentTypes[$extension]);
+            readfile($file);
+            exit;
+        }
+    }
+}

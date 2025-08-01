@@ -243,4 +243,67 @@ class ArticleController
             ]);
         }
     }
+
+    #[Route('/api/articles', 'GET')]
+    public function getAllArticles(): void
+    {
+        try {
+            // Récupération des paramètres de pagination et filtres
+            $page = isset($_GET['page']) ? max(1, (int)$_GET['page']) : 1;
+            $limit = isset($_GET['limit']) ? min(50, max(1, (int)$_GET['limit'])) : 10;
+
+            // Préparation des filtres
+            $filters = [];
+
+            if (!empty($_GET['date'])) {
+                $filters['date'] = $_GET['date'];
+            }
+
+            if (!empty($_GET['author'])) {
+                $filters['author'] = $_GET['author'];
+            }
+
+            if (!empty($_GET['tags'])) {
+                $filters['tags'] = $_GET['tags'];
+            }
+
+            // Récupération des articles
+            $result = $this->articleRepository->getAll($page, $limit, $filters);
+
+            // Transformation des articles en format JSON
+            $articles = array_map(function ($article) {
+                return [
+                    'id' => $article->getId(),
+                    'title' => $article->getTitle(),
+                    'slug' => $article->getSlug(),
+                    'content' => $article->getContent(),
+                    'introduction' => $article->getIntroduction(),
+                    'cover_image' => $article->getCoverImage(),
+                    'published_at' => $article->getPublishedAt(),
+                    'created_at' => $article->getCreatedAt(),
+                    'tags' => $article->getTags()
+                ];
+            }, $result['articles']);
+
+            // Envoi de la réponse
+            header('Content-Type: application/json');
+            echo json_encode([
+                'success' => true,
+                'articles' => $articles,
+                'pagination' => [
+                    'current_page' => $page,
+                    'per_page' => $limit,
+                    'total' => $result['total']
+                ]
+            ]);
+        } catch (\Exception $e) {
+            error_log("Erreur dans ArticleController::getAllArticles : " . $e->getMessage());
+            http_response_code(500);
+            echo json_encode([
+                'success' => false,
+                'error' => 'Erreur lors de la récupération des articles',
+                'details' => $e->getMessage()
+            ]);
+        }
+    }
 }

@@ -181,10 +181,10 @@ class ArticleRepository
     }
 
     /**
-     * Récupère tous les articles avec pagination et filtres optionnels
+     * Récupère tous les articles avec pagination et filtres
      * @param int $page Numéro de la page (commence à 1)
      * @param int $perPage Nombre d'articles par page
-     * @param array $filters Filtres optionnels (catégorie, date, auteur, etc.)
+     * @param array $filters Filtres optionnels (catégorie, date, auteur, tags)
      * @return array{articles: Article[], total: int} Articles et nombre total
      */
     public function getAll(int $page = 1, int $perPage = 10, array $filters = []): array
@@ -213,6 +213,11 @@ class ArticleRepository
             if (!empty($filters['date'])) {
                 $whereConditions[] = "DATE(a.published_at) = :date";
                 $params['date'] = $filters['date'];
+            }
+
+            if (!empty($filters['tags'])) {
+                $whereConditions[] = "JSON_CONTAINS(a.tags, :tags)";
+                $params['tags'] = json_encode($filters['tags']);
             }
 
             // Assemblage de la clause WHERE
@@ -254,13 +259,14 @@ class ArticleRepository
 
                 $stmtCategories = $this->db->prepare($queryCategories);
                 $stmtCategories->execute(['article_id' => $articleData['id_article']]);
-
                 $categories = $stmtCategories->fetchAll(PDO::FETCH_ASSOC);
 
+                // Ajout des catégories aux données de l'article
                 $articleData['categories'] = array_map(function ($category) {
                     return $category['id_categories'];
                 }, $categories);
 
+                // Création de l'objet Article
                 $articles[] = new Article($articleData);
             }
 
