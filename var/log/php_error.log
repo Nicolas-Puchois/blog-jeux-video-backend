@@ -1,8 +1,51 @@
-[Fri Aug  1 11:06:57 2025] PHP 8.4.10 Development Server (http://localhost:8000) started
-[Fri Aug  1 11:07:07 2025] [::1]:63279 Accepted
-[Fri Aug  1 11:07:07 2025] Tentative d'accès à la route: GET /api/articles
-[Fri Aug  1 11:07:07 2025] Routes disponibles: Array
+[Wed Aug  6 14:47:44 2025] PHP 8.4.10 Development Server (http://localhost:8000) started
+[Wed Aug  6 14:48:09 2025] [::1]:54682 Accepted
+[Wed Aug  6 14:48:09 2025] Tentative d'accès à la route: GET /api/articles
+[Wed Aug  6 14:48:09 2025] Routes disponibles: Array
 (
+    [DELETE] => Array
+        (
+            [/api/articles/id/(?P<id>[^/]+)] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => deleteById
+                    [originalPath] => /api/articles/id/{id}
+                )
+
+        )
+
+    [GET] => Array
+        (
+            [/api/articles/id/(?P<id>[^/]+)] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => getById
+                    [originalPath] => /api/articles/id/{id}
+                )
+
+            [/api/articles/(?P<slug>[^/]+)] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => getBySlug
+                    [originalPath] => /api/articles/{slug}
+                )
+
+            [/api/articles] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => getAllArticles
+                    [originalPath] => /api/articles
+                )
+
+            [/api/valider-email] => Array
+                (
+                    [className] => App\controller\UserController
+                    [methodName] => verifyEmail
+                    [originalPath] => /api/valider-email
+                )
+
+        )
+
     [POST] => Array
         (
             [/api/articles] => Array
@@ -35,8 +78,46 @@
 
         )
 
+)
+
+[Wed Aug  6 14:48:09 2025] Route trouvée : /api/articles
+[Wed Aug  6 14:48:09 2025] Appel du contrôleur: App\controller\ArticleController::getAllArticles
+[Wed Aug  6 14:48:09 2025] [::1]:54682 [200]: GET /api/articles?page=1&limit=3
+[Wed Aug  6 14:48:09 2025] [::1]:54682 Closing
+[Wed Aug  6 14:48:11 2025] [::1]:54690 Accepted
+[Wed Aug  6 14:48:11 2025] [::1]:54690 [200]: GET /uploads/articles/article_4_688775ad5bdd2.png
+[Wed Aug  6 14:48:11 2025] [::1]:54690 Closing
+[Wed Aug  6 14:49:19 2025] [::1]:54762 Accepted
+[Wed Aug  6 14:49:19 2025] Tentative d'accès à la route: GET /api/articles/id/4
+[Wed Aug  6 14:49:19 2025] Routes disponibles: Array
+(
+    [DELETE] => Array
+        (
+            [/api/articles/id/(?P<id>[^/]+)] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => deleteById
+                    [originalPath] => /api/articles/id/{id}
+                )
+
+        )
+
     [GET] => Array
         (
+            [/api/articles/id/(?P<id>[^/]+)] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => getById
+                    [originalPath] => /api/articles/id/{id}
+                )
+
+            [/api/articles/(?P<slug>[^/]+)] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => getBySlug
+                    [originalPath] => /api/articles/{slug}
+                )
+
             [/api/articles] => Array
                 (
                     [className] => App\controller\ArticleController
@@ -53,16 +134,6 @@
 
         )
 
-)
-
-[Fri Aug  1 11:07:07 2025] Route trouvée : /api/articles
-[Fri Aug  1 11:07:07 2025] Appel du contrôleur: App\controller\ArticleController::getAllArticles
-[Fri Aug  1 11:07:07 2025] [::1]:63279 [200]: GET /api/articles?page=1&limit=3
-[Fri Aug  1 11:07:07 2025] [::1]:63279 Closing
-[Fri Aug  1 11:07:07 2025] [::1]:63284 Accepted
-[Fri Aug  1 11:07:07 2025] Tentative d'accès à la route: GET /public/uploads/articles/article_4_688775ad5bdd2.png
-[Fri Aug  1 11:07:07 2025] Routes disponibles: Array
-(
     [POST] => Array
         (
             [/api/articles] => Array
@@ -95,8 +166,57 @@
 
         )
 
+    [PUT] => Array
+        (
+            [/api/articles/(?P<id>[^/]+)] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => update
+                    [originalPath] => /api/articles/{id}
+                )
+
+        )
+
+)
+
+[Wed Aug  6 14:49:19 2025] Route trouvée : /api/articles/id/{id}
+[Wed Aug  6 14:49:19 2025] Appel du contrôleur: App\controller\ArticleController::getById
+[Wed Aug  6 14:49:19 2025] [::1]:54762 [200]: GET /api/articles/id/4
+[Wed Aug  6 14:49:19 2025] [::1]:54762 Closing
+[Wed Aug  6 14:49:19 2025] [::1]:54764 Accepted
+[Wed Aug  6 14:49:19 2025] [::1]:54764 [200]: GET /uploads/articles/article_4_688775ad5bdd2.png
+[Wed Aug  6 14:49:19 2025] [::1]:54764 Closing
+[Wed Aug  6 14:50:38 2025] [::1]:54878 Accepted
+[Wed Aug  6 14:50:38 2025] Tentative d'accès à la route: GET /api/articles/id/4
+[Wed Aug  6 14:50:38 2025] Routes disponibles: Array
+(
+    [DELETE] => Array
+        (
+            [/api/articles/id/(?P<id>[^/]+)] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => deleteById
+                    [originalPath] => /api/articles/id/{id}
+                )
+
+        )
+
     [GET] => Array
         (
+            [/api/articles/id/(?P<id>[^/]+)] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => getById
+                    [originalPath] => /api/articles/id/{id}
+                )
+
+            [/api/articles/(?P<slug>[^/]+)] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => getBySlug
+                    [originalPath] => /api/articles/{slug}
+                )
+
             [/api/articles] => Array
                 (
                     [className] => App\controller\ArticleController
@@ -113,14 +233,6 @@
 
         )
 
-)
-
-[Fri Aug  1 11:07:07 2025] [::1]:63284 [200]: GET /public/uploads/articles/article_4_688775ad5bdd2.png
-[Fri Aug  1 11:07:07 2025] [::1]:63284 Closing
-[Fri Aug  1 11:07:14 2025] [::1]:63295 Accepted
-[Fri Aug  1 11:07:14 2025] Tentative d'accès à la route: GET /public/uploads/articles/article_4_688775ad5bdd2.png
-[Fri Aug  1 11:07:14 2025] Routes disponibles: Array
-(
     [POST] => Array
         (
             [/api/articles] => Array
@@ -153,8 +265,57 @@
 
         )
 
+    [PUT] => Array
+        (
+            [/api/articles/(?P<id>[^/]+)] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => update
+                    [originalPath] => /api/articles/{id}
+                )
+
+        )
+
+)
+
+[Wed Aug  6 14:50:38 2025] Route trouvée : /api/articles/id/{id}
+[Wed Aug  6 14:50:38 2025] Appel du contrôleur: App\controller\ArticleController::getById
+[Wed Aug  6 14:50:38 2025] [::1]:54878 [200]: GET /api/articles/id/4
+[Wed Aug  6 14:50:38 2025] [::1]:54878 Closing
+[Wed Aug  6 14:50:38 2025] [::1]:54880 Accepted
+[Wed Aug  6 14:50:38 2025] [::1]:54880 [200]: GET /uploads/articles/article_4_688775ad5bdd2.png
+[Wed Aug  6 14:50:38 2025] [::1]:54880 Closing
+[Wed Aug  6 14:50:43 2025] [::1]:54922 Accepted
+[Wed Aug  6 14:50:43 2025] Tentative d'accès à la route: GET /api/articles/id/4
+[Wed Aug  6 14:50:43 2025] Routes disponibles: Array
+(
+    [DELETE] => Array
+        (
+            [/api/articles/id/(?P<id>[^/]+)] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => deleteById
+                    [originalPath] => /api/articles/id/{id}
+                )
+
+        )
+
     [GET] => Array
         (
+            [/api/articles/id/(?P<id>[^/]+)] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => getById
+                    [originalPath] => /api/articles/id/{id}
+                )
+
+            [/api/articles/(?P<slug>[^/]+)] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => getBySlug
+                    [originalPath] => /api/articles/{slug}
+                )
+
             [/api/articles] => Array
                 (
                     [className] => App\controller\ArticleController
@@ -171,14 +332,6 @@
 
         )
 
-)
-
-[Fri Aug  1 11:07:14 2025] [::1]:63295 [200]: GET /public/uploads/articles/article_4_688775ad5bdd2.png
-[Fri Aug  1 11:07:14 2025] [::1]:63295 Closing
-[Fri Aug  1 11:07:14 2025] [::1]:63297 Accepted
-[Fri Aug  1 11:07:14 2025] Tentative d'accès à la route: GET /favicon.ico
-[Fri Aug  1 11:07:14 2025] Routes disponibles: Array
-(
     [POST] => Array
         (
             [/api/articles] => Array
@@ -211,154 +364,23 @@
 
         )
 
-    [GET] => Array
+    [PUT] => Array
         (
-            [/api/articles] => Array
+            [/api/articles/(?P<id>[^/]+)] => Array
                 (
                     [className] => App\controller\ArticleController
-                    [methodName] => getAllArticles
-                    [originalPath] => /api/articles
-                )
-
-            [/api/valider-email] => Array
-                (
-                    [className] => App\controller\UserController
-                    [methodName] => verifyEmail
-                    [originalPath] => /api/valider-email
+                    [methodName] => update
+                    [originalPath] => /api/articles/{id}
                 )
 
         )
 
 )
 
-[Fri Aug  1 11:07:14 2025] [::1]:63297 [200]: GET /favicon.ico
-[Fri Aug  1 11:07:14 2025] [::1]:63297 Closing
-[Fri Aug  1 11:07:27 2025] [::1]:63303 Accepted
-[Fri Aug  1 11:07:27 2025] [::1]:63303 [200]: GET /uploads/articles/article_4_688775ad5bdd2.png
-[Fri Aug  1 11:07:27 2025] [::1]:63303 Closing
-[Fri Aug  1 11:07:59 2025] [::1]:63348 Accepted
-[Fri Aug  1 11:07:59 2025] Tentative d'accès à la route: GET /api/articles
-[Fri Aug  1 11:07:59 2025] Routes disponibles: Array
-(
-    [POST] => Array
-        (
-            [/api/articles] => Array
-                (
-                    [className] => App\controller\ArticleController
-                    [methodName] => create
-                    [originalPath] => /api/articles
-                )
-
-            [/api/articles/(?P<id>[^/]+)/image] => Array
-                (
-                    [className] => App\controller\ArticleController
-                    [methodName] => uploadImage
-                    [originalPath] => /api/articles/{id}/image
-                )
-
-            [/api/register] => Array
-                (
-                    [className] => App\controller\UserController
-                    [methodName] => register
-                    [originalPath] => /api/register
-                )
-
-            [/api/login] => Array
-                (
-                    [className] => App\controller\UserController
-                    [methodName] => login
-                    [originalPath] => /api/login
-                )
-
-        )
-
-    [GET] => Array
-        (
-            [/api/articles] => Array
-                (
-                    [className] => App\controller\ArticleController
-                    [methodName] => getAllArticles
-                    [originalPath] => /api/articles
-                )
-
-            [/api/valider-email] => Array
-                (
-                    [className] => App\controller\UserController
-                    [methodName] => verifyEmail
-                    [originalPath] => /api/valider-email
-                )
-
-        )
-
-)
-
-[Fri Aug  1 11:07:59 2025] Route trouvée : /api/articles
-[Fri Aug  1 11:07:59 2025] Appel du contrôleur: App\controller\ArticleController::getAllArticles
-[Fri Aug  1 11:07:59 2025] [::1]:63348 [200]: GET /api/articles?page=1&limit=3
-[Fri Aug  1 11:07:59 2025] [::1]:63348 Closing
-[Fri Aug  1 11:07:59 2025] [::1]:63353 Accepted
-[Fri Aug  1 11:07:59 2025] [::1]:63353 [200]: GET /uploads/articles/article_4_688775ad5bdd2.png
-[Fri Aug  1 11:07:59 2025] [::1]:63353 Closing
-[Fri Aug  1 11:08:30 2025] [::1]:63393 Accepted
-[Fri Aug  1 11:08:30 2025] Tentative d'accès à la route: GET /api/articles
-[Fri Aug  1 11:08:30 2025] Routes disponibles: Array
-(
-    [POST] => Array
-        (
-            [/api/articles] => Array
-                (
-                    [className] => App\controller\ArticleController
-                    [methodName] => create
-                    [originalPath] => /api/articles
-                )
-
-            [/api/articles/(?P<id>[^/]+)/image] => Array
-                (
-                    [className] => App\controller\ArticleController
-                    [methodName] => uploadImage
-                    [originalPath] => /api/articles/{id}/image
-                )
-
-            [/api/register] => Array
-                (
-                    [className] => App\controller\UserController
-                    [methodName] => register
-                    [originalPath] => /api/register
-                )
-
-            [/api/login] => Array
-                (
-                    [className] => App\controller\UserController
-                    [methodName] => login
-                    [originalPath] => /api/login
-                )
-
-        )
-
-    [GET] => Array
-        (
-            [/api/articles] => Array
-                (
-                    [className] => App\controller\ArticleController
-                    [methodName] => getAllArticles
-                    [originalPath] => /api/articles
-                )
-
-            [/api/valider-email] => Array
-                (
-                    [className] => App\controller\UserController
-                    [methodName] => verifyEmail
-                    [originalPath] => /api/valider-email
-                )
-
-        )
-
-)
-
-[Fri Aug  1 11:08:30 2025] Route trouvée : /api/articles
-[Fri Aug  1 11:08:30 2025] Appel du contrôleur: App\controller\ArticleController::getAllArticles
-[Fri Aug  1 11:08:30 2025] [::1]:63393 [200]: GET /api/articles?page=1&limit=3
-[Fri Aug  1 11:08:30 2025] [::1]:63393 Closing
-[Fri Aug  1 11:08:31 2025] [::1]:63398 Accepted
-[Fri Aug  1 11:08:31 2025] [::1]:63398 [200]: GET /uploads/articles/article_4_688775ad5bdd2.png
-[Fri Aug  1 11:08:31 2025] [::1]:63398 Closing
+[Wed Aug  6 14:50:43 2025] Route trouvée : /api/articles/id/{id}
+[Wed Aug  6 14:50:43 2025] Appel du contrôleur: App\controller\ArticleController::getById
+[Wed Aug  6 14:50:43 2025] [::1]:54922 [200]: GET /api/articles/id/4
+[Wed Aug  6 14:50:43 2025] [::1]:54922 Closing
+[Wed Aug  6 14:50:43 2025] [::1]:54924 Accepted
+[Wed Aug  6 14:50:43 2025] [::1]:54924 [200]: GET /uploads/articles/article_4_688775ad5bdd2.png
+[Wed Aug  6 14:50:43 2025] [::1]:54924 Closing

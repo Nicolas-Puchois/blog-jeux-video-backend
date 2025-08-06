@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\controller;
 
+use Exception;
+
 use App\core\attributes\Route;
 use App\model\Article;
 use App\repository\ArticleRepository;
@@ -17,6 +19,121 @@ class ArticleController
     public function __construct()
     {
         $this->articleRepository = new ArticleRepository;
+    }
+
+    #[Route('/api/articles/id/{id}', 'DELETE')]
+    public function deleteById(int $id): void
+    {
+        try {
+            // Vérification de l'authentification
+            if (!isset($_SERVER['HTTP_AUTHORIZATION'])) {
+                http_response_code(401);
+                echo json_encode(['success' => false, 'error' => 'Token non fourni']);
+                return;
+            }
+
+            $token = str_replace('Bearer ', '', $_SERVER['HTTP_AUTHORIZATION']);
+            $payload = JWTServices::verify($token);
+
+            $article = $this->articleRepository->findById($id);
+            if (!$article) {
+                http_response_code(404);
+                echo json_encode(['success' => false, 'error' => 'Article non trouvé']);
+                return;
+            }
+
+            // Vérifier si l'utilisateur est l'auteur ou un admin
+            if ($article->getUserId() !== $payload->id && !$payload->isAdmin) {
+                http_response_code(403);
+                echo json_encode(['success' => false, 'error' => 'Non autorisé']);
+                return;
+            }
+
+            if ($this->articleRepository->delete($id)) {
+                http_response_code(200);
+                echo json_encode(['success' => true]);
+            } else {
+                http_response_code(500);
+                echo json_encode(['success' => false, 'error' => 'Erreur lors de la suppression']);
+            }
+        } catch (\Exception $e) {
+            http_response_code(500);
+            echo json_encode(['success' => false, 'error' => 'Erreur serveur']);
+        }
+    }
+
+    #[Route('/api/articles/id/{id}', 'GET')]
+    public function getById(int|string $id): void
+    {
+        try {
+            // Assurer que l'ID est un entier
+            $articleId = is_string($id) ? (int) $id : $id;
+
+            $article = $this->articleRepository->findById($articleId);
+
+            if (!$article) {
+                http_response_code(404);
+                echo json_encode([
+                    'success' => false,
+                    'error' => 'Article non trouvé'
+                ]);
+                return;
+            }
+
+            // Vérifier si l'utilisateur est connecté pour les droits d'édition
+            $isAuthor = false;
+            $isAdmin = false;
+
+            if (isset($_SERVER['HTTP_AUTHORIZATION'])) {
+                $token = str_replace('Bearer ', '', $_SERVER['HTTP_AUTHORIZATION']);
+                try {
+                    $payload = JWTServices::verify($token);
+                    $isAuthor = $article->getUserId() === $payload->id;
+                    $isAdmin = isset($payload->isAdmin) ? $payload->isAdmin : false;
+                } catch (\Exception $e) {
+                    // Si le token est invalide, on continue sans droits spéciaux
+                }
+            }
+
+            $articleData = $article->toArray();
+            $articleData['is_author'] = $isAuthor;
+            $articleData['is_admin'] = $isAdmin;
+
+            http_response_code(200);
+            echo json_encode([
+                'success' => true,
+                'data' => $articleData
+            ]);
+        } catch (Exception $e) {
+            http_response_code(500);
+            echo json_encode([
+                'success' => false,
+                'error' => 'Erreur serveur: ' . $e->getMessage()
+            ]);
+        }
+    }
+
+    #[Route('/api/articles/{slug}', 'GET')]
+    public function getBySlug(string $slug): void
+    {
+        try {
+            $article = $this->articleRepository->findBySlug($slug);
+
+            if (!$article) {
+                http_response_code(404);
+                echo json_encode(['success' => false, 'error' => 'Article non trouvé']);
+                return;
+            }
+
+            http_response_code(200);
+            echo json_encode([
+                'success' => true,
+                'data' => $article
+            ]);
+        } catch (\Exception $e) {
+            http_response_code(500);
+            echo json_encode(['success' => false, 'error' => 'Erreur serveur']);
+        }
     }
 
     #[Route('/api/articles', 'POST')]
@@ -133,6 +250,8 @@ class ArticleController
         }
     }
 
+
+
     #[Route('/api/articles/{id}/image', 'POST')]
     public function uploadImage(int $id): void
     {
@@ -194,7 +313,7 @@ class ArticleController
             }
 
             // Mise à jour du chemin de l'image dans la base de données
-            $article = $this->articleRepository->getById($id);
+            $article = $this->articleRepository->findById($id);
             error_log("Article récupéré : " . print_r($article, true));
 
             if (!$article) {
@@ -268,7 +387,7 @@ class ArticleController
             }
 
             // Récupération des articles
-            $result = $this->articleRepository->getAll($page, $limit, $filters);
+            $result = $this->articleRepository->findAll($page, $limit, $filters);
 
             // Transformation des articles en format JSON
             $articles = array_map(function ($article) {
@@ -302,6 +421,85 @@ class ArticleController
             echo json_encode([
                 'success' => false,
                 'error' => 'Erreur lors de la récupération des articles',
+                'details' => $e->getMessage()
+            ]);
+        }
+    }
+
+    #[Route('/api/articles/{id}', 'PUT')]
+    public function update(int $id): void
+    {
+        try {
+            // Vérification de l'authentification
+            if (!isset($_SERVER['HTTP_AUTHORIZATION'])) {
+                http_response_code(401);
+                echo json_encode(['success' => false, 'error' => 'Token non fourni']);
+                return;
+            }
+
+            // Récupération du token
+            $token = str_replace('Bearer ', '', $_SERVER['HTTP_AUTHORIZATION']);
+            $payload = JWTServices::verify($token);
+
+            // Récupérer l'article existant
+            $article = $this->articleRepository->findById($id);
+            if (!$article) {
+                http_response_code(404);
+                echo json_encode(['success' => false, 'error' => 'Article non trouvé']);
+                return;
+            }
+
+            // Vérifier si l'utilisateur est l'auteur ou un admin
+            if ($article->getUserId() !== $payload['id'] && !isset($payload['isAdmin'])) {
+                http_response_code(403);
+                echo json_encode(['success' => false, 'error' => 'Non autorisé']);
+                return;
+            }
+
+            // Récupération des données
+            $data = json_decode(file_get_contents('php://input'), true);
+            if (!$data) {
+                http_response_code(400);
+                echo json_encode(['success' => false, 'error' => 'Données invalides']);
+                return;
+            }
+
+            // Mise à jour des champs
+            if (isset($data['title'])) {
+                $article->setTitle($data['title']);
+                // Regénérer le slug si le titre change
+                $article->generateSlug();
+            }
+            if (isset($data['introduction'])) {
+                $article->setIntroduction($data['introduction']);
+            }
+            if (isset($data['content'])) {
+                $article->setContent($data['content']);
+            }
+            if (isset($data['tags'])) {
+                $tags = is_string($data['tags']) ? json_decode($data['tags'], true) : $data['tags'];
+                $article->setTags($tags);
+            }
+
+            // Mise à jour de l'article
+            $success = $this->articleRepository->update($article);
+            if (!$success) {
+                throw new \Exception('Erreur lors de la mise à jour de l\'article');
+            }
+
+            // Réponse
+            http_response_code(200);
+            echo json_encode([
+                'success' => true,
+                'message' => 'Article mis à jour avec succès',
+                'data' => $article->toArray()
+            ]);
+        } catch (\Exception $e) {
+            error_log("Erreur lors de la mise à jour de l'article : " . $e->getMessage());
+            http_response_code(500);
+            echo json_encode([
+                'success' => false,
+                'error' => 'Erreur lors de la mise à jour de l\'article',
                 'details' => $e->getMessage()
             ]);
         }
