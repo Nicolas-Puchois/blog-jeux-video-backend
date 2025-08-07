@@ -301,11 +301,6 @@ class ArticleRepository
 
             $stmt = $this->db->prepare($query);
 
-            // Si le slug n'est pas défini, on le génère
-            if (empty($article->getSlug())) {
-                $article->generateSlug();
-            }
-
             $params = [
                 'cover_image' => $article->getCoverImage(),
                 'title' => $article->getTitle(),

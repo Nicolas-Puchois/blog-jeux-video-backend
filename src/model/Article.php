@@ -12,7 +12,7 @@ class Article
     private ?string $published_at = null;
     private string $created_at;
     private string $title;
-    private string $slug;
+    private ?string $slug = null; // Modification ici pour permettre null
     private string $content;
     private ?string $introduction = null;
     private ?int $id_user = null;
@@ -60,7 +60,7 @@ class Article
         return $this->title;
     }
 
-    public function getSlug(): string
+    public function getSlug(): ?string // Modification du type de retour
     {
         return $this->slug;
     }
@@ -70,9 +70,24 @@ class Article
         return $this->content;
     }
 
+    /**
+     * Get the value of id_user
+     */
     public function getUserId(): ?int
     {
         return $this->id_user;
+    }
+
+    /**
+     * Set the value of id_user
+     *
+     * @param int $id_user
+     * @return self
+     */
+    public function setUserId(int $id_user): self
+    {
+        $this->id_user = $id_user;
+        return $this;
     }
 
     public function getCategories(): ?array
@@ -187,10 +202,13 @@ class Article
     {
         if (!empty($this->title)) {
             $baseSlug = strtolower($this->title);
+            // Remplacer les caractères accentués
+            $baseSlug = iconv('UTF-8', 'ASCII//TRANSLIT', $baseSlug);
+            // Remplacer tout ce qui n'est pas alphanumérique par un tiret
             $baseSlug = preg_replace('/[^a-z0-9]+/', '-', $baseSlug);
+            // Supprimer les tirets en début et fin
             $baseSlug = trim($baseSlug, '-');
-
-            // Ajoute un timestamp court pour rendre le slug unique
+            // Ajouter un timestamp pour l'unicité
             $timestamp = substr((string)time(), -4);
             $this->setSlug($baseSlug . '-' . $timestamp);
         }

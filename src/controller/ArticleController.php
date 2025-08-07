@@ -139,19 +139,7 @@ class ArticleController
     #[Route('/api/articles', 'POST')]
     public function create(): void
     {
-        // Activer la capture de la sortie
-
         try {
-            // Debug des données reçues
-            error_log("=== Début de la requête de création d'article ===");
-
-            // Récupération des données JSON
-            $jsonData = file_get_contents('php://input');
-            $data = json_decode($jsonData, true);
-
-            error_log("Données JSON reçues : " . print_r($data, true));
-
-
             // Vérification de l'authentification
             if (!isset($_SERVER['HTTP_AUTHORIZATION'])) {
                 http_response_code(401);
@@ -161,50 +149,38 @@ class ArticleController
 
             // Récupération du token
             $token = str_replace('Bearer ', '', $_SERVER['HTTP_AUTHORIZATION']);
+            $payload = JWTServices::verify($token);
 
-            try {
-                // Décodage du token pour récupérer l'ID de l'utilisateur
-                $payload = JWTServices::verify($token);
-                if (!isset($payload['id'])) {
-                    throw new \Exception('ID utilisateur non trouvé dans le token');
-                }
-                $userId = $payload['id'];
-            } catch (\Exception $e) {
-                http_response_code(401);
-                echo json_encode(['success' => false, 'error' => 'Token invalide']);
-                return;
-            }
+            // Récupération des données JSON
+            $jsonData = file_get_contents('php://input');
+            $data = json_decode($jsonData, true);
 
-            // Validation des données requises
-            if (empty($data['title']) || empty($data['content'])) {
+            if (!$data || !isset($data['title']) || !isset($data['content'])) {
                 http_response_code(400);
-                echo json_encode(['success' => false, 'error' => 'Titre et contenu requis']);
+                echo json_encode([
+                    'success' => false,
+                    'error' => 'Titre et contenu requis'
+                ]);
                 return;
             }
 
-            // Création de l'article
-            $article = new Article([
-                'title' => $data['title'],
-                'content' => $data['content'],
-                'introduction' => $data['introduction'] ?? '',
-                'cover_image' => null,
-                'id_user' => $userId,
-                'published_at' => (new DateTime())->format('Y-m-d H:i:s'),
-                'created_at' => (new DateTime())->format('Y-m-d H:i:s')
-            ]);
-
-            // Génération automatique du slug
-            $article->generateSlug();
-
-            // Gestion des tags
-            if (!empty($data['tags'])) {
-                $tags = json_decode($data['tags'], true);
-                if (is_array($tags)) {
-                    $article->setTags($tags);
-                }
-                error_log('Tags reçus : ' . $data['tags']);
-                error_log('Tags décodés : ' . print_r($tags, true));
+            // Créer l'article
+            $article = new Article();
+            $article->setTitle($data['title']);
+            $article->setIntroduction($data['introduction'] ?? '');
+            $article->setContent($data['content']);
+            $article->setUserId($payload['id']);
+            if (isset($data['tags'])) {
+                $article->setTags($data['tags']);
             }
+
+            // Générer le slug avant la création
+            $baseSlug = strtolower($article->getTitle());
+            $baseSlug = iconv('UTF-8', 'ASCII//TRANSLIT', $baseSlug);
+            $baseSlug = preg_replace('/[^a-z0-9]+/', '-', $baseSlug);
+            $baseSlug = trim($baseSlug, '-');
+            $timestamp = substr((string)time(), -4);
+            $article->setSlug($baseSlug . '-' . $timestamp);
 
             // Sauvegarde de l'article
             $articleId = $this->articleRepository->create($article);
@@ -213,25 +189,22 @@ class ArticleController
                 throw new \Exception('Erreur lors de la création de l\'article');
             }
 
-            // Nettoyage de toute sortie précédente
-
-
             // Retour de la réponse
-            header('Content-Type: application/json');
             http_response_code(201);
-
             $response = [
                 'success' => true,
                 'message' => 'Article créé avec succès',
-                'articleId' => $articleId
+                'data' => [
+                    'id_article' => $articleId,
+                    'title' => $article->getTitle(),
+                    'content' => $article->getContent(),
+                    'introduction' => $article->getIntroduction(),
+                    'tags' => $article->getTags()
+                ]
             ];
 
-            error_log("Réponse envoyée : " . json_encode($response));
             echo json_encode($response);
         } catch (\Exception $e) {
-            // Nettoyage de toute sortie précédente
-
-
             // Log détaillé de l'erreur
             error_log("Erreur dans ArticleController::create : " . $e->getMessage());
             error_log("Stack trace : " . $e->getTraceAsString());
@@ -245,38 +218,37 @@ class ArticleController
                 'details' => $e->getMessage()
             ];
 
-            error_log("Réponse d'erreur envoyée : " . json_encode($error));
             echo json_encode($error);
         }
     }
-
-
 
     #[Route('/api/articles/{id}/image', 'POST')]
     public function uploadImage(int $id): void
     {
         try {
-            error_log("=== Début de l'upload d'image pour l'article $id ===");
-            error_log('Fichiers reçus : ' . print_r($_FILES, true));
-            // Vérification de l'authentification
-            if (!isset($_SERVER['HTTP_AUTHORIZATION'])) {
-                http_response_code(401);
-                echo json_encode(['success' => false, 'error' => 'Token non fourni']);
-                return;
-            }
-
-            // Vérification du fichier
+            // Vérifier si un fichier a été envoyé
             if (!isset($_FILES['image']) || $_FILES['image']['error'] !== UPLOAD_ERR_OK) {
+                $errorMessage = match ($_FILES['image']['error'] ?? -1) {
+                    UPLOAD_ERR_INI_SIZE => "L'image est trop volumineuse (max: " . ini_get('upload_max_filesize') . ")",
+                    UPLOAD_ERR_FORM_SIZE => "L'image dépasse la taille maximale autorisée",
+                    UPLOAD_ERR_NO_FILE => "Aucune image n'a été envoyée",
+                    default => "Erreur lors de l'upload de l'image"
+                };
                 http_response_code(400);
-                echo json_encode(['success' => false, 'error' => 'Image non fournie ou invalide']);
+                echo json_encode(['success' => false, 'error' => $errorMessage]);
                 return;
             }
 
-            // Vérification du type MIME
-            $allowedTypes = ['image/jpeg', 'image/png', 'image/webp'];
-            if (!in_array($_FILES['image']['type'], $allowedTypes)) {
+            // Vérifier le type MIME
+            $allowedTypes = ['image/jpeg', 'image/png', 'image/gif'];
+            $finfo = finfo_open(FILEINFO_MIME_TYPE);
+            $mimeType = finfo_file($finfo, $_FILES['image']['tmp_name']);
+            if (!in_array($mimeType, $allowedTypes)) {
                 http_response_code(400);
-                echo json_encode(['success' => false, 'error' => 'Format d\'image non supporté']);
+                echo json_encode([
+                    'success' => false,
+                    'error' => 'Type de fichier non autorisé. Utilisez JPG, PNG ou GIF'
+                ]);
                 return;
             }
 
@@ -297,7 +269,7 @@ class ArticleController
             }
 
             // Vérification de la taille du fichier (max 5MB)
-            $maxFileSize = 5 * 1024 * 1024; // 5MB
+            $maxFileSize = 10 * 1024 * 1024; // 5MB
             if ($_FILES['image']['size'] > $maxFileSize) {
                 throw new \Exception('La taille du fichier ne doit pas dépasser 5MB');
             }
