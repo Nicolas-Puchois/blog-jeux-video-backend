@@ -35,6 +35,12 @@ class ArticleController
             $token = str_replace('Bearer ', '', $_SERVER['HTTP_AUTHORIZATION']);
             $payload = JWTServices::verify($token);
 
+            if (!$payload) {
+                http_response_code(401);
+                echo json_encode(['success' => false, 'error' => 'Token invalide']);
+                return;
+            }
+
             $article = $this->articleRepository->findById($id);
             if (!$article) {
                 http_response_code(404);
@@ -43,7 +49,9 @@ class ArticleController
             }
 
             // Vérifier si l'utilisateur est l'auteur ou un admin
-            if ($article->getUserId() !== $payload->id && !$payload->isAdmin) {
+            $isAdmin = is_array($payload['role']) ? in_array('admin', $payload['role']) : $payload['role'] === 'admin';
+
+            if ($article->getUserId() !== (int)$payload['id'] && !$isAdmin) {
                 http_response_code(403);
                 echo json_encode(['success' => false, 'error' => 'Non autorisé']);
                 return;
@@ -88,8 +96,8 @@ class ArticleController
                 $token = str_replace('Bearer ', '', $_SERVER['HTTP_AUTHORIZATION']);
                 try {
                     $payload = JWTServices::verify($token);
-                    $isAuthor = $article->getUserId() === $payload->id;
-                    $isAdmin = isset($payload->isAdmin) ? $payload->isAdmin : false;
+                    $isAuthor = $article->getUserId() === (int)$payload['id'];
+                    $isAdmin = is_array($payload['role']) ? in_array('admin', $payload['role']) : $payload['role'] === 'admin';
                 } catch (\Exception $e) {
                     // Si le token est invalide, on continue sans droits spéciaux
                 }
@@ -170,6 +178,7 @@ class ArticleController
             $article->setIntroduction($data['introduction'] ?? '');
             $article->setContent($data['content']);
             $article->setUserId($payload['id']);
+            $article->setPublished_at((new DateTime())->format('Y-m-d H:i:s'));
             if (isset($data['tags'])) {
                 $article->setTags($data['tags']);
             }
@@ -402,16 +411,25 @@ class ArticleController
     public function update(int $id): void
     {
         try {
-            // Vérification de l'authentification
             if (!isset($_SERVER['HTTP_AUTHORIZATION'])) {
+                error_log("Token manquant dans la requête");
                 http_response_code(401);
                 echo json_encode(['success' => false, 'error' => 'Token non fourni']);
                 return;
             }
 
-            // Récupération du token
             $token = str_replace('Bearer ', '', $_SERVER['HTTP_AUTHORIZATION']);
+            error_log("Token reçu: " . $token);
+
             $payload = JWTServices::verify($token);
+            error_log("Payload décodé: " . print_r($payload, true));
+
+            if (!$payload) {
+                error_log("Token invalide ou non décodé");
+                http_response_code(401);
+                echo json_encode(['success' => false, 'error' => 'Token invalide']);
+                return;
+            }
 
             // Récupérer l'article existant
             $article = $this->articleRepository->findById($id);
@@ -422,7 +440,12 @@ class ArticleController
             }
 
             // Vérifier si l'utilisateur est l'auteur ou un admin
-            if ($article->getUserId() !== $payload['id'] && !isset($payload['isAdmin'])) {
+            $isAdmin = is_array($payload['role']) ? in_array('admin', $payload['role']) : $payload['role'] === 'admin';
+
+            if ($article->getUserId() !== (int)$payload['id'] && !$isAdmin) {
+                error_log("User ID article: " . $article->getUserId());
+                error_log("User ID token: " . $payload['id']);
+                error_log("Role: " . print_r($payload['role'], true));
                 http_response_code(403);
                 echo json_encode(['success' => false, 'error' => 'Non autorisé']);
                 return;
@@ -452,6 +475,7 @@ class ArticleController
                 $tags = is_string($data['tags']) ? json_decode($data['tags'], true) : $data['tags'];
                 $article->setTags($tags);
             }
+            $article->setPublished_at((new DateTime())->format('Y-m-d H:i:s'));
 
             // Mise à jour de l'article
             $success = $this->articleRepository->update($article);
@@ -467,7 +491,7 @@ class ArticleController
                 'data' => $article->toArray()
             ]);
         } catch (\Exception $e) {
-            error_log("Erreur lors de la mise à jour de l'article : " . $e->getMessage());
+            error_log("Erreur lors de la mise à jour: " . $e->getMessage());
             http_response_code(500);
             echo json_encode([
                 'success' => false,
