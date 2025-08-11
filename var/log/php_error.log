@@ -1244,3 +1244,488 @@
 [Mon Aug 11 11:10:19 2025] [::1]:64774 Closing
 [Mon Aug 11 11:10:19 2025] [::1]:64773 Closing
 [Mon Aug 11 11:10:19 2025] [::1]:64775 Closing
+[Mon Aug 11 11:10:56 2025] [::1]:64815 Accepted
+[Mon Aug 11 11:10:56 2025] Tentative d'accès à la route: POST /api/articles
+[Mon Aug 11 11:10:56 2025] Routes disponibles: Array
+(
+    [DELETE] => Array
+        (
+            [/api/articles/id/(?P<id>[^/]+)] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => deleteById
+                    [originalPath] => /api/articles/id/{id}
+                )
+
+        )
+
+    [GET] => Array
+        (
+            [/api/articles/id/(?P<id>[^/]+)] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => getById
+                    [originalPath] => /api/articles/id/{id}
+                )
+
+            [/api/articles/(?P<slug>[^/]+)] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => getBySlug
+                    [originalPath] => /api/articles/{slug}
+                )
+
+            [/api/articles] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => getAllArticles
+                    [originalPath] => /api/articles
+                )
+
+            [/api/valider-email] => Array
+                (
+                    [className] => App\controller\UserController
+                    [methodName] => verifyEmail
+                    [originalPath] => /api/valider-email
+                )
+
+        )
+
+    [POST] => Array
+        (
+            [/api/articles] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => create
+                    [originalPath] => /api/articles
+                )
+
+            [/api/articles/(?P<id>[^/]+)/image] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => uploadImage
+                    [originalPath] => /api/articles/{id}/image
+                )
+
+            [/api/register] => Array
+                (
+                    [className] => App\controller\UserController
+                    [methodName] => register
+                    [originalPath] => /api/register
+                )
+
+            [/api/login] => Array
+                (
+                    [className] => App\controller\UserController
+                    [methodName] => login
+                    [originalPath] => /api/login
+                )
+
+        )
+
+    [PUT] => Array
+        (
+            [/api/articles/(?P<id>[^/]+)] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => update
+                    [originalPath] => /api/articles/{id}
+                )
+
+        )
+
+)
+
+[Mon Aug 11 11:10:56 2025] Route trouvée : /api/articles
+[Mon Aug 11 11:10:56 2025] Appel du contrôleur: App\controller\ArticleController::create
+[Mon Aug 11 11:10:56 2025] [::1]:64815 [201]: POST /api/articles
+[Mon Aug 11 11:10:56 2025] [::1]:64815 Closing
+[Mon Aug 11 11:10:56 2025] [::1]:64817 Accepted
+[Mon Aug 11 11:10:56 2025] Tentative d'accès à la route: POST /api/articles/12/image
+[Mon Aug 11 11:10:56 2025] Routes disponibles: Array
+(
+    [DELETE] => Array
+        (
+            [/api/articles/id/(?P<id>[^/]+)] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => deleteById
+                    [originalPath] => /api/articles/id/{id}
+                )
+
+        )
+
+    [GET] => Array
+        (
+            [/api/articles/id/(?P<id>[^/]+)] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => getById
+                    [originalPath] => /api/articles/id/{id}
+                )
+
+            [/api/articles/(?P<slug>[^/]+)] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => getBySlug
+                    [originalPath] => /api/articles/{slug}
+                )
+
+            [/api/articles] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => getAllArticles
+                    [originalPath] => /api/articles
+                )
+
+            [/api/valider-email] => Array
+                (
+                    [className] => App\controller\UserController
+                    [methodName] => verifyEmail
+                    [originalPath] => /api/valider-email
+                )
+
+        )
+
+    [POST] => Array
+        (
+            [/api/articles] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => create
+                    [originalPath] => /api/articles
+                )
+
+            [/api/articles/(?P<id>[^/]+)/image] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => uploadImage
+                    [originalPath] => /api/articles/{id}/image
+                )
+
+            [/api/register] => Array
+                (
+                    [className] => App\controller\UserController
+                    [methodName] => register
+                    [originalPath] => /api/register
+                )
+
+            [/api/login] => Array
+                (
+                    [className] => App\controller\UserController
+                    [methodName] => login
+                    [originalPath] => /api/login
+                )
+
+        )
+
+    [PUT] => Array
+        (
+            [/api/articles/(?P<id>[^/]+)] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => update
+                    [originalPath] => /api/articles/{id}
+                )
+
+        )
+
+)
+
+[Mon Aug 11 11:10:56 2025] Route trouvée : /api/articles/{id}/image
+[Mon Aug 11 11:10:56 2025] Appel du contrôleur: App\controller\ArticleController::uploadImage
+[Mon Aug 11 11:10:56 2025] Article récupéré : App\model\Article Object
+(
+    [id_article:App\model\Article:private] => 12
+    [cover_image:App\model\Article:private] => 
+    [published_at:App\model\Article:private] => 2025-08-11 09:10:56
+    [created_at:App\model\Article:private] => 2025-08-11 09:10:56
+    [title:App\model\Article:private] => oejzhtgiqreht
+    [slug:App\model\Article:private] => oejzhtgiqreht-3456
+    [content:App\model\Article:private] => Curabitur in lorem quam. Fusce auctor bibendum arcu, in gravida felis facilisis ut. Nunc ultricies magna varius arcu hendrerit, ut porttitor ex condimentum. Etiam ut consequat magna. Quisque semper nibh ipsum. Nam euismod malesuada erat, vel placerat nisl ullamcorper eleifend. Curabitur erat nibh, interdum sed blandit sit amet, hendrerit quis felis. Mauris rhoncus mauris nec libero accumsan tincidunt. Vestibulum eget tellus gravida metus congue tincidunt. Sed fringilla venenatis felis. Duis finibus tincidunt arcu, eget placerat massa eleifend non. Quisque lacinia ac odio ac mollis. Suspendisse quis imperdiet quam, et ultricies lectus. Vivamus eget massa dignissim, posuere risus vehicula, faucibus velit. 
+    [introduction:App\model\Article:private] => tgdfxjgc hk,k;hjl54yg4lg4llk65j
+    [id_user:App\model\Article:private] => 1
+    [categories:App\model\Article:private] => Array
+        (
+        )
+
+    [tags:App\model\Article:private] => Array
+        (
+            [0] => gaming
+            [1] => budget
+            [2] => avis
+        )
+
+)
+
+[Mon Aug 11 11:10:56 2025] Chemin de l'image à sauvegarder : /uploads/articles/article_12_6899b3a0c4392.jpg
+[Mon Aug 11 11:10:56 2025] Article avant update : App\model\Article Object
+(
+    [id_article:App\model\Article:private] => 12
+    [cover_image:App\model\Article:private] => /uploads/articles/article_12_6899b3a0c4392.jpg
+    [published_at:App\model\Article:private] => 2025-08-11 09:10:56
+    [created_at:App\model\Article:private] => 2025-08-11 09:10:56
+    [title:App\model\Article:private] => oejzhtgiqreht
+    [slug:App\model\Article:private] => oejzhtgiqreht-3456
+    [content:App\model\Article:private] => Curabitur in lorem quam. Fusce auctor bibendum arcu, in gravida felis facilisis ut. Nunc ultricies magna varius arcu hendrerit, ut porttitor ex condimentum. Etiam ut consequat magna. Quisque semper nibh ipsum. Nam euismod malesuada erat, vel placerat nisl ullamcorper eleifend. Curabitur erat nibh, interdum sed blandit sit amet, hendrerit quis felis. Mauris rhoncus mauris nec libero accumsan tincidunt. Vestibulum eget tellus gravida metus congue tincidunt. Sed fringilla venenatis felis. Duis finibus tincidunt arcu, eget placerat massa eleifend non. Quisque lacinia ac odio ac mollis. Suspendisse quis imperdiet quam, et ultricies lectus. Vivamus eget massa dignissim, posuere risus vehicula, faucibus velit. 
+    [introduction:App\model\Article:private] => tgdfxjgc hk,k;hjl54yg4lg4llk65j
+    [id_user:App\model\Article:private] => 1
+    [categories:App\model\Article:private] => Array
+        (
+        )
+
+    [tags:App\model\Article:private] => Array
+        (
+            [0] => gaming
+            [1] => budget
+            [2] => avis
+        )
+
+)
+
+[Mon Aug 11 11:10:56 2025] Tentative de mise à jour de l'article : App\model\Article Object
+(
+    [id_article:App\model\Article:private] => 12
+    [cover_image:App\model\Article:private] => /uploads/articles/article_12_6899b3a0c4392.jpg
+    [published_at:App\model\Article:private] => 2025-08-11 09:10:56
+    [created_at:App\model\Article:private] => 2025-08-11 09:10:56
+    [title:App\model\Article:private] => oejzhtgiqreht
+    [slug:App\model\Article:private] => oejzhtgiqreht-3456
+    [content:App\model\Article:private] => Curabitur in lorem quam. Fusce auctor bibendum arcu, in gravida felis facilisis ut. Nunc ultricies magna varius arcu hendrerit, ut porttitor ex condimentum. Etiam ut consequat magna. Quisque semper nibh ipsum. Nam euismod malesuada erat, vel placerat nisl ullamcorper eleifend. Curabitur erat nibh, interdum sed blandit sit amet, hendrerit quis felis. Mauris rhoncus mauris nec libero accumsan tincidunt. Vestibulum eget tellus gravida metus congue tincidunt. Sed fringilla venenatis felis. Duis finibus tincidunt arcu, eget placerat massa eleifend non. Quisque lacinia ac odio ac mollis. Suspendisse quis imperdiet quam, et ultricies lectus. Vivamus eget massa dignissim, posuere risus vehicula, faucibus velit. 
+    [introduction:App\model\Article:private] => tgdfxjgc hk,k;hjl54yg4lg4llk65j
+    [id_user:App\model\Article:private] => 1
+    [categories:App\model\Article:private] => Array
+        (
+        )
+
+    [tags:App\model\Article:private] => Array
+        (
+            [0] => gaming
+            [1] => budget
+            [2] => avis
+        )
+
+)
+
+[Mon Aug 11 11:10:56 2025] Paramètres de la requête de mise à jour : Array
+(
+    [id] => 12
+    [cover_image] => /uploads/articles/article_12_6899b3a0c4392.jpg
+    [title] => oejzhtgiqreht
+    [slug] => oejzhtgiqreht-3456
+    [introduction] => tgdfxjgc hk,k;hjl54yg4lg4llk65j
+    [content] => Curabitur in lorem quam. Fusce auctor bibendum arcu, in gravida felis facilisis ut. Nunc ultricies magna varius arcu hendrerit, ut porttitor ex condimentum. Etiam ut consequat magna. Quisque semper nibh ipsum. Nam euismod malesuada erat, vel placerat nisl ullamcorper eleifend. Curabitur erat nibh, interdum sed blandit sit amet, hendrerit quis felis. Mauris rhoncus mauris nec libero accumsan tincidunt. Vestibulum eget tellus gravida metus congue tincidunt. Sed fringilla venenatis felis. Duis finibus tincidunt arcu, eget placerat massa eleifend non. Quisque lacinia ac odio ac mollis. Suspendisse quis imperdiet quam, et ultricies lectus. Vivamus eget massa dignissim, posuere risus vehicula, faucibus velit. 
+    [published_at] => 2025-08-11 09:10:56
+    [tags] => ["gaming","budget","avis"]
+)
+
+[Mon Aug 11 11:10:56 2025] Mise à jour des catégories pour l'article ID 12
+[Mon Aug 11 11:10:56 2025] Anciennes catégories supprimées
+[Mon Aug 11 11:10:56 2025] Toutes les nouvelles catégories ont été ajoutées
+[Mon Aug 11 11:10:56 2025] Résultat de la mise à jour : succès
+[Mon Aug 11 11:10:56 2025] [::1]:64817 [200]: POST /api/articles/12/image
+[Mon Aug 11 11:10:56 2025] [::1]:64817 Closing
+[Mon Aug 11 11:10:56 2025] [::1]:64836 Accepted
+[Mon Aug 11 11:10:56 2025] Tentative d'accès à la route: GET /api/articles/id/12
+[Mon Aug 11 11:10:56 2025] Routes disponibles: Array
+(
+    [DELETE] => Array
+        (
+            [/api/articles/id/(?P<id>[^/]+)] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => deleteById
+                    [originalPath] => /api/articles/id/{id}
+                )
+
+        )
+
+    [GET] => Array
+        (
+            [/api/articles/id/(?P<id>[^/]+)] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => getById
+                    [originalPath] => /api/articles/id/{id}
+                )
+
+            [/api/articles/(?P<slug>[^/]+)] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => getBySlug
+                    [originalPath] => /api/articles/{slug}
+                )
+
+            [/api/articles] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => getAllArticles
+                    [originalPath] => /api/articles
+                )
+
+            [/api/valider-email] => Array
+                (
+                    [className] => App\controller\UserController
+                    [methodName] => verifyEmail
+                    [originalPath] => /api/valider-email
+                )
+
+        )
+
+    [POST] => Array
+        (
+            [/api/articles] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => create
+                    [originalPath] => /api/articles
+                )
+
+            [/api/articles/(?P<id>[^/]+)/image] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => uploadImage
+                    [originalPath] => /api/articles/{id}/image
+                )
+
+            [/api/register] => Array
+                (
+                    [className] => App\controller\UserController
+                    [methodName] => register
+                    [originalPath] => /api/register
+                )
+
+            [/api/login] => Array
+                (
+                    [className] => App\controller\UserController
+                    [methodName] => login
+                    [originalPath] => /api/login
+                )
+
+        )
+
+    [PUT] => Array
+        (
+            [/api/articles/(?P<id>[^/]+)] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => update
+                    [originalPath] => /api/articles/{id}
+                )
+
+        )
+
+)
+
+[Mon Aug 11 11:10:56 2025] Route trouvée : /api/articles/id/{id}
+[Mon Aug 11 11:10:56 2025] Appel du contrôleur: App\controller\ArticleController::getById
+[Mon Aug 11 11:10:56 2025] [::1]:64836 [200]: GET /api/articles/id/12
+[Mon Aug 11 11:10:56 2025] [::1]:64836 Closing
+[Mon Aug 11 11:10:57 2025] [::1]:64838 Accepted
+[Mon Aug 11 11:10:57 2025] [::1]:64838 [200]: GET /uploads/articles/article_12_6899b3a0c4392.jpg
+[Mon Aug 11 11:10:57 2025] [::1]:64838 Closing
+[Mon Aug 11 11:11:09 2025] [::1]:64868 Accepted
+[Mon Aug 11 11:11:09 2025] Tentative d'accès à la route: GET /api/articles
+[Mon Aug 11 11:11:09 2025] Routes disponibles: Array
+(
+    [DELETE] => Array
+        (
+            [/api/articles/id/(?P<id>[^/]+)] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => deleteById
+                    [originalPath] => /api/articles/id/{id}
+                )
+
+        )
+
+    [GET] => Array
+        (
+            [/api/articles/id/(?P<id>[^/]+)] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => getById
+                    [originalPath] => /api/articles/id/{id}
+                )
+
+            [/api/articles/(?P<slug>[^/]+)] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => getBySlug
+                    [originalPath] => /api/articles/{slug}
+                )
+
+            [/api/articles] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => getAllArticles
+                    [originalPath] => /api/articles
+                )
+
+            [/api/valider-email] => Array
+                (
+                    [className] => App\controller\UserController
+                    [methodName] => verifyEmail
+                    [originalPath] => /api/valider-email
+                )
+
+        )
+
+    [POST] => Array
+        (
+            [/api/articles] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => create
+                    [originalPath] => /api/articles
+                )
+
+            [/api/articles/(?P<id>[^/]+)/image] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => uploadImage
+                    [originalPath] => /api/articles/{id}/image
+                )
+
+            [/api/register] => Array
+                (
+                    [className] => App\controller\UserController
+                    [methodName] => register
+                    [originalPath] => /api/register
+                )
+
+            [/api/login] => Array
+                (
+                    [className] => App\controller\UserController
+                    [methodName] => login
+                    [originalPath] => /api/login
+                )
+
+        )
+
+    [PUT] => Array
+        (
+            [/api/articles/(?P<id>[^/]+)] => Array
+                (
+                    [className] => App\controller\ArticleController
+                    [methodName] => update
+                    [originalPath] => /api/articles/{id}
+                )
+
+        )
+
+)
+
+[Mon Aug 11 11:11:09 2025] Route trouvée : /api/articles
+[Mon Aug 11 11:11:09 2025] Appel du contrôleur: App\controller\ArticleController::getAllArticles
+[Mon Aug 11 11:11:09 2025] [::1]:64868 [200]: GET /api/articles?page=1&limit=3
+[Mon Aug 11 11:11:09 2025] [::1]:64868 Closing
+[Mon Aug 11 11:11:09 2025] [::1]:64871 Accepted
+[Mon Aug 11 11:11:09 2025] [::1]:64871 [200]: GET /uploads/articles/article_12_6899b3a0c4392.jpg
+[Mon Aug 11 11:11:09 2025] [::1]:64872 Accepted
+[Mon Aug 11 11:11:09 2025] [::1]:64873 Accepted
+[Mon Aug 11 11:11:09 2025] [::1]:64872 [200]: GET /uploads/articles/article_11_6899b36aea1a9.jpg
+[Mon Aug 11 11:11:09 2025] [::1]:64873 [200]: GET /uploads/articles/article_4_688775ad5bdd2.png
+[Mon Aug 11 11:11:09 2025] [::1]:64873 Closing
+[Mon Aug 11 11:11:09 2025] [::1]:64872 Closing
+[Mon Aug 11 11:11:09 2025] [::1]:64871 Closing
