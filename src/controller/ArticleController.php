@@ -21,7 +21,7 @@ class ArticleController
         $this->articleRepository = new ArticleRepository;
     }
 
-    #[Route('/api/articles/id/{id}', 'DELETE')]
+    #[Route('/api/article-delete/{id}', 'DELETE')]
     public function deleteById(int $id): void
     {
         try {
@@ -408,7 +408,7 @@ class ArticleController
     }
 
     #[Route('/api/articles/{id}', 'PUT')]
-    public function update(int $id): void
+    public function updateArticle(int $id): void
     {
         try {
             if (!isset($_SERVER['HTTP_AUTHORIZATION'])) {
