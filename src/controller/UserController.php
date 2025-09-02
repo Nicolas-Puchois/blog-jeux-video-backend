@@ -11,6 +11,7 @@ use App\services\MailService;
 use App\core\attributes\Route;
 use App\repository\UserRepository;
 use App\services\JWTServices;
+use App\Utils\SecurityUtils;
 
 class UserController
 {
@@ -65,6 +66,8 @@ class UserController
             $data = json_decode(file_get_contents('php://input'), true);
             if (!$data) throw new Exception('JSON invalide');
 
+            // Nettoyer les données entrantes contre XSS
+            $data = SecurityUtils::sanitizeRequestData($data);
 
             $emailToken = bin2hex(random_bytes(32));
 
@@ -112,6 +115,9 @@ class UserController
             if (!$data) {
                 throw new Exception('Données invalides');
             }
+
+            // Nettoyer les données entrantes contre XSS
+            $data = SecurityUtils::sanitizeRequestData($data);
 
             if (empty($data['email']) || empty($data['password'])) {
                 throw new Exception('Email et mot de passe requis');

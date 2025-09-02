@@ -4,6 +4,7 @@ namespace App\controller;
 
 use App\core\attributes\Route;
 use App\services\RecaptchaService;
+use App\Utils\SecurityUtils;
 
 class RecaptchaController
 {
@@ -19,6 +20,8 @@ class RecaptchaController
     {
         // Récupérer le token depuis le corps de la requête
         $data = json_decode(file_get_contents('php://input'), true);
+        // Nettoyer les données entrantes contre XSS
+        $data = SecurityUtils::sanitizeRequestData($data);
         $token = $data['token'] ?? '';
 
         if (empty($token)) {
