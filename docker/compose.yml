@@ -1,8 +1,9 @@
+name: test
 services:
   infodotgamedb:
     image: mariadb
     restart: unless-stopped
-    container_name: infodotgamedb
+    container_name: infodotgamedb2
     ports:
       - "3315:3306"
 
@@ -19,7 +20,7 @@ services:
 
   mailpit:
     image: axllent/mailpit
-    container_name: mailpit
+    container_name: mailpit2
     restart: unless-stopped
     ports:
       - ${MAILPIT_HTTP_PORT}:8025

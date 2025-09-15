@@ -79,7 +79,7 @@ CREATE TABLE article (
     content TEXT NOT NULL,
     id_user INT,
     tags JSON,
-    introduction VARCHAR(255),
+    introduction TEXT,
     FOREIGN KEY (id_user) REFERENCES user(id_user) ON DELETE SET NULL
 );
 
