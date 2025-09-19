@@ -1,1 +1,37 @@
-[Thu Sep 11 10:27:21 2025] PHP 8.4.10 Development Server (http://localhost:8000) started
+[Fri Sep 19 14:53:49 2025] PHP 8.4.10 Development Server (http://localhost:8000) started
+[Fri Sep 19 14:53:54 2025] [::1]:58996 Accepted
+[Fri Sep 19 14:53:54 2025] [::1]:58996 [200]: GET /api/articles?page=1&limit=3
+[Fri Sep 19 14:53:54 2025] [::1]:58996 Closing
+[Fri Sep 19 14:53:56 2025] [::1]:59004 Accepted
+[Fri Sep 19 14:53:56 2025] [::1]:59005 Accepted
+[Fri Sep 19 14:53:56 2025] [::1]:59006 Accepted
+[Fri Sep 19 14:53:56 2025] [::1]:59004 [200]: GET /uploads/articles/article_10_689498d4e92b9.jpg
+[Fri Sep 19 14:53:56 2025] [::1]:59005 [200]: GET /uploads/articles/article_4_688775ad5bdd2.png
+[Fri Sep 19 14:53:56 2025] [::1]:59006 [200]: GET /uploads/articles/article_11_6899b36aea1a9.jpg
+[Fri Sep 19 14:53:56 2025] [::1]:59005 Closing
+[Fri Sep 19 14:53:56 2025] [::1]:59006 Closing
+[Fri Sep 19 14:53:56 2025] [::1]:59004 Closing
+[Fri Sep 19 15:03:08 2025] [::1]:59371 Accepted
+[Fri Sep 19 15:03:08 2025] Validation data: {"username":"johnD@auteur.com","email":"johnD@auteur.com","password":"87lMXR1bzMw5*9"}
+[Fri Sep 19 15:03:08 2025] Current user: johnD@auteur.com / johnD@auteur.com
+[Fri Sep 19 15:03:08 2025] Checking username: johnD@auteur.com
+[Fri Sep 19 15:03:08 2025] Username same as current user, skipping check
+[Fri Sep 19 15:03:08 2025] Checking email: johnD@auteur.com
+[Fri Sep 19 15:03:08 2025] Email same as current user, skipping check
+[Fri Sep 19 15:03:08 2025] [::1]:59371 [200]: POST /api/register
+[Fri Sep 19 15:03:08 2025] [::1]:59371 Closing
+[Fri Sep 19 15:03:25 2025] [::1]:59405 Accepted
+[Fri Sep 19 15:03:25 2025] [::1]:59405 [200]: GET /api/valider-email?token=b06cb8cf64165804f90c3f291ec24ea53ef4e2d6b465e8a18b7a204e5afdf6b8
+[Fri Sep 19 15:03:25 2025] [::1]:59405 Closing
+[Fri Sep 19 15:04:35 2025] [::1]:59540 Accepted
+[Fri Sep 19 15:04:35 2025] Erreur inscription: Utilisateur non trouvé
+[Fri Sep 19 15:04:35 2025] [::1]:59540 [400]: GET /api/valider-email?token=b06cb8cf64165804f90c3f291ec24ea53ef4e2d6b465e8a18b7a204e5afdf6b8
+[Fri Sep 19 15:04:35 2025] [::1]:59540 Closing
+[Fri Sep 19 15:04:37 2025] [::1]:59563 Accepted
+[Fri Sep 19 15:04:37 2025] Erreur inscription: Utilisateur non trouvé
+[Fri Sep 19 15:04:37 2025] [::1]:59563 [400]: GET /api/valider-email?token=b06cb8cf64165804f90c3f291ec24ea53ef4e2d6b465e8a18b7a204e5afdf6b8
+[Fri Sep 19 15:04:37 2025] [::1]:59563 Closing
+[Fri Sep 19 15:05:51 2025] [::1]:59687 Accepted
+[Fri Sep 19 15:05:51 2025] Erreur inscription: Utilisateur non trouvé
+[Fri Sep 19 15:05:51 2025] [::1]:59687 [400]: GET /api/valider-email?token=b06cb8cf64165804f90c3f291ec24ea53ef4e2d6b465e8a18b7a204e5afdf6b8
+[Fri Sep 19 15:05:51 2025] [::1]:59687 Closing

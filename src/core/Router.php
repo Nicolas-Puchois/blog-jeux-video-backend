@@ -18,8 +18,7 @@ class Router
 
     public function dispatch(string $uri, string $method): void
     {
-        error_log("Tentative d'accès à la route: {$method} {$uri}");
-        error_log("Routes disponibles: " . print_r($this->routes, true));
+
 
         // Chercher une route correspondante avec des paramètres dynamiques
         foreach ($this->routes[$method] as $pattern => $routeInfo) {
@@ -28,8 +27,6 @@ class Router
                 $controllerClass = $routeInfo['className'];
                 $action = $routeInfo['methodName'];
 
-                error_log("Route trouvée : {$routeInfo['originalPath']}");
-                error_log("Appel du contrôleur: {$controllerClass}::{$action}");
 
                 // Extraire les paramètres de l'URL
                 $params = array_filter($matches, 'is_string', ARRAY_FILTER_USE_KEY);

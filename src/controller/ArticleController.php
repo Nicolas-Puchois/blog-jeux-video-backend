@@ -88,24 +88,24 @@ class ArticleController
                 return;
             }
 
-            // Vérifier si l'utilisateur est connecté pour les droits d'édition
-            $isAuthor = false;
-            $isAdmin = false;
+            // On ajoute quand même les droits si un token est présent
+            // mais ce n'est pas bloquant pour voir l'article
+            $articleData = $article->toArray();
+            $articleData['is_author'] = false;
+            $articleData['is_admin'] = false;
 
             if (isset($_SERVER['HTTP_AUTHORIZATION'])) {
                 $token = str_replace('Bearer ', '', $_SERVER['HTTP_AUTHORIZATION']);
                 try {
                     $payload = JWTServices::verify($token);
-                    $isAuthor = $article->getUserId() === (int)$payload['id'];
-                    $isAdmin = is_array($payload['role']) ? in_array('admin', $payload['role']) : $payload['role'] === 'admin';
+                    $articleData['is_author'] = $article->getUserId() === (int)$payload['id'];
+                    $articleData['is_admin'] = is_array($payload['role']) ?
+                        in_array('admin', $payload['role']) :
+                        $payload['role'] === 'admin';
                 } catch (\Exception $e) {
-                    // Si le token est invalide, on continue sans droits spéciaux
+                    // Si le token est invalide, on garde les droits par défaut (false)
                 }
             }
-
-            $articleData = $article->toArray();
-            $articleData['is_author'] = $isAuthor;
-            $articleData['is_admin'] = $isAdmin;
 
             http_response_code(200);
             echo json_encode([
@@ -214,9 +214,6 @@ class ArticleController
 
             echo json_encode($response);
         } catch (\Exception $e) {
-            // Log détaillé de l'erreur
-            error_log("Erreur dans ArticleController::create : " . $e->getMessage());
-            error_log("Stack trace : " . $e->getTraceAsString());
 
             header('Content-Type: application/json');
             http_response_code(500);
@@ -412,17 +409,14 @@ class ArticleController
     {
         try {
             if (!isset($_SERVER['HTTP_AUTHORIZATION'])) {
-                error_log("Token manquant dans la requête");
                 http_response_code(401);
                 echo json_encode(['success' => false, 'error' => 'Token non fourni']);
                 return;
             }
 
             $token = str_replace('Bearer ', '', $_SERVER['HTTP_AUTHORIZATION']);
-            error_log("Token reçu: " . $token);
 
             $payload = JWTServices::verify($token);
-            error_log("Payload décodé: " . print_r($payload, true));
 
             if (!$payload) {
                 error_log("Token invalide ou non décodé");
@@ -443,9 +437,6 @@ class ArticleController
             $isAdmin = is_array($payload['role']) ? in_array('admin', $payload['role']) : $payload['role'] === 'admin';
 
             if ($article->getUserId() !== (int)$payload['id'] && !$isAdmin) {
-                error_log("User ID article: " . $article->getUserId());
-                error_log("User ID token: " . $payload['id']);
-                error_log("Role: " . print_r($payload['role'], true));
                 http_response_code(403);
                 echo json_encode(['success' => false, 'error' => 'Non autorisé']);
                 return;
