@@ -5,10 +5,15 @@ declare(strict_types=1);
 namespace App\core;
 
 use Exception;
+use App\middleware\CSRFMiddleware;
 
 class Router
 {
     private array $routes;
+    private array $excludedRoutes = [
+        '/api/login',
+        '/api/register'
+    ];
 
 
     public function __construct()
@@ -16,8 +21,35 @@ class Router
         $this->routes = RouteResolver::getRoutes();
     }
 
+    private function shouldCheckCSRF(string $uri, string $method): bool
+    {
+        // On vérifie CSRF uniquement pour les méthodes modifiant des données
+        if (!in_array($method, ['POST', 'PUT', 'DELETE', 'PATCH'])) {
+            return false;
+        }
+
+        // On exclut certaines routes de la vérification CSRF
+        return !in_array($uri, $this->excludedRoutes);
+    }
+
+    private function verifyCSRF(): void
+    {
+        if (!CSRFMiddleware::verifyToken()) {
+            http_response_code(403);
+            echo json_encode([
+                'success' => false,
+                'error' => 'Token CSRF invalide'
+            ]);
+            exit;
+        }
+    }
+
     public function dispatch(string $uri, string $method): void
     {
+        // Vérification CSRF si nécessaire
+        if ($this->shouldCheckCSRF($uri, $method)) {
+            $this->verifyCSRF();
+        }
 
 
         // Chercher une route correspondante avec des paramètres dynamiques

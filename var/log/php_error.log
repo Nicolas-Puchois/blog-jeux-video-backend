@@ -1,37 +1,64 @@
-[Fri Sep 19 14:53:49 2025] PHP 8.4.10 Development Server (http://localhost:8000) started
-[Fri Sep 19 14:53:54 2025] [::1]:58996 Accepted
-[Fri Sep 19 14:53:54 2025] [::1]:58996 [200]: GET /api/articles?page=1&limit=3
-[Fri Sep 19 14:53:54 2025] [::1]:58996 Closing
-[Fri Sep 19 14:53:56 2025] [::1]:59004 Accepted
-[Fri Sep 19 14:53:56 2025] [::1]:59005 Accepted
-[Fri Sep 19 14:53:56 2025] [::1]:59006 Accepted
-[Fri Sep 19 14:53:56 2025] [::1]:59004 [200]: GET /uploads/articles/article_10_689498d4e92b9.jpg
-[Fri Sep 19 14:53:56 2025] [::1]:59005 [200]: GET /uploads/articles/article_4_688775ad5bdd2.png
-[Fri Sep 19 14:53:56 2025] [::1]:59006 [200]: GET /uploads/articles/article_11_6899b36aea1a9.jpg
-[Fri Sep 19 14:53:56 2025] [::1]:59005 Closing
-[Fri Sep 19 14:53:56 2025] [::1]:59006 Closing
-[Fri Sep 19 14:53:56 2025] [::1]:59004 Closing
-[Fri Sep 19 15:03:08 2025] [::1]:59371 Accepted
-[Fri Sep 19 15:03:08 2025] Validation data: {"username":"johnD@auteur.com","email":"johnD@auteur.com","password":"87lMXR1bzMw5*9"}
-[Fri Sep 19 15:03:08 2025] Current user: johnD@auteur.com / johnD@auteur.com
-[Fri Sep 19 15:03:08 2025] Checking username: johnD@auteur.com
-[Fri Sep 19 15:03:08 2025] Username same as current user, skipping check
-[Fri Sep 19 15:03:08 2025] Checking email: johnD@auteur.com
-[Fri Sep 19 15:03:08 2025] Email same as current user, skipping check
-[Fri Sep 19 15:03:08 2025] [::1]:59371 [200]: POST /api/register
-[Fri Sep 19 15:03:08 2025] [::1]:59371 Closing
-[Fri Sep 19 15:03:25 2025] [::1]:59405 Accepted
-[Fri Sep 19 15:03:25 2025] [::1]:59405 [200]: GET /api/valider-email?token=b06cb8cf64165804f90c3f291ec24ea53ef4e2d6b465e8a18b7a204e5afdf6b8
-[Fri Sep 19 15:03:25 2025] [::1]:59405 Closing
-[Fri Sep 19 15:04:35 2025] [::1]:59540 Accepted
-[Fri Sep 19 15:04:35 2025] Erreur inscription: Utilisateur non trouvé
-[Fri Sep 19 15:04:35 2025] [::1]:59540 [400]: GET /api/valider-email?token=b06cb8cf64165804f90c3f291ec24ea53ef4e2d6b465e8a18b7a204e5afdf6b8
-[Fri Sep 19 15:04:35 2025] [::1]:59540 Closing
-[Fri Sep 19 15:04:37 2025] [::1]:59563 Accepted
-[Fri Sep 19 15:04:37 2025] Erreur inscription: Utilisateur non trouvé
-[Fri Sep 19 15:04:37 2025] [::1]:59563 [400]: GET /api/valider-email?token=b06cb8cf64165804f90c3f291ec24ea53ef4e2d6b465e8a18b7a204e5afdf6b8
-[Fri Sep 19 15:04:37 2025] [::1]:59563 Closing
-[Fri Sep 19 15:05:51 2025] [::1]:59687 Accepted
-[Fri Sep 19 15:05:51 2025] Erreur inscription: Utilisateur non trouvé
-[Fri Sep 19 15:05:51 2025] [::1]:59687 [400]: GET /api/valider-email?token=b06cb8cf64165804f90c3f291ec24ea53ef4e2d6b465e8a18b7a204e5afdf6b8
-[Fri Sep 19 15:05:51 2025] [::1]:59687 Closing
+[Mon Sep 22 13:18:07 2025] PHP 8.4.4 Development Server (http://localhost:8000) started
+[Mon Sep 22 13:19:58 2025] [::1]:63445 Accepted
+[Mon Sep 22 13:19:59 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Mon Sep 22 13:19:59 2025] Validation data: {"csrf_token":"","username":"toto","email":"toto@test.com","password":"Azertyuiop&amp;11"}
+[Mon Sep 22 13:19:59 2025] Current user: toto / toto@test.com
+[Mon Sep 22 13:19:59 2025] Checking username: toto
+[Mon Sep 22 13:19:59 2025] Username same as current user, skipping check
+[Mon Sep 22 13:19:59 2025] Checking email: toto@test.com
+[Mon Sep 22 13:19:59 2025] Email same as current user, skipping check
+[Mon Sep 22 13:19:59 2025] [::1]:63445 [200]: POST /api/register
+[Mon Sep 22 13:19:59 2025] [::1]:63445 Closing
+[Mon Sep 22 13:20:28 2025] [::1]:63491 Accepted
+[Mon Sep 22 13:20:29 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Mon Sep 22 13:20:33 2025] [::1]:63491 [200]: GET /api/valider-email?token=807eacd92ca39b8b60945409a41e34a6fd62f226182ecfa10677229e56bb0023
+[Mon Sep 22 13:20:33 2025] [::1]:63491 Closing
+[Mon Sep 22 13:23:24 2025] [::1]:63589 Accepted
+[Mon Sep 22 13:23:24 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Mon Sep 22 13:23:24 2025] [::1]:63589 [200]: POST /api/login
+[Mon Sep 22 13:23:24 2025] [::1]:63589 Closing
+[Mon Sep 22 13:23:34 2025] [::1]:63659 Accepted
+[Mon Sep 22 13:23:35 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Mon Sep 22 13:23:35 2025] [::1]:63659 [200]: GET /api/articles?page=1&limit=3
+[Mon Sep 22 13:23:35 2025] [::1]:63659 Closing
+[Mon Sep 22 13:23:35 2025] [::1]:63663 Accepted
+[Mon Sep 22 13:23:35 2025] [::1]:63663 [200]: GET /uploads/articles/article_1_68d103025e052.png
+[Mon Sep 22 13:23:35 2025] [::1]:63663 Closing
+[Mon Sep 22 13:23:55 2025] [::1]:63712 Accepted
+[Mon Sep 22 13:23:55 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Mon Sep 22 13:23:55 2025] [::1]:63712 [200]: GET /api/articles?page=1&limit=3
+[Mon Sep 22 13:23:55 2025] [::1]:63712 Closing
+[Mon Sep 22 13:23:55 2025] [::1]:63718 Accepted
+[Mon Sep 22 13:23:55 2025] [::1]:63718 [200]: GET /uploads/articles/article_1_68d103025e052.png
+[Mon Sep 22 13:23:55 2025] [::1]:63718 Closing
+[Mon Sep 22 13:23:56 2025] [::1]:63738 Accepted
+[Mon Sep 22 13:23:56 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Mon Sep 22 13:23:56 2025] [::1]:63738 [200]: GET /api/articles/id/1
+[Mon Sep 22 13:23:56 2025] [::1]:63738 Closing
+[Mon Sep 22 13:23:56 2025] [::1]:63744 Accepted
+[Mon Sep 22 13:23:56 2025] [::1]:63744 [200]: GET /uploads/articles/article_1_68d103025e052.png
+[Mon Sep 22 13:23:56 2025] [::1]:63744 Closing
+[Mon Sep 22 13:23:57 2025] [::1]:63764 Accepted
+[Mon Sep 22 13:23:57 2025] [::1]:63764 [200]: GET /uploads/articles/article_1_68d103025e052.png
+[Mon Sep 22 13:23:57 2025] [::1]:63764 Closing
+[Mon Sep 22 13:24:01 2025] [::1]:63786 Accepted
+[Mon Sep 22 13:24:01 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Mon Sep 22 13:24:01 2025] [::1]:63786 [200]: GET /api/articles?page=1&limit=3
+[Mon Sep 22 13:24:01 2025] [::1]:63786 Closing
+[Mon Sep 22 13:24:01 2025] [::1]:63792 Accepted
+[Mon Sep 22 13:24:01 2025] [::1]:63792 [200]: GET /uploads/articles/article_1_68d103025e052.png
+[Mon Sep 22 13:24:01 2025] [::1]:63792 Closing
+[Mon Sep 22 13:25:27 2025] [::1]:63852 Accepted
+[Mon Sep 22 13:25:27 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Mon Sep 22 13:25:27 2025] [::1]:63852 [200]: GET /api/articles?page=1&limit=3
+[Mon Sep 22 13:25:27 2025] [::1]:63852 Closing
+[Mon Sep 22 13:25:27 2025] [::1]:63857 Accepted
+[Mon Sep 22 13:25:27 2025] [::1]:63857 [200]: GET /uploads/articles/article_1_68d103025e052.png
+[Mon Sep 22 13:25:27 2025] [::1]:63857 Closing
+[Mon Sep 22 13:30:12 2025] [::1]:64018 Accepted
+[Mon Sep 22 13:30:12 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Mon Sep 22 13:30:12 2025] [::1]:64018 [200]: GET /api/articles?page=1&limit=3
+[Mon Sep 22 13:30:12 2025] [::1]:64018 Closing
+[Mon Sep 22 13:30:12 2025] [::1]:64023 Accepted
+[Mon Sep 22 13:30:12 2025] [::1]:64023 [200]: GET /uploads/articles/article_1_68d103025e052.png
+[Mon Sep 22 13:30:12 2025] [::1]:64023 Closing
