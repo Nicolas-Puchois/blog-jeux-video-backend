@@ -10,6 +10,7 @@ use App\core\attributes\Route;
 use App\model\Article;
 use App\repository\ArticleRepository;
 use App\services\JWTServices;
+use App\Utils\SecurityUtils;
 use DateTime;
 
 class ArticleController
@@ -107,6 +108,16 @@ class ArticleController
                 }
             }
 
+            // Échapper les données de l'article avant de les envoyer
+            $articleData['title'] = htmlspecialchars($articleData['title'], ENT_QUOTES, 'UTF-8');
+            $articleData['content'] = htmlspecialchars($articleData['content'], ENT_QUOTES, 'UTF-8');
+            $articleData['introduction'] = htmlspecialchars($articleData['introduction'], ENT_QUOTES, 'UTF-8');
+            if (isset($articleData['tags'])) {
+                $articleData['tags'] = array_map(function ($tag) {
+                    return htmlspecialchars($tag, ENT_QUOTES, 'UTF-8');
+                }, $articleData['tags']);
+            }
+
             http_response_code(200);
             echo json_encode([
                 'success' => true,
@@ -172,7 +183,10 @@ class ArticleController
                 return;
             }
 
-            // Créer l'article
+            // Sanitize les données reçues
+            $data = SecurityUtils::sanitizeRequestData($data);
+
+            // Créer l'article avec les données nettoyées
             $article = new Article();
             $article->setTitle($data['title']);
             $article->setIntroduction($data['introduction'] ?? '');
@@ -367,18 +381,20 @@ class ArticleController
             // Récupération des articles
             $result = $this->articleRepository->findAll($page, $limit, $filters);
 
-            // Transformation des articles en format JSON
+            // Transformation des articles en format JSON avec échappement HTML
             $articles = array_map(function ($article) {
                 return [
                     'id' => $article->getId(),
-                    'title' => $article->getTitle(),
+                    'title' => htmlspecialchars($article->getTitle(), ENT_QUOTES, 'UTF-8'),
                     'slug' => $article->getSlug(),
-                    'content' => $article->getContent(),
-                    'introduction' => $article->getIntroduction(),
+                    'content' => htmlspecialchars($article->getContent(), ENT_QUOTES, 'UTF-8'),
+                    'introduction' => htmlspecialchars($article->getIntroduction(), ENT_QUOTES, 'UTF-8'),
                     'cover_image' => $article->getCoverImage(),
                     'published_at' => $article->getPublishedAt(),
                     'created_at' => $article->getCreatedAt(),
-                    'tags' => $article->getTags()
+                    'tags' => array_map(function ($tag) {
+                        return htmlspecialchars($tag, ENT_QUOTES, 'UTF-8');
+                    }, $article->getTags() ?? [])
                 ];
             }, $result['articles']);
 
@@ -450,7 +466,10 @@ class ArticleController
                 return;
             }
 
-            // Mise à jour des champs
+            // Sanitize les données reçues
+            $data = SecurityUtils::sanitizeRequestData($data);
+
+            // Mise à jour des champs avec les données nettoyées
             if (isset($data['title'])) {
                 $article->setTitle($data['title']);
                 // Regénérer le slug si le titre change

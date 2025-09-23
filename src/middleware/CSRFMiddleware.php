@@ -17,15 +17,21 @@ class CSRFMiddleware
         return $_SESSION['csrf_token'];
     }
 
-    public static function verifyToken(string $token = null): bool
+    public static function verifyToken(): bool
     {
-        // Récupérer la clé secrète depuis .env
-        $csrfSecret = getenv('CSRF_SECRET');
+        error_log("Vérification CSRF...");
+        error_log("Headers reçus: " . print_r(getallheaders(), true));
 
-        // Récupérer le token depuis les headers
-        $headerToken = $_SERVER['HTTP_X_CSRF_TOKEN'] ?? null;
+        // Récupérer le token CSRF de l'en-tête
+        $csrfToken = $_SERVER['HTTP_X_CSRF_TOKEN'] ?? null;
+        error_log("Token CSRF reçu: " . $csrfToken);
+        error_log("Token CSRF attendu: " . getenv('CSRF_SECRET'));
 
-        // Vérifier que le token correspond
-        return $headerToken === $csrfSecret;
+        if (!$csrfToken) {
+            error_log("Pas de token CSRF trouvé dans la requête");
+            return false;
+        }
+
+        return $csrfToken === getenv('CSRF_SECRET');
     }
 }
