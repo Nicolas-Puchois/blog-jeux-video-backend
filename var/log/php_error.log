@@ -1,28 +1,599 @@
-[Tue Sep 23 15:51:40 2025] PHP 8.4.4 Development Server (http://localhost:8000) started
-[Tue Sep 23 15:51:44 2025] [::1]:56074 Accepted
-[Tue Sep 23 15:51:44 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Tue Sep 23 15:51:44 2025] Vérification CSRF...
-[Tue Sep 23 15:51:44 2025] Headers reçus: Array
+[Tue Sep 23 17:30:36 2025] PHP 8.4.4 Development Server (http://localhost:8000) started
+[Tue Sep 23 17:30:51 2025] [::1]:59923 Accepted
+[Tue Sep 23 17:30:52 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Tue Sep 23 17:30:52 2025] Variables d'environnement chargées:
+[Tue Sep 23 17:30:52 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:30:52 2025] CSRF_SECRET via getenv: 
+[Tue Sep 23 17:30:52 2025] DB_HOST: 
+[Tue Sep 23 17:30:52 2025] Vérification CSRF...
+[Tue Sep 23 17:30:52 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:30:52 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:30:52 2025] Toutes les variables d'env: Array
 (
-    [Host] => localhost:8000
-    [User-Agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:143.0) Gecko/20100101 Firefox/143.0
-    [Accept] => */*
-    [Accept-Language] => fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
-    [Accept-Encoding] => gzip, deflate, br, zstd
-    [Prefer] => safe
-    [Authorization] => Bearer eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJpZCI6MSwiZW1haWwiOiJqb2huQGF1dGV1ci5jb20iLCJyb2xlIjpbImFkbWluIl0sImV4cCI6MTc1ODYyNjYwNH0.OnWgra6EQd1rg1IxXgMY2N_nLH0DQ2wRjT61JQ1Buqk
-    [X-CSRF-Token] => a99968bdd4cf7016244b7374277c2b2bbb2b821a25270d17eeb582f38a1ed5ee
-    [Content-Type] => application/json
-    [Content-Length] => 380
-    [Origin] => http://localhost:3001
-    [Connection] => keep-alive
-    [Sec-Fetch-Dest] => empty
-    [Sec-Fetch-Mode] => cors
-    [Sec-Fetch-Site] => same-site
-    [Priority] => u=0
+    [DB_HOST] => localhost
+    [DB_NAME] => infodotgame
+    [DB_USER] => db_user
+    [DB_PASSWORD] => 12345
+    [DB_PORT] => 3315
+    [JWT_SECRET_KEY] => f982da955f9c94f234e8f05971d9f170b7118da9250399c9009f97c5483b90c8
+    [RECAPTCHA_SECRET_KEY] => 6LdPrM4rAAAAAEAQehIF1pwgQc5Y4AW-6YUkhiRU
+    [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
 )
 
-[Tue Sep 23 15:51:44 2025] Token CSRF reçu: a99968bdd4cf7016244b7374277c2b2bbb2b821a25270d17eeb582f38a1ed5ee
-[Tue Sep 23 15:51:44 2025] Token CSRF attendu: 
-[Tue Sep 23 15:51:44 2025] [::1]:56074 [403]: POST /api/articles
-[Tue Sep 23 15:51:44 2025] [::1]:56074 Closing
+[Tue Sep 23 17:30:52 2025] Erreur de vérification du token : Token expiré
+[Tue Sep 23 17:30:52 2025] PHP Warning:  Trying to access array offset on null in E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php on line 194
+[Tue Sep 23 17:30:52 2025] PHP Fatal error:  Uncaught TypeError: App\model\Article::setUserId(): Argument #1 ($id_user) must be of type int, null given, called in E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php on line 194 and defined in E:\projet_info_dot_game\blog-jeux-video-backend\src\model\Article.php:87
+Stack trace:
+#0 E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php(194): App\model\Article->setUserId(NULL)
+#1 E:\projet_info_dot_game\blog-jeux-video-backend\src\core\Router.php(76): App\controller\ArticleController->create()
+#2 E:\projet_info_dot_game\blog-jeux-video-backend\public\index.php(36): App\core\Router->dispatch('/api/articles', 'POST')
+#3 {main}
+  thrown in E:\projet_info_dot_game\blog-jeux-video-backend\src\model\Article.php on line 87
+[Tue Sep 23 17:30:52 2025] [::1]:59923 [200]: POST /api/articles - Uncaught TypeError: App\model\Article::setUserId(): Argument #1 ($id_user) must be of type int, null given, called in E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php on line 194 and defined in E:\projet_info_dot_game\blog-jeux-video-backend\src\model\Article.php:87
+Stack trace:
+#0 E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php(194): App\model\Article->setUserId(NULL)
+#1 E:\projet_info_dot_game\blog-jeux-video-backend\src\core\Router.php(76): App\controller\ArticleController->create()
+#2 E:\projet_info_dot_game\blog-jeux-video-backend\public\index.php(36): App\core\Router->dispatch('/api/articles', 'POST')
+#3 {main}
+  thrown in E:\projet_info_dot_game\blog-jeux-video-backend\src\model\Article.php on line 87
+[Tue Sep 23 17:30:52 2025] [::1]:59923 Closing
+[Tue Sep 23 17:30:52 2025] [::1]:59925 Accepted
+[Tue Sep 23 17:30:52 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Tue Sep 23 17:30:52 2025] Variables d'environnement chargées:
+[Tue Sep 23 17:30:52 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:30:52 2025] CSRF_SECRET via getenv: 
+[Tue Sep 23 17:30:52 2025] DB_HOST: 
+[Tue Sep 23 17:30:52 2025] Vérification CSRF...
+[Tue Sep 23 17:30:52 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:30:52 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:30:52 2025] Toutes les variables d'env: Array
+(
+    [DB_HOST] => localhost
+    [DB_NAME] => infodotgame
+    [DB_USER] => db_user
+    [DB_PASSWORD] => 12345
+    [DB_PORT] => 3315
+    [JWT_SECRET_KEY] => f982da955f9c94f234e8f05971d9f170b7118da9250399c9009f97c5483b90c8
+    [RECAPTCHA_SECRET_KEY] => 6LdPrM4rAAAAAEAQehIF1pwgQc5Y4AW-6YUkhiRU
+    [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+)
+
+[Tue Sep 23 17:30:52 2025] Erreur de vérification du token : Token expiré
+[Tue Sep 23 17:30:52 2025] PHP Warning:  Trying to access array offset on null in E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php on line 194
+[Tue Sep 23 17:30:52 2025] PHP Fatal error:  Uncaught TypeError: App\model\Article::setUserId(): Argument #1 ($id_user) must be of type int, null given, called in E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php on line 194 and defined in E:\projet_info_dot_game\blog-jeux-video-backend\src\model\Article.php:87
+Stack trace:
+#0 E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php(194): App\model\Article->setUserId(NULL)
+#1 E:\projet_info_dot_game\blog-jeux-video-backend\src\core\Router.php(76): App\controller\ArticleController->create()
+#2 E:\projet_info_dot_game\blog-jeux-video-backend\public\index.php(36): App\core\Router->dispatch('/api/articles', 'POST')
+#3 {main}
+  thrown in E:\projet_info_dot_game\blog-jeux-video-backend\src\model\Article.php on line 87
+[Tue Sep 23 17:30:52 2025] [::1]:59925 [200]: POST /api/articles - Uncaught TypeError: App\model\Article::setUserId(): Argument #1 ($id_user) must be of type int, null given, called in E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php on line 194 and defined in E:\projet_info_dot_game\blog-jeux-video-backend\src\model\Article.php:87
+Stack trace:
+#0 E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php(194): App\model\Article->setUserId(NULL)
+#1 E:\projet_info_dot_game\blog-jeux-video-backend\src\core\Router.php(76): App\controller\ArticleController->create()
+#2 E:\projet_info_dot_game\blog-jeux-video-backend\public\index.php(36): App\core\Router->dispatch('/api/articles', 'POST')
+#3 {main}
+  thrown in E:\projet_info_dot_game\blog-jeux-video-backend\src\model\Article.php on line 87
+[Tue Sep 23 17:30:52 2025] [::1]:59925 Closing
+[Tue Sep 23 17:34:31 2025] [::1]:59973 Accepted
+[Tue Sep 23 17:34:32 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Tue Sep 23 17:34:32 2025] Variables d'environnement chargées:
+[Tue Sep 23 17:34:32 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:34:32 2025] CSRF_SECRET via getenv: 
+[Tue Sep 23 17:34:32 2025] DB_HOST: 
+[Tue Sep 23 17:34:32 2025] Vérification CSRF...
+[Tue Sep 23 17:34:32 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:34:32 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:34:32 2025] Toutes les variables d'env: Array
+(
+    [DB_HOST] => localhost
+    [DB_NAME] => infodotgame
+    [DB_USER] => db_user
+    [DB_PASSWORD] => 12345
+    [DB_PORT] => 3315
+    [JWT_SECRET_KEY] => f982da955f9c94f234e8f05971d9f170b7118da9250399c9009f97c5483b90c8
+    [RECAPTCHA_SECRET_KEY] => 6LdPrM4rAAAAAEAQehIF1pwgQc5Y4AW-6YUkhiRU
+    [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+)
+
+[Tue Sep 23 17:34:32 2025] Erreur de vérification du token : Token expiré
+[Tue Sep 23 17:34:32 2025] [::1]:59973 [500]: POST /api/articles
+[Tue Sep 23 17:34:32 2025] [::1]:59973 Closing
+[Tue Sep 23 17:34:32 2025] [::1]:59978 Accepted
+[Tue Sep 23 17:34:33 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Tue Sep 23 17:34:33 2025] Variables d'environnement chargées:
+[Tue Sep 23 17:34:33 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:34:33 2025] CSRF_SECRET via getenv: 
+[Tue Sep 23 17:34:33 2025] DB_HOST: 
+[Tue Sep 23 17:34:33 2025] Vérification CSRF...
+[Tue Sep 23 17:34:33 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:34:33 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:34:33 2025] Toutes les variables d'env: Array
+(
+    [DB_HOST] => localhost
+    [DB_NAME] => infodotgame
+    [DB_USER] => db_user
+    [DB_PASSWORD] => 12345
+    [DB_PORT] => 3315
+    [JWT_SECRET_KEY] => f982da955f9c94f234e8f05971d9f170b7118da9250399c9009f97c5483b90c8
+    [RECAPTCHA_SECRET_KEY] => 6LdPrM4rAAAAAEAQehIF1pwgQc5Y4AW-6YUkhiRU
+    [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+)
+
+[Tue Sep 23 17:34:33 2025] Erreur de vérification du token : Token expiré
+[Tue Sep 23 17:34:33 2025] [::1]:59978 [500]: POST /api/articles
+[Tue Sep 23 17:34:33 2025] [::1]:59978 Closing
+[Tue Sep 23 17:34:58 2025] [::1]:60101 Accepted
+[Tue Sep 23 17:34:59 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Tue Sep 23 17:34:59 2025] Variables d'environnement chargées:
+[Tue Sep 23 17:34:59 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:34:59 2025] CSRF_SECRET via getenv: 
+[Tue Sep 23 17:34:59 2025] DB_HOST: 
+[Tue Sep 23 17:34:59 2025] [::1]:60101 [200]: POST /api/login
+[Tue Sep 23 17:34:59 2025] [::1]:60101 Closing
+[Tue Sep 23 17:35:00 2025] [::1]:60126 Accepted
+[Tue Sep 23 17:35:01 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Tue Sep 23 17:35:01 2025] Variables d'environnement chargées:
+[Tue Sep 23 17:35:01 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:35:01 2025] CSRF_SECRET via getenv: 
+[Tue Sep 23 17:35:01 2025] DB_HOST: 
+[Tue Sep 23 17:35:01 2025] [::1]:60126 [200]: POST /api/login
+[Tue Sep 23 17:35:01 2025] [::1]:60126 Closing
+[Tue Sep 23 17:35:03 2025] [::1]:60182 Accepted
+[Tue Sep 23 17:35:04 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Tue Sep 23 17:35:04 2025] Variables d'environnement chargées:
+[Tue Sep 23 17:35:04 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:35:04 2025] CSRF_SECRET via getenv: 
+[Tue Sep 23 17:35:04 2025] DB_HOST: 
+[Tue Sep 23 17:35:04 2025] [::1]:60182 [200]: GET /api/articles?page=1&limit=3
+[Tue Sep 23 17:35:04 2025] [::1]:60182 Closing
+[Tue Sep 23 17:35:04 2025] [::1]:60193 Accepted
+[Tue Sep 23 17:35:04 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Tue Sep 23 17:35:04 2025] Variables d'environnement chargées:
+[Tue Sep 23 17:35:04 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:35:04 2025] CSRF_SECRET via getenv: 
+[Tue Sep 23 17:35:04 2025] DB_HOST: 
+[Tue Sep 23 17:35:04 2025] [::1]:60193 [200]: GET /api/articles?page=1&limit=3
+[Tue Sep 23 17:35:04 2025] [::1]:60193 Closing
+[Tue Sep 23 17:35:04 2025] [::1]:60216 Accepted
+[Tue Sep 23 17:35:04 2025] [::1]:60216 [200]: GET /uploads/articles/article_1_68d103025e052.png
+[Tue Sep 23 17:35:04 2025] [::1]:60216 Closing
+[Tue Sep 23 17:35:07 2025] [::1]:60236 Accepted
+[Tue Sep 23 17:35:07 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Tue Sep 23 17:35:07 2025] Variables d'environnement chargées:
+[Tue Sep 23 17:35:07 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:35:07 2025] CSRF_SECRET via getenv: 
+[Tue Sep 23 17:35:07 2025] DB_HOST: 
+[Tue Sep 23 17:35:07 2025] [::1]:60236 [200]: GET /api/articles?page=1&limit=3
+[Tue Sep 23 17:35:07 2025] [::1]:60236 Closing
+[Tue Sep 23 17:35:07 2025] [::1]:60242 Accepted
+[Tue Sep 23 17:35:07 2025] [::1]:60242 [200]: GET /uploads/articles/article_1_68d103025e052.png
+[Tue Sep 23 17:35:07 2025] [::1]:60242 Closing
+[Tue Sep 23 17:35:50 2025] [::1]:60295 Accepted
+[Tue Sep 23 17:35:50 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Tue Sep 23 17:35:50 2025] Variables d'environnement chargées:
+[Tue Sep 23 17:35:50 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:35:50 2025] CSRF_SECRET via getenv: 
+[Tue Sep 23 17:35:50 2025] DB_HOST: 
+[Tue Sep 23 17:35:50 2025] Vérification CSRF...
+[Tue Sep 23 17:35:50 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:35:50 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:35:50 2025] Toutes les variables d'env: Array
+(
+    [DB_HOST] => localhost
+    [DB_NAME] => infodotgame
+    [DB_USER] => db_user
+    [DB_PASSWORD] => 12345
+    [DB_PORT] => 3315
+    [JWT_SECRET_KEY] => f982da955f9c94f234e8f05971d9f170b7118da9250399c9009f97c5483b90c8
+    [RECAPTCHA_SECRET_KEY] => 6LdPrM4rAAAAAEAQehIF1pwgQc5Y4AW-6YUkhiRU
+    [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+)
+
+[Tue Sep 23 17:35:50 2025] [::1]:60295 [201]: POST /api/articles
+[Tue Sep 23 17:35:50 2025] [::1]:60295 Closing
+[Tue Sep 23 17:35:51 2025] [::1]:60299 Accepted
+[Tue Sep 23 17:35:51 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Tue Sep 23 17:35:51 2025] Variables d'environnement chargées:
+[Tue Sep 23 17:35:51 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:35:51 2025] CSRF_SECRET via getenv: 
+[Tue Sep 23 17:35:51 2025] DB_HOST: 
+[Tue Sep 23 17:35:51 2025] Vérification CSRF...
+[Tue Sep 23 17:35:51 2025] Token CSRF reçu: non défini
+[Tue Sep 23 17:35:51 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:35:51 2025] Toutes les variables d'env: Array
+(
+    [DB_HOST] => localhost
+    [DB_NAME] => infodotgame
+    [DB_USER] => db_user
+    [DB_PASSWORD] => 12345
+    [DB_PORT] => 3315
+    [JWT_SECRET_KEY] => f982da955f9c94f234e8f05971d9f170b7118da9250399c9009f97c5483b90c8
+    [RECAPTCHA_SECRET_KEY] => 6LdPrM4rAAAAAEAQehIF1pwgQc5Y4AW-6YUkhiRU
+    [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+)
+
+[Tue Sep 23 17:35:51 2025] Token CSRF ou Secret manquant
+[Tue Sep 23 17:35:51 2025] [::1]:60299 [403]: POST /api/articles/3/image
+[Tue Sep 23 17:35:51 2025] [::1]:60299 Closing
+[Tue Sep 23 17:43:30 2025] [::1]:53589 Accepted
+[Tue Sep 23 17:43:31 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Tue Sep 23 17:43:31 2025] Variables d'environnement chargées:
+[Tue Sep 23 17:43:31 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:43:31 2025] CSRF_SECRET via getenv: 
+[Tue Sep 23 17:43:31 2025] DB_HOST: 
+[Tue Sep 23 17:43:31 2025] Vérification CSRF...
+[Tue Sep 23 17:43:31 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:43:31 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:43:31 2025] Toutes les variables d'env: Array
+(
+    [DB_HOST] => localhost
+    [DB_NAME] => infodotgame
+    [DB_USER] => db_user
+    [DB_PASSWORD] => 12345
+    [DB_PORT] => 3315
+    [JWT_SECRET_KEY] => f982da955f9c94f234e8f05971d9f170b7118da9250399c9009f97c5483b90c8
+    [RECAPTCHA_SECRET_KEY] => 6LdPrM4rAAAAAEAQehIF1pwgQc5Y4AW-6YUkhiRU
+    [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+)
+
+[Tue Sep 23 17:43:31 2025] Vérification CSRF...
+[Tue Sep 23 17:43:31 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:43:31 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:43:31 2025] Toutes les variables d'env: Array
+(
+    [DB_HOST] => localhost
+    [DB_NAME] => infodotgame
+    [DB_USER] => db_user
+    [DB_PASSWORD] => 12345
+    [DB_PORT] => 3315
+    [JWT_SECRET_KEY] => f982da955f9c94f234e8f05971d9f170b7118da9250399c9009f97c5483b90c8
+    [RECAPTCHA_SECRET_KEY] => 6LdPrM4rAAAAAEAQehIF1pwgQc5Y4AW-6YUkhiRU
+    [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+)
+
+[Tue Sep 23 17:43:31 2025] [::1]:53589 [201]: POST /api/articles
+[Tue Sep 23 17:43:31 2025] [::1]:53589 Closing
+[Tue Sep 23 17:43:31 2025] [::1]:53614 Accepted
+[Tue Sep 23 17:43:32 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Tue Sep 23 17:43:32 2025] Variables d'environnement chargées:
+[Tue Sep 23 17:43:32 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:43:32 2025] CSRF_SECRET via getenv: 
+[Tue Sep 23 17:43:32 2025] DB_HOST: 
+[Tue Sep 23 17:43:32 2025] PHP Fatal error:  Uncaught TypeError: htmlspecialchars(): Argument #1 ($string) must be of type string, null given in E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php:115
+Stack trace:
+#0 E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php(115): htmlspecialchars(NULL, 3, 'UTF-8')
+#1 E:\projet_info_dot_game\blog-jeux-video-backend\src\core\Router.php(76): App\controller\ArticleController->getById(4)
+#2 E:\projet_info_dot_game\blog-jeux-video-backend\public\index.php(36): App\core\Router->dispatch('/api/articles/i...', 'GET')
+#3 {main}
+  thrown in E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php on line 115
+[Tue Sep 23 17:43:32 2025] [::1]:53614 [200]: GET /api/articles/id/4 - Uncaught TypeError: htmlspecialchars(): Argument #1 ($string) must be of type string, null given in E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php:115
+Stack trace:
+#0 E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php(115): htmlspecialchars(NULL, 3, 'UTF-8')
+#1 E:\projet_info_dot_game\blog-jeux-video-backend\src\core\Router.php(76): App\controller\ArticleController->getById(4)
+#2 E:\projet_info_dot_game\blog-jeux-video-backend\public\index.php(36): App\core\Router->dispatch('/api/articles/i...', 'GET')
+#3 {main}
+  thrown in E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php on line 115
+[Tue Sep 23 17:43:32 2025] [::1]:53614 Closing
+[Tue Sep 23 17:45:45 2025] [::1]:53670 Accepted
+[Tue Sep 23 17:45:46 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Tue Sep 23 17:45:46 2025] Variables d'environnement chargées:
+[Tue Sep 23 17:45:46 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:45:46 2025] CSRF_SECRET via getenv: 
+[Tue Sep 23 17:45:46 2025] DB_HOST: 
+[Tue Sep 23 17:45:46 2025] Méthode GET : pas de vérification CSRF nécessaire
+[Tue Sep 23 17:45:46 2025] PHP Fatal error:  Uncaught TypeError: htmlspecialchars(): Argument #1 ($string) must be of type string, null given in E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php:115
+Stack trace:
+#0 E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php(115): htmlspecialchars(NULL, 3, 'UTF-8')
+#1 E:\projet_info_dot_game\blog-jeux-video-backend\src\core\Router.php(86): App\controller\ArticleController->getById(4)
+#2 E:\projet_info_dot_game\blog-jeux-video-backend\public\index.php(36): App\core\Router->dispatch('/api/articles/i...', 'GET')
+#3 {main}
+  thrown in E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php on line 115
+[Tue Sep 23 17:45:46 2025] [::1]:53670 [200]: GET /api/articles/id/4 - Uncaught TypeError: htmlspecialchars(): Argument #1 ($string) must be of type string, null given in E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php:115
+Stack trace:
+#0 E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php(115): htmlspecialchars(NULL, 3, 'UTF-8')
+#1 E:\projet_info_dot_game\blog-jeux-video-backend\src\core\Router.php(86): App\controller\ArticleController->getById(4)
+#2 E:\projet_info_dot_game\blog-jeux-video-backend\public\index.php(36): App\core\Router->dispatch('/api/articles/i...', 'GET')
+#3 {main}
+  thrown in E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php on line 115
+[Tue Sep 23 17:45:46 2025] [::1]:53670 Closing
+[Tue Sep 23 17:45:53 2025] [::1]:53702 Accepted
+[Tue Sep 23 17:45:54 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Tue Sep 23 17:45:54 2025] Variables d'environnement chargées:
+[Tue Sep 23 17:45:54 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:45:54 2025] CSRF_SECRET via getenv: 
+[Tue Sep 23 17:45:54 2025] DB_HOST: 
+[Tue Sep 23 17:45:54 2025] Méthode GET : pas de vérification CSRF nécessaire
+[Tue Sep 23 17:45:54 2025] PHP Fatal error:  Uncaught TypeError: htmlspecialchars(): Argument #1 ($string) must be of type string, null given in E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php:403
+Stack trace:
+#0 E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php(403): htmlspecialchars(NULL, 3, 'UTF-8')
+#1 [internal function]: App\controller\ArticleController->{closure:App\controller\ArticleController::getAllArticles():397}(Object(App\model\Article))
+#2 E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php(397): array_map(Object(Closure), Array)
+#3 E:\projet_info_dot_game\blog-jeux-video-backend\src\core\Router.php(86): App\controller\ArticleController->getAllArticles()
+#4 E:\projet_info_dot_game\blog-jeux-video-backend\public\index.php(36): App\core\Router->dispatch('/api/articles', 'GET')
+#5 {main}
+  thrown in E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php on line 403
+[Tue Sep 23 17:45:54 2025] [::1]:53702 [200]: GET /api/articles?page=1&limit=3 - Uncaught TypeError: htmlspecialchars(): Argument #1 ($string) must be of type string, null given in E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php:403
+Stack trace:
+#0 E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php(403): htmlspecialchars(NULL, 3, 'UTF-8')
+#1 [internal function]: App\controller\ArticleController->{closure:App\controller\ArticleController::getAllArticles():397}(Object(App\model\Article))
+#2 E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php(397): array_map(Object(Closure), Array)
+#3 E:\projet_info_dot_game\blog-jeux-video-backend\src\core\Router.php(86): App\controller\ArticleController->getAllArticles()
+#4 E:\projet_info_dot_game\blog-jeux-video-backend\public\index.php(36): App\core\Router->dispatch('/api/articles', 'GET')
+#5 {main}
+  thrown in E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php on line 403
+[Tue Sep 23 17:45:54 2025] [::1]:53702 Closing
+[Tue Sep 23 17:50:23 2025] [::1]:53812 Accepted
+[Tue Sep 23 17:50:24 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Tue Sep 23 17:50:24 2025] Variables d'environnement chargées:
+[Tue Sep 23 17:50:24 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:50:24 2025] CSRF_SECRET via getenv: 
+[Tue Sep 23 17:50:24 2025] DB_HOST: 
+[Tue Sep 23 17:50:24 2025] Méthode GET : pas de vérification CSRF nécessaire
+[Tue Sep 23 17:50:24 2025] PHP Fatal error:  Uncaught TypeError: htmlspecialchars(): Argument #1 ($string) must be of type string, null given in E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php:403
+Stack trace:
+#0 E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php(403): htmlspecialchars(NULL, 3, 'UTF-8')
+#1 [internal function]: App\controller\ArticleController->{closure:App\controller\ArticleController::getAllArticles():397}(Object(App\model\Article))
+#2 E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php(397): array_map(Object(Closure), Array)
+#3 E:\projet_info_dot_game\blog-jeux-video-backend\src\core\Router.php(86): App\controller\ArticleController->getAllArticles()
+#4 E:\projet_info_dot_game\blog-jeux-video-backend\public\index.php(36): App\core\Router->dispatch('/api/articles', 'GET')
+#5 {main}
+  thrown in E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php on line 403
+[Tue Sep 23 17:50:24 2025] [::1]:53812 [200]: GET /api/articles?page=1&limit=3 - Uncaught TypeError: htmlspecialchars(): Argument #1 ($string) must be of type string, null given in E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php:403
+Stack trace:
+#0 E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php(403): htmlspecialchars(NULL, 3, 'UTF-8')
+#1 [internal function]: App\controller\ArticleController->{closure:App\controller\ArticleController::getAllArticles():397}(Object(App\model\Article))
+#2 E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php(397): array_map(Object(Closure), Array)
+#3 E:\projet_info_dot_game\blog-jeux-video-backend\src\core\Router.php(86): App\controller\ArticleController->getAllArticles()
+#4 E:\projet_info_dot_game\blog-jeux-video-backend\public\index.php(36): App\core\Router->dispatch('/api/articles', 'GET')
+#5 {main}
+  thrown in E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php on line 403
+[Tue Sep 23 17:50:24 2025] [::1]:53812 Closing
+[Tue Sep 23 17:50:50 2025] [::1]:53868 Accepted
+[Tue Sep 23 17:50:51 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Tue Sep 23 17:50:51 2025] Variables d'environnement chargées:
+[Tue Sep 23 17:50:51 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:50:51 2025] CSRF_SECRET via getenv: 
+[Tue Sep 23 17:50:51 2025] DB_HOST: 
+[Tue Sep 23 17:50:51 2025] Méthode GET : pas de vérification CSRF nécessaire
+[Tue Sep 23 17:50:51 2025] PHP Fatal error:  Uncaught TypeError: htmlspecialchars(): Argument #1 ($string) must be of type string, null given in E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php:403
+Stack trace:
+#0 E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php(403): htmlspecialchars(NULL, 3, 'UTF-8')
+#1 [internal function]: App\controller\ArticleController->{closure:App\controller\ArticleController::getAllArticles():397}(Object(App\model\Article))
+#2 E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php(397): array_map(Object(Closure), Array)
+#3 E:\projet_info_dot_game\blog-jeux-video-backend\src\core\Router.php(86): App\controller\ArticleController->getAllArticles()
+#4 E:\projet_info_dot_game\blog-jeux-video-backend\public\index.php(36): App\core\Router->dispatch('/api/articles', 'GET')
+#5 {main}
+  thrown in E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php on line 403
+[Tue Sep 23 17:50:51 2025] [::1]:53868 [200]: GET /api/articles?page=1&limit=3 - Uncaught TypeError: htmlspecialchars(): Argument #1 ($string) must be of type string, null given in E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php:403
+Stack trace:
+#0 E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php(403): htmlspecialchars(NULL, 3, 'UTF-8')
+#1 [internal function]: App\controller\ArticleController->{closure:App\controller\ArticleController::getAllArticles():397}(Object(App\model\Article))
+#2 E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php(397): array_map(Object(Closure), Array)
+#3 E:\projet_info_dot_game\blog-jeux-video-backend\src\core\Router.php(86): App\controller\ArticleController->getAllArticles()
+#4 E:\projet_info_dot_game\blog-jeux-video-backend\public\index.php(36): App\core\Router->dispatch('/api/articles', 'GET')
+#5 {main}
+  thrown in E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php on line 403
+[Tue Sep 23 17:50:51 2025] [::1]:53868 Closing
+[Tue Sep 23 17:52:53 2025] [::1]:53931 Accepted
+[Tue Sep 23 17:52:54 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Tue Sep 23 17:52:54 2025] Variables d'environnement chargées:
+[Tue Sep 23 17:52:54 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:52:54 2025] CSRF_SECRET via getenv: 
+[Tue Sep 23 17:52:54 2025] DB_HOST: 
+[Tue Sep 23 17:52:54 2025] Méthode GET : pas de vérification CSRF nécessaire
+[Tue Sep 23 17:52:54 2025] [::1]:53931 [200]: GET /api/articles?page=1&limit=3
+[Tue Sep 23 17:52:54 2025] [::1]:53931 Closing
+[Tue Sep 23 17:52:54 2025] [::1]:53937 Accepted
+[Tue Sep 23 17:52:54 2025] [::1]:53937 [200]: GET /uploads/articles/article_1_68d103025e052.png
+[Tue Sep 23 17:52:54 2025] [::1]:53937 Closing
+[Tue Sep 23 17:53:35 2025] [::1]:53967 Accepted
+[Tue Sep 23 17:53:36 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Tue Sep 23 17:53:36 2025] Variables d'environnement chargées:
+[Tue Sep 23 17:53:36 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:53:36 2025] CSRF_SECRET via getenv: 
+[Tue Sep 23 17:53:36 2025] DB_HOST: 
+[Tue Sep 23 17:53:36 2025] Route /api/articles : vérification CSRF
+[Tue Sep 23 17:53:36 2025] Vérification CSRF...
+[Tue Sep 23 17:53:36 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:53:36 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:53:36 2025] Toutes les variables d'env: Array
+(
+    [DB_HOST] => localhost
+    [DB_NAME] => infodotgame
+    [DB_USER] => db_user
+    [DB_PASSWORD] => 12345
+    [DB_PORT] => 3315
+    [JWT_SECRET_KEY] => f982da955f9c94f234e8f05971d9f170b7118da9250399c9009f97c5483b90c8
+    [RECAPTCHA_SECRET_KEY] => 6LdPrM4rAAAAAEAQehIF1pwgQc5Y4AW-6YUkhiRU
+    [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+)
+
+[Tue Sep 23 17:53:36 2025] Vérification CSRF...
+[Tue Sep 23 17:53:36 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:53:36 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:53:36 2025] Toutes les variables d'env: Array
+(
+    [DB_HOST] => localhost
+    [DB_NAME] => infodotgame
+    [DB_USER] => db_user
+    [DB_PASSWORD] => 12345
+    [DB_PORT] => 3315
+    [JWT_SECRET_KEY] => f982da955f9c94f234e8f05971d9f170b7118da9250399c9009f97c5483b90c8
+    [RECAPTCHA_SECRET_KEY] => 6LdPrM4rAAAAAEAQehIF1pwgQc5Y4AW-6YUkhiRU
+    [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+)
+
+[Tue Sep 23 17:53:36 2025] [::1]:53967 [201]: POST /api/articles
+[Tue Sep 23 17:53:36 2025] [::1]:53967 Closing
+[Tue Sep 23 17:53:36 2025] [::1]:53971 Accepted
+[Tue Sep 23 17:53:36 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Tue Sep 23 17:53:36 2025] Variables d'environnement chargées:
+[Tue Sep 23 17:53:36 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:53:36 2025] CSRF_SECRET via getenv: 
+[Tue Sep 23 17:53:36 2025] DB_HOST: 
+[Tue Sep 23 17:53:36 2025] Route /api/articles/5/image : vérification CSRF
+[Tue Sep 23 17:53:36 2025] Vérification CSRF...
+[Tue Sep 23 17:53:36 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:53:36 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:53:36 2025] Toutes les variables d'env: Array
+(
+    [DB_HOST] => localhost
+    [DB_NAME] => infodotgame
+    [DB_USER] => db_user
+    [DB_PASSWORD] => 12345
+    [DB_PORT] => 3315
+    [JWT_SECRET_KEY] => f982da955f9c94f234e8f05971d9f170b7118da9250399c9009f97c5483b90c8
+    [RECAPTCHA_SECRET_KEY] => 6LdPrM4rAAAAAEAQehIF1pwgQc5Y4AW-6YUkhiRU
+    [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+)
+
+[Tue Sep 23 17:53:36 2025] Vérification CSRF...
+[Tue Sep 23 17:53:36 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:53:36 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:53:36 2025] Toutes les variables d'env: Array
+(
+    [DB_HOST] => localhost
+    [DB_NAME] => infodotgame
+    [DB_USER] => db_user
+    [DB_PASSWORD] => 12345
+    [DB_PORT] => 3315
+    [JWT_SECRET_KEY] => f982da955f9c94f234e8f05971d9f170b7118da9250399c9009f97c5483b90c8
+    [RECAPTCHA_SECRET_KEY] => 6LdPrM4rAAAAAEAQehIF1pwgQc5Y4AW-6YUkhiRU
+    [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+)
+
+[Tue Sep 23 17:53:36 2025] Article récupéré : App\model\Article Object
+(
+    [id_article:App\model\Article:private] => 5
+    [cover_image:App\model\Article:private] => 
+    [published_at:App\model\Article:private] => 2025-09-23 15:53:36
+    [created_at:App\model\Article:private] => 2025-09-23 15:53:36
+    [title:App\model\Article:private] => failexss
+    [slug:App\model\Article:private] => failexss-2816
+    [content:App\model\Article:private] => jerzojgeiozjgjeriozjhgogr
+fh465gtrf45f4j685efj468
+fsh4ryd54yjk4yer46to6u46dyk4t
+rskyijhgshfskjdnhbkfdnbqdfknhbkldf,qnbkqgdnmk
+    [introduction:App\model\Article:private] => 
+    [id_user:App\model\Article:private] => 1
+    [categories:App\model\Article:private] => Array
+        (
+        )
+
+    [tags:App\model\Article:private] => Array
+        (
+            [0] => xss
+            [1] => faille
+        )
+
+)
+
+[Tue Sep 23 17:53:36 2025] Chemin de l'image à sauvegarder : /uploads/articles/article_5_68d2c280e3ed5.png
+[Tue Sep 23 17:53:36 2025] Article avant update : App\model\Article Object
+(
+    [id_article:App\model\Article:private] => 5
+    [cover_image:App\model\Article:private] => /uploads/articles/article_5_68d2c280e3ed5.png
+    [published_at:App\model\Article:private] => 2025-09-23 15:53:36
+    [created_at:App\model\Article:private] => 2025-09-23 15:53:36
+    [title:App\model\Article:private] => failexss
+    [slug:App\model\Article:private] => failexss-2816
+    [content:App\model\Article:private] => jerzojgeiozjgjeriozjhgogr
+fh465gtrf45f4j685efj468
+fsh4ryd54yjk4yer46to6u46dyk4t
+rskyijhgshfskjdnhbkfdnbqdfknhbkldf,qnbkqgdnmk
+    [introduction:App\model\Article:private] => 
+    [id_user:App\model\Article:private] => 1
+    [categories:App\model\Article:private] => Array
+        (
+        )
+
+    [tags:App\model\Article:private] => Array
+        (
+            [0] => xss
+            [1] => faille
+        )
+
+)
+
+[Tue Sep 23 17:53:36 2025] Tentative de mise à jour de l'article : App\model\Article Object
+(
+    [id_article:App\model\Article:private] => 5
+    [cover_image:App\model\Article:private] => /uploads/articles/article_5_68d2c280e3ed5.png
+    [published_at:App\model\Article:private] => 2025-09-23 15:53:36
+    [created_at:App\model\Article:private] => 2025-09-23 15:53:36
+    [title:App\model\Article:private] => failexss
+    [slug:App\model\Article:private] => failexss-2816
+    [content:App\model\Article:private] => jerzojgeiozjgjeriozjhgogr
+fh465gtrf45f4j685efj468
+fsh4ryd54yjk4yer46to6u46dyk4t
+rskyijhgshfskjdnhbkfdnbqdfknhbkldf,qnbkqgdnmk
+    [introduction:App\model\Article:private] => 
+    [id_user:App\model\Article:private] => 1
+    [categories:App\model\Article:private] => Array
+        (
+        )
+
+    [tags:App\model\Article:private] => Array
+        (
+            [0] => xss
+            [1] => faille
+        )
+
+)
+
+[Tue Sep 23 17:53:36 2025] Paramètres de la requête de mise à jour : Array
+(
+    [id] => 5
+    [cover_image] => /uploads/articles/article_5_68d2c280e3ed5.png
+    [title] => failexss
+    [slug] => failexss-2816
+    [introduction] => 
+    [content] => jerzojgeiozjgjeriozjhgogr
+fh465gtrf45f4j685efj468
+fsh4ryd54yjk4yer46to6u46dyk4t
+rskyijhgshfskjdnhbkfdnbqdfknhbkldf,qnbkqgdnmk
+    [published_at] => 2025-09-23 15:53:36
+    [tags] => ["xss","faille"]
+)
+
+[Tue Sep 23 17:53:36 2025] Mise à jour des catégories pour l'article ID 5
+[Tue Sep 23 17:53:36 2025] Anciennes catégories supprimées
+[Tue Sep 23 17:53:36 2025] Toutes les nouvelles catégories ont été ajoutées
+[Tue Sep 23 17:53:36 2025] Résultat de la mise à jour : succès
+[Tue Sep 23 17:53:36 2025] [::1]:53971 [200]: POST /api/articles/5/image
+[Tue Sep 23 17:53:36 2025] [::1]:53971 Closing
+[Tue Sep 23 17:53:37 2025] [::1]:53998 Accepted
+[Tue Sep 23 17:53:38 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Tue Sep 23 17:53:38 2025] Variables d'environnement chargées:
+[Tue Sep 23 17:53:38 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:53:38 2025] CSRF_SECRET via getenv: 
+[Tue Sep 23 17:53:38 2025] DB_HOST: 
+[Tue Sep 23 17:53:38 2025] Méthode GET : pas de vérification CSRF nécessaire
+[Tue Sep 23 17:53:38 2025] PHP Fatal error:  Uncaught TypeError: htmlspecialchars(): Argument #1 ($string) must be of type string, null given in E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php:115
+Stack trace:
+#0 E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php(115): htmlspecialchars(NULL, 3, 'UTF-8')
+#1 E:\projet_info_dot_game\blog-jeux-video-backend\src\core\Router.php(86): App\controller\ArticleController->getById(5)
+#2 E:\projet_info_dot_game\blog-jeux-video-backend\public\index.php(36): App\core\Router->dispatch('/api/articles/i...', 'GET')
+#3 {main}
+  thrown in E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php on line 115
+[Tue Sep 23 17:53:38 2025] [::1]:53998 [200]: GET /api/articles/id/5 - Uncaught TypeError: htmlspecialchars(): Argument #1 ($string) must be of type string, null given in E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php:115
+Stack trace:
+#0 E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php(115): htmlspecialchars(NULL, 3, 'UTF-8')
+#1 E:\projet_info_dot_game\blog-jeux-video-backend\src\core\Router.php(86): App\controller\ArticleController->getById(5)
+#2 E:\projet_info_dot_game\blog-jeux-video-backend\public\index.php(36): App\core\Router->dispatch('/api/articles/i...', 'GET')
+#3 {main}
+  thrown in E:\projet_info_dot_game\blog-jeux-video-backend\src\controller\ArticleController.php on line 115
+[Tue Sep 23 17:53:38 2025] [::1]:53998 Closing
+[Tue Sep 23 17:55:30 2025] [::1]:54116 Accepted
+[Tue Sep 23 17:55:31 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Tue Sep 23 17:55:31 2025] Variables d'environnement chargées:
+[Tue Sep 23 17:55:31 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Tue Sep 23 17:55:31 2025] CSRF_SECRET via getenv: 
+[Tue Sep 23 17:55:31 2025] DB_HOST: 
+[Tue Sep 23 17:55:31 2025] Méthode GET : pas de vérification CSRF nécessaire
+[Tue Sep 23 17:55:31 2025] [::1]:54116 [200]: GET /api/articles/id/5
+[Tue Sep 23 17:55:31 2025] [::1]:54116 Closing
+[Tue Sep 23 17:55:31 2025] [::1]:54123 Accepted
+[Tue Sep 23 17:55:31 2025] [::1]:54123 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
+[Tue Sep 23 17:55:31 2025] [::1]:54123 Closing

@@ -4,34 +4,23 @@ namespace App\middleware;
 
 class CSRFMiddleware
 {
-    public static function generateToken(): string
-    {
-        if (session_status() === PHP_SESSION_NONE) {
-            session_start();
-        }
-
-        if (!isset($_SESSION['csrf_token'])) {
-            $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
-        }
-
-        return $_SESSION['csrf_token'];
-    }
-
     public static function verifyToken(): bool
     {
         error_log("Vérification CSRF...");
-        error_log("Headers reçus: " . print_r(getallheaders(), true));
 
-        // Récupérer le token CSRF de l'en-tête
+        // Utiliser l'opérateur null coalescing pour éviter les erreurs
         $csrfToken = $_SERVER['HTTP_X_CSRF_TOKEN'] ?? null;
-        error_log("Token CSRF reçu: " . $csrfToken);
-        error_log("Token CSRF attendu: " . getenv('CSRF_SECRET'));
+        $csrfSecret = $_ENV['CSRF_SECRET'] ?? getenv('CSRF_SECRET'); // Essayer les deux méthodes
 
-        if (!$csrfToken) {
-            error_log("Pas de token CSRF trouvé dans la requête");
+        error_log("Token CSRF reçu: " . ($csrfToken ?? 'non défini'));
+        error_log("Token CSRF attendu: " . ($csrfSecret ?? 'non défini'));
+        error_log("Toutes les variables d'env: " . print_r($_ENV, true));
+
+        if (!$csrfToken || !$csrfSecret) {
+            error_log("Token CSRF ou Secret manquant");
             return false;
         }
 
-        return $csrfToken === getenv('CSRF_SECRET');
+        return hash_equals($csrfToken, $csrfSecret);
     }
 }

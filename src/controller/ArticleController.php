@@ -5,21 +5,22 @@ declare(strict_types=1);
 namespace App\controller;
 
 use Exception;
-
 use App\core\attributes\Route;
 use App\model\Article;
 use App\repository\ArticleRepository;
 use App\services\JWTServices;
 use App\Utils\SecurityUtils;
+use App\middleware\CSRFMiddleware;
 use DateTime;
 
 class ArticleController
 {
     private ArticleRepository $articleRepository;
 
+
     public function __construct()
     {
-        $this->articleRepository = new ArticleRepository;
+        $this->articleRepository = new ArticleRepository();
     }
 
     #[Route('/api/article-delete/{id}', 'DELETE')]
@@ -89,34 +90,17 @@ class ArticleController
                 return;
             }
 
-            // On ajoute quand même les droits si un token est présent
-            // mais ce n'est pas bloquant pour voir l'article
-            $articleData = $article->toArray();
-            $articleData['is_author'] = false;
-            $articleData['is_admin'] = false;
-
-            if (isset($_SERVER['HTTP_AUTHORIZATION'])) {
-                $token = str_replace('Bearer ', '', $_SERVER['HTTP_AUTHORIZATION']);
-                try {
-                    $payload = JWTServices::verify($token);
-                    $articleData['is_author'] = $article->getUserId() === (int)$payload['id'];
-                    $articleData['is_admin'] = is_array($payload['role']) ?
-                        in_array('admin', $payload['role']) :
-                        $payload['role'] === 'admin';
-                } catch (\Exception $e) {
-                    // Si le token est invalide, on garde les droits par défaut (false)
-                }
-            }
-
-            // Échapper les données de l'article avant de les envoyer
-            $articleData['title'] = htmlspecialchars($articleData['title'], ENT_QUOTES, 'UTF-8');
-            $articleData['content'] = htmlspecialchars($articleData['content'], ENT_QUOTES, 'UTF-8');
-            $articleData['introduction'] = htmlspecialchars($articleData['introduction'], ENT_QUOTES, 'UTF-8');
-            if (isset($articleData['tags'])) {
-                $articleData['tags'] = array_map(function ($tag) {
-                    return htmlspecialchars($tag, ENT_QUOTES, 'UTF-8');
-                }, $articleData['tags']);
-            }
+            // Plus besoin d'échapper les caractères ici
+            $articleData = [
+                'id' => $article->getId(),
+                'title' => $article->getTitle(),
+                'content' => $article->getContent(),
+                'introduction' => $article->getIntroduction(),
+                'cover_image' => $article->getCoverImage(),
+                'published_at' => $article->getPublishedAt(),
+                'created_at' => $article->getCreatedAt(),
+                'tags' => $article->getTags()
+            ];
 
             http_response_code(200);
             echo json_encode([
@@ -159,39 +143,40 @@ class ArticleController
     public function create(): void
     {
         try {
-            // Vérification de l'authentification
-            if (!isset($_SERVER['HTTP_AUTHORIZATION'])) {
-                http_response_code(401);
-                echo json_encode(['success' => false, 'error' => 'Token non fourni']);
-                return;
-            }
-
-            // Récupération du token
-            $token = str_replace('Bearer ', '', $_SERVER['HTTP_AUTHORIZATION']);
-            $payload = JWTServices::verify($token);
-
-            // Récupération des données JSON
-            $jsonData = file_get_contents('php://input');
-            $data = json_decode($jsonData, true);
-
-            if (!$data || !isset($data['title']) || !isset($data['content'])) {
-                http_response_code(400);
+            // Ajouter la vérification CSRF en premier
+            if (!CSRFMiddleware::verifyToken()) {
+                http_response_code(403);
                 echo json_encode([
                     'success' => false,
-                    'error' => 'Titre et contenu requis'
+                    'error' => 'Token CSRF invalide'
                 ]);
                 return;
             }
 
-            // Sanitize les données reçues
-            $data = SecurityUtils::sanitizeRequestData($data);
+            // Vérifier et décoder le token JWT
+            $authHeader = $_SERVER['HTTP_AUTHORIZATION'] ?? '';
+            if (empty($authHeader)) {
+                throw new Exception('Token JWT manquant');
+            }
 
-            // Créer l'article avec les données nettoyées
+            // Extraire le token du header "Bearer <token>"
+            $token = str_replace('Bearer ', '', $authHeader);
+            $payload = JWTServices::verify($token);
+            if (!$payload || !isset($payload['id'])) {
+                throw new Exception('Token JWT invalide ou expiré');
+            }
+
+            // Récupérer les données de l'article
+            $data = json_decode(file_get_contents('php://input'), true);
+            if (!$data) {
+                throw new Exception('Données invalides');
+            }
+
+            // Créer l'article avec l'ID utilisateur du token
             $article = new Article();
             $article->setTitle($data['title']);
-            $article->setIntroduction($data['introduction'] ?? '');
             $article->setContent($data['content']);
-            $article->setUserId($payload['id']);
+            $article->setUserId((int)$payload['id']); // Cast en int
             $article->setPublished_at((new DateTime())->format('Y-m-d H:i:s'));
             if (isset($data['tags'])) {
                 $article->setTags($data['tags']);
@@ -228,7 +213,7 @@ class ArticleController
 
             echo json_encode($response);
         } catch (\Exception $e) {
-
+            error_log("Erreur dans ArticleController::create : " . $e->getMessage());
             header('Content-Type: application/json');
             http_response_code(500);
 
@@ -246,6 +231,16 @@ class ArticleController
     public function uploadImage(int $id): void
     {
         try {
+            // Ajouter la vérification CSRF
+            if (!CSRFMiddleware::verifyToken()) {
+                http_response_code(403);
+                echo json_encode([
+                    'success' => false,
+                    'error' => 'Token CSRF invalide'
+                ]);
+                return;
+            }
+
             // Vérifier si un fichier a été envoyé
             if (!isset($_FILES['image']) || $_FILES['image']['error'] !== UPLOAD_ERR_OK) {
                 $errorMessage = match ($_FILES['image']['error'] ?? -1) {
@@ -359,53 +354,31 @@ class ArticleController
     public function getAllArticles(): void
     {
         try {
-            // Récupération des paramètres de pagination et filtres
-            $page = isset($_GET['page']) ? max(1, (int)$_GET['page']) : 1;
-            $limit = isset($_GET['limit']) ? min(50, max(1, (int)$_GET['limit'])) : 10;
+            $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+            $limit = isset($_GET['limit']) ? (int)$_GET['limit'] : 10;
 
-            // Préparation des filtres
-            $filters = [];
+            $result = $this->articleRepository->findAll($page, $limit);
 
-            if (!empty($_GET['date'])) {
-                $filters['date'] = $_GET['date'];
-            }
-
-            if (!empty($_GET['author'])) {
-                $filters['author'] = $_GET['author'];
-            }
-
-            if (!empty($_GET['tags'])) {
-                $filters['tags'] = $_GET['tags'];
-            }
-
-            // Récupération des articles
-            $result = $this->articleRepository->findAll($page, $limit, $filters);
-
-            // Transformation des articles en format JSON avec échappement HTML
+            // Plus besoin d'échapper les caractères ici
             $articles = array_map(function ($article) {
                 return [
                     'id' => $article->getId(),
-                    'title' => htmlspecialchars($article->getTitle(), ENT_QUOTES, 'UTF-8'),
+                    'title' => $article->getTitle(),
                     'slug' => $article->getSlug(),
-                    'content' => htmlspecialchars($article->getContent(), ENT_QUOTES, 'UTF-8'),
-                    'introduction' => htmlspecialchars($article->getIntroduction(), ENT_QUOTES, 'UTF-8'),
+                    'content' => $article->getContent(),
+                    'introduction' => $article->getIntroduction(),
                     'cover_image' => $article->getCoverImage(),
                     'published_at' => $article->getPublishedAt(),
                     'created_at' => $article->getCreatedAt(),
-                    'tags' => array_map(function ($tag) {
-                        return htmlspecialchars($tag, ENT_QUOTES, 'UTF-8');
-                    }, $article->getTags() ?? [])
+                    'tags' => $article->getTags()
                 ];
             }, $result['articles']);
 
-            // Envoi de la réponse
-            header('Content-Type: application/json');
+            http_response_code(200);
             echo json_encode([
                 'success' => true,
-                'articles' => $articles,
-                'pagination' => [
-                    'current_page' => $page,
-                    'per_page' => $limit,
+                'data' => [
+                    'articles' => $articles,
                     'total' => $result['total']
                 ]
             ]);
@@ -424,6 +397,16 @@ class ArticleController
     public function updateArticle(int $id): void
     {
         try {
+            // Ajouter la vérification CSRF
+            if (!CSRFMiddleware::verifyToken()) {
+                http_response_code(403);
+                echo json_encode([
+                    'success' => false,
+                    'error' => 'Token CSRF invalide'
+                ]);
+                return;
+            }
+
             if (!isset($_SERVER['HTTP_AUTHORIZATION'])) {
                 http_response_code(401);
                 echo json_encode(['success' => false, 'error' => 'Token non fourni']);

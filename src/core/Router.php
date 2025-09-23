@@ -25,11 +25,21 @@ class Router
     {
         // On vérifie CSRF uniquement pour les méthodes modifiant des données
         if (!in_array($method, ['POST', 'PUT', 'DELETE', 'PATCH'])) {
+            error_log("Méthode $method : pas de vérification CSRF nécessaire");
             return false;
         }
 
-        // On exclut certaines routes de la vérification CSRF
-        return !in_array($uri, $this->excludedRoutes);
+        // Liste des routes exclues de la vérification CSRF
+        $this->excludedRoutes = [
+            '/api/login',
+            '/api/register',
+            '/api/valider-email'
+        ];
+
+        $shouldCheck = !in_array($uri, $this->excludedRoutes);
+        error_log("Route $uri : " . ($shouldCheck ? "vérification CSRF" : "pas de vérification CSRF"));
+
+        return $shouldCheck;
     }
 
     private function verifyCSRF(): void

@@ -4,10 +4,26 @@
 use App\core\CorsMiddleWare;
 use App\core\Database;
 use App\core\Router;
+use Dotenv\Dotenv;
 
 require_once __DIR__ . "/../bootstrap.php";
+
+// Charger les variables d'environnement
+$dotenv = Dotenv::createImmutable(__DIR__ . '/..');
+$dotenv->load();
+
+// Forcer le chargement dans $_ENV
+$_ENV['CSRF_SECRET'] = $_ENV['CSRF_SECRET'] ?? getenv('CSRF_SECRET');
+
+// Debug des variables d'environnement
+error_log("Variables d'environnement chargées:");
+error_log("CSRF_SECRET via _ENV: " . ($_ENV['CSRF_SECRET'] ?? 'non défini'));
+error_log("CSRF_SECRET via getenv: " . (getenv('CSRF_SECRET') ?? 'non défini'));
+error_log("DB_HOST: " . (getenv('DB_HOST') ?? 'non défini'));
+
 $corsMiddleWare = new CorsMiddleWare();
 $corsMiddleWare->handle();
+
 try {
 
     $router = new Router();
