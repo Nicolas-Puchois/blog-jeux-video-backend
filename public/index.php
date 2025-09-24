@@ -12,8 +12,10 @@ require_once __DIR__ . "/../bootstrap.php";
 $dotenv = Dotenv::createImmutable(__DIR__ . '/..');
 $dotenv->load();
 
-// Forcer le chargement dans $_ENV
-$_ENV['CSRF_SECRET'] = $_ENV['CSRF_SECRET'] ?? getenv('CSRF_SECRET');
+// Forcer le chargement dans l'environnement
+foreach ($_ENV as $key => $value) {
+    putenv("$key=$value");
+}
 
 // Debug des variables d'environnement
 error_log("Variables d'environnement chargées:");

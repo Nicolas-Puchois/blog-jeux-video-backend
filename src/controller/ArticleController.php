@@ -76,10 +76,7 @@ class ArticleController
     public function getById(int|string $id): void
     {
         try {
-            // Assurer que l'ID est un entier
-            $articleId = is_string($id) ? (int) $id : $id;
-
-            $article = $this->articleRepository->findById($articleId);
+            $article = $this->articleRepository->findById($id);
 
             if (!$article) {
                 http_response_code(404);
@@ -90,7 +87,6 @@ class ArticleController
                 return;
             }
 
-            // Plus besoin d'échapper les caractères ici
             $articleData = [
                 'id' => $article->getId(),
                 'title' => $article->getTitle(),
@@ -99,6 +95,7 @@ class ArticleController
                 'cover_image' => $article->getCoverImage(),
                 'published_at' => $article->getPublishedAt(),
                 'created_at' => $article->getCreatedAt(),
+                'user_id' => $article->getUserId(), // Ajout de l'ID utilisateur
                 'tags' => $article->getTags()
             ];
 
@@ -107,11 +104,12 @@ class ArticleController
                 'success' => true,
                 'data' => $articleData
             ]);
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
+            error_log("Erreur dans getById: " . $e->getMessage());
             http_response_code(500);
             echo json_encode([
                 'success' => false,
-                'error' => 'Erreur serveur: ' . $e->getMessage()
+                'error' => 'Erreur lors de la récupération de l\'article'
             ]);
         }
     }
