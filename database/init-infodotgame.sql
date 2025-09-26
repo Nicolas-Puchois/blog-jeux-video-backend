@@ -16,6 +16,20 @@ CREATE TABLE `user` (
     role VARCHAR(20) DEFAULT 'user'
 );
 
+CREATE TABLE article (
+    id_article INT AUTO_INCREMENT PRIMARY KEY,
+    cover_image VARCHAR(255),
+    published_at TIMESTAMP NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    title VARCHAR(255) NOT NULL,
+    slug VARCHAR(255) NOT NULL UNIQUE,
+    content TEXT NOT NULL,
+    id_user INT,
+    tags JSON,
+    introduction TEXT,
+    FOREIGN KEY (id_user) REFERENCES user(id_user) ON DELETE SET NULL
+);
+
 CREATE TABLE game (
     id_game INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
@@ -69,19 +83,7 @@ CREATE TABLE review_comment (
     FOREIGN KEY (id_comments) REFERENCES comments(id_comments) ON DELETE CASCADE
 );
 
-CREATE TABLE article (
-    id_article INT AUTO_INCREMENT PRIMARY KEY,
-    cover_image VARCHAR(255),
-    published_at TIMESTAMP NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    title VARCHAR(255) NOT NULL,
-    slug VARCHAR(255) NOT NULL UNIQUE,
-    content TEXT NOT NULL,
-    id_user INT,
-    tags JSON,
-    introduction TEXT,
-    FOREIGN KEY (id_user) REFERENCES user(id_user) ON DELETE SET NULL
-);
+
 
 
 CREATE TABLE categories (

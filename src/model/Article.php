@@ -12,7 +12,7 @@ class Article
     private ?string $published_at = null;
     private string $created_at;
     private string $title;
-    private ?string $slug = null; // Modification ici pour permettre null
+    private ?string $slug = null;
     private string $content;
     private ?string $introduction = null;
     private ?int $id_user = null;

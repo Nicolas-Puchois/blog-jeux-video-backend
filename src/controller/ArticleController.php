@@ -95,7 +95,7 @@ class ArticleController
                 'cover_image' => $article->getCoverImage(),
                 'published_at' => $article->getPublishedAt(),
                 'created_at' => $article->getCreatedAt(),
-                'user_id' => $article->getUserId(), // Ajout de l'ID utilisateur
+                'user_id' => $article->getUserId(),
                 'tags' => $article->getTags()
             ];
 
