@@ -1,357 +1,33 @@
-[Wed Sep 24 08:26:05 2025] PHP 8.4.4 Development Server (http://localhost:8000) started
-[Wed Sep 24 08:26:38 2025] [::1]:50850 Accepted
-[Wed Sep 24 08:26:39 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:26:39 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:26:39 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:26:39 2025] CSRF_SECRET via getenv: 
-[Wed Sep 24 08:26:39 2025] DB_HOST: 
-[Wed Sep 24 08:26:39 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:26:39 2025] [::1]:50850 [200]: GET /api/articles?page=1&limit=3
-[Wed Sep 24 08:26:39 2025] [::1]:50850 Closing
-[Wed Sep 24 08:28:03 2025] [::1]:50955 Accepted
-[Wed Sep 24 08:28:04 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:28:04 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:28:04 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:28:04 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:28:04 2025] DB_HOST: localhost
-[Wed Sep 24 08:28:04 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:28:04 2025] [::1]:50955 [200]: GET /api/articles?page=1&limit=3
-[Wed Sep 24 08:28:04 2025] [::1]:50955 Closing
-[Wed Sep 24 08:31:10 2025] [::1]:51024 Accepted
-[Wed Sep 24 08:31:10 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:31:10 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:31:10 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:31:10 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:31:10 2025] DB_HOST: localhost
-[Wed Sep 24 08:31:10 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:31:10 2025] [::1]:51024 [200]: GET /api/articles?page=1&limit=3
-[Wed Sep 24 08:31:10 2025] [::1]:51024 Closing
-[Wed Sep 24 08:31:12 2025] [::1]:51053 Accepted
-[Wed Sep 24 08:31:12 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:31:12 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:31:12 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:31:12 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:31:12 2025] DB_HOST: localhost
-[Wed Sep 24 08:31:12 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:31:12 2025] [::1]:51053 [200]: GET /api/articles?page=1&limit=3
-[Wed Sep 24 08:31:12 2025] [::1]:51053 Closing
-[Wed Sep 24 08:31:14 2025] [::1]:51064 Accepted
-[Wed Sep 24 08:31:14 2025] [::1]:51065 Accepted
-[Wed Sep 24 08:31:14 2025] [::1]:51065 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:31:14 2025] [::1]:51064 [200]: GET /uploads/articles/article_1_68d103025e052.png
-[Wed Sep 24 08:31:14 2025] [::1]:51065 Closing
-[Wed Sep 24 08:31:14 2025] [::1]:51064 Closing
-[Wed Sep 24 08:32:51 2025] [::1]:51103 Accepted
-[Wed Sep 24 08:32:51 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:32:51 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:32:51 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:32:51 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:32:51 2025] DB_HOST: localhost
-[Wed Sep 24 08:32:51 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:32:51 2025] [::1]:51103 [200]: GET /api/articles?page=1&limit=3
-[Wed Sep 24 08:32:51 2025] [::1]:51103 Closing
-[Wed Sep 24 08:32:51 2025] [::1]:51110 Accepted
-[Wed Sep 24 08:32:51 2025] [::1]:51111 Accepted
-[Wed Sep 24 08:32:51 2025] [::1]:51110 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:32:51 2025] [::1]:51110 Closing
-[Wed Sep 24 08:32:51 2025] [::1]:51111 [200]: GET /uploads/articles/article_1_68d103025e052.png
-[Wed Sep 24 08:32:51 2025] [::1]:51111 Closing
-[Wed Sep 24 08:32:54 2025] [::1]:51131 Accepted
-[Wed Sep 24 08:32:54 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:32:54 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:32:54 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:32:54 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:32:54 2025] DB_HOST: localhost
-[Wed Sep 24 08:32:54 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:32:54 2025] [::1]:51131 [200]: GET /api/articles?page=1&limit=3
-[Wed Sep 24 08:32:54 2025] [::1]:51131 Closing
-[Wed Sep 24 08:32:54 2025] [::1]:51137 Accepted
-[Wed Sep 24 08:32:54 2025] [::1]:51137 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:32:54 2025] [::1]:51138 Accepted
-[Wed Sep 24 08:32:54 2025] [::1]:51137 Closing
-[Wed Sep 24 08:32:54 2025] [::1]:51138 [200]: GET /uploads/articles/article_1_68d103025e052.png
-[Wed Sep 24 08:32:54 2025] [::1]:51138 Closing
-[Wed Sep 24 08:32:55 2025] [::1]:51159 Accepted
-[Wed Sep 24 08:32:56 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:32:56 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:32:56 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:32:56 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:32:56 2025] DB_HOST: localhost
-[Wed Sep 24 08:32:56 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:32:56 2025] [::1]:51159 [200]: GET /api/articles/id/5
-[Wed Sep 24 08:32:56 2025] [::1]:51159 Closing
-[Wed Sep 24 08:32:56 2025] [::1]:51164 Accepted
-[Wed Sep 24 08:32:56 2025] [::1]:51164 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:32:56 2025] [::1]:51164 Closing
-[Wed Sep 24 08:34:08 2025] [::1]:51263 Accepted
-[Wed Sep 24 08:34:09 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:34:09 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:34:09 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:34:09 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:34:09 2025] DB_HOST: localhost
-[Wed Sep 24 08:34:09 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:34:09 2025] [::1]:51263 [200]: GET /api/articles/id/5
-[Wed Sep 24 08:34:09 2025] [::1]:51263 Closing
-[Wed Sep 24 08:34:09 2025] [::1]:51269 Accepted
-[Wed Sep 24 08:34:09 2025] [::1]:51269 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:34:09 2025] [::1]:51269 Closing
-[Wed Sep 24 08:34:20 2025] [::1]:51321 Accepted
-[Wed Sep 24 08:34:20 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:34:20 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:34:20 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:34:20 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:34:20 2025] DB_HOST: localhost
-[Wed Sep 24 08:34:20 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:34:20 2025] [::1]:51321 [200]: GET /api/articles/id/5
-[Wed Sep 24 08:34:20 2025] [::1]:51321 Closing
-[Wed Sep 24 08:34:20 2025] [::1]:51328 Accepted
-[Wed Sep 24 08:34:20 2025] [::1]:51328 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:34:20 2025] [::1]:51328 Closing
-[Wed Sep 24 08:35:08 2025] [::1]:51385 Accepted
-[Wed Sep 24 08:35:09 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:35:09 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:35:09 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:35:09 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:35:09 2025] DB_HOST: localhost
-[Wed Sep 24 08:35:09 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:35:09 2025] [::1]:51385 [200]: GET /api/articles/id/5
-[Wed Sep 24 08:35:09 2025] [::1]:51385 Closing
-[Wed Sep 24 08:35:09 2025] [::1]:51403 Accepted
-[Wed Sep 24 08:35:09 2025] [::1]:51403 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:35:09 2025] [::1]:51403 Closing
-[Wed Sep 24 08:35:11 2025] [::1]:51449 Accepted
-[Wed Sep 24 08:35:11 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:35:11 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:35:11 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:35:11 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:35:11 2025] DB_HOST: localhost
-[Wed Sep 24 08:35:11 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:35:11 2025] [::1]:51449 [200]: GET /api/articles?page=1&limit=3
-[Wed Sep 24 08:35:11 2025] [::1]:51449 Closing
-[Wed Sep 24 08:35:11 2025] [::1]:51461 Accepted
-[Wed Sep 24 08:35:11 2025] [::1]:51462 Accepted
-[Wed Sep 24 08:35:11 2025] [::1]:51461 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:35:11 2025] [::1]:51461 Closing
-[Wed Sep 24 08:35:11 2025] [::1]:51462 [200]: GET /uploads/articles/article_1_68d103025e052.png
-[Wed Sep 24 08:35:11 2025] [::1]:51462 Closing
-[Wed Sep 24 08:35:16 2025] [::1]:51499 Accepted
-[Wed Sep 24 08:35:17 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:35:17 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:35:17 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:35:17 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:35:17 2025] DB_HOST: localhost
-[Wed Sep 24 08:35:17 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:35:17 2025] [::1]:51499 [200]: GET /api/articles/id/5
-[Wed Sep 24 08:35:17 2025] [::1]:51499 Closing
-[Wed Sep 24 08:35:17 2025] [::1]:51509 Accepted
-[Wed Sep 24 08:35:17 2025] [::1]:51509 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:35:17 2025] [::1]:51509 Closing
-[Wed Sep 24 08:35:31 2025] [::1]:51535 Accepted
-[Wed Sep 24 08:35:31 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:35:31 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:35:31 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:35:31 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:35:31 2025] DB_HOST: localhost
-[Wed Sep 24 08:35:31 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:35:31 2025] [::1]:51535 [200]: GET /api/articles/id/5
-[Wed Sep 24 08:35:31 2025] [::1]:51535 Closing
-[Wed Sep 24 08:35:31 2025] [::1]:51546 Accepted
-[Wed Sep 24 08:35:31 2025] [::1]:51546 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:35:31 2025] [::1]:51546 Closing
-[Wed Sep 24 08:36:47 2025] [::1]:51582 Accepted
-[Wed Sep 24 08:36:48 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:36:48 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:36:48 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:36:48 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:36:48 2025] DB_HOST: localhost
-[Wed Sep 24 08:36:48 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:36:48 2025] [::1]:51582 [200]: GET /api/articles/id/5
-[Wed Sep 24 08:36:48 2025] [::1]:51582 Closing
-[Wed Sep 24 08:36:48 2025] [::1]:51592 Accepted
-[Wed Sep 24 08:36:48 2025] [::1]:51592 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:36:48 2025] [::1]:51592 Closing
-[Wed Sep 24 08:36:50 2025] [::1]:51612 Accepted
-[Wed Sep 24 08:36:50 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:36:50 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:36:50 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:36:50 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:36:50 2025] DB_HOST: localhost
-[Wed Sep 24 08:36:50 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:36:50 2025] [::1]:51612 [200]: GET /api/articles/id/5
-[Wed Sep 24 08:36:50 2025] [::1]:51612 Closing
-[Wed Sep 24 08:36:50 2025] [::1]:51622 Accepted
-[Wed Sep 24 08:36:50 2025] [::1]:51622 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:36:50 2025] [::1]:51622 Closing
-[Wed Sep 24 08:36:55 2025] [::1]:51650 Accepted
-[Wed Sep 24 08:36:55 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:36:55 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:36:55 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:36:55 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:36:55 2025] DB_HOST: localhost
-[Wed Sep 24 08:36:55 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:36:55 2025] [::1]:51650 [200]: GET /api/articles/id/5
-[Wed Sep 24 08:36:55 2025] [::1]:51650 Closing
-[Wed Sep 24 08:36:55 2025] [::1]:51660 Accepted
-[Wed Sep 24 08:36:55 2025] [::1]:51660 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:36:55 2025] [::1]:51660 Closing
-[Wed Sep 24 08:38:26 2025] [::1]:51716 Accepted
-[Wed Sep 24 08:38:27 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:38:27 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:38:27 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:38:27 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:38:27 2025] DB_HOST: localhost
-[Wed Sep 24 08:38:27 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:38:27 2025] [::1]:51716 [200]: GET /api/articles/id/5
-[Wed Sep 24 08:38:27 2025] [::1]:51716 Closing
-[Wed Sep 24 08:38:27 2025] [::1]:51726 Accepted
-[Wed Sep 24 08:38:27 2025] [::1]:51726 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:38:27 2025] [::1]:51726 Closing
-[Wed Sep 24 08:38:43 2025] [::1]:51752 Accepted
-[Wed Sep 24 08:38:43 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:38:43 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:38:43 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:38:43 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:38:43 2025] DB_HOST: localhost
-[Wed Sep 24 08:38:43 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:38:43 2025] [::1]:51752 [200]: GET /api/articles/id/5
-[Wed Sep 24 08:38:43 2025] [::1]:51752 Closing
-[Wed Sep 24 08:38:43 2025] [::1]:51762 Accepted
-[Wed Sep 24 08:38:43 2025] [::1]:51762 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:38:43 2025] [::1]:51762 Closing
-[Wed Sep 24 08:38:50 2025] [::1]:51784 Accepted
-[Wed Sep 24 08:38:51 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:38:51 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:38:51 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:38:51 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:38:51 2025] DB_HOST: localhost
-[Wed Sep 24 08:38:51 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:38:51 2025] [::1]:51784 [200]: GET /api/articles/id/5
-[Wed Sep 24 08:38:51 2025] [::1]:51784 Closing
-[Wed Sep 24 08:38:51 2025] [::1]:51796 Accepted
-[Wed Sep 24 08:38:51 2025] [::1]:51796 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:38:51 2025] [::1]:51796 Closing
-[Wed Sep 24 08:38:53 2025] [::1]:51816 Accepted
-[Wed Sep 24 08:38:54 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:38:54 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:38:54 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:38:54 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:38:54 2025] DB_HOST: localhost
-[Wed Sep 24 08:38:54 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:38:54 2025] [::1]:51816 [200]: GET /api/articles/id/5
-[Wed Sep 24 08:38:54 2025] [::1]:51816 Closing
-[Wed Sep 24 08:38:54 2025] [::1]:51826 Accepted
-[Wed Sep 24 08:38:54 2025] [::1]:51826 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:38:54 2025] [::1]:51826 Closing
-[Wed Sep 24 08:38:58 2025] [::1]:51853 Accepted
-[Wed Sep 24 08:38:58 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:38:58 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:38:58 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:38:58 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:38:58 2025] DB_HOST: localhost
-[Wed Sep 24 08:38:59 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:38:59 2025] [::1]:51853 [200]: GET /api/articles/id/5
-[Wed Sep 24 08:38:59 2025] [::1]:51853 Closing
-[Wed Sep 24 08:38:59 2025] [::1]:51863 Accepted
-[Wed Sep 24 08:38:59 2025] [::1]:51863 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:38:59 2025] [::1]:51863 Closing
-[Wed Sep 24 08:39:53 2025] [::1]:51901 Accepted
-[Wed Sep 24 08:39:53 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:39:53 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:39:53 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:39:53 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:39:53 2025] DB_HOST: localhost
-[Wed Sep 24 08:39:53 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:39:53 2025] [::1]:51901 [200]: GET /api/articles/id/5
-[Wed Sep 24 08:39:53 2025] [::1]:51901 Closing
-[Wed Sep 24 08:39:53 2025] [::1]:51911 Accepted
-[Wed Sep 24 08:39:53 2025] [::1]:51911 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:39:53 2025] [::1]:51911 Closing
-[Wed Sep 24 08:39:56 2025] [::1]:51937 Accepted
-[Wed Sep 24 08:39:56 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:39:56 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:39:56 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:39:56 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:39:56 2025] DB_HOST: localhost
-[Wed Sep 24 08:39:56 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:39:56 2025] [::1]:51937 [200]: GET /api/articles/id/5
-[Wed Sep 24 08:39:56 2025] [::1]:51937 Closing
-[Wed Sep 24 08:39:56 2025] [::1]:51948 Accepted
-[Wed Sep 24 08:39:56 2025] [::1]:51948 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:39:56 2025] [::1]:51948 Closing
-[Wed Sep 24 08:40:18 2025] [::1]:51970 Accepted
-[Wed Sep 24 08:40:18 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:40:18 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:40:18 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:40:18 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:40:18 2025] DB_HOST: localhost
-[Wed Sep 24 08:40:18 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:40:18 2025] [::1]:51970 [200]: GET /api/articles/id/5
-[Wed Sep 24 08:40:18 2025] [::1]:51970 Closing
-[Wed Sep 24 08:40:18 2025] [::1]:51984 Accepted
-[Wed Sep 24 08:40:18 2025] [::1]:51984 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:40:18 2025] [::1]:51984 Closing
-[Wed Sep 24 08:40:19 2025] [::1]:52004 Accepted
-[Wed Sep 24 08:40:20 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:40:20 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:40:20 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:40:20 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:40:20 2025] DB_HOST: localhost
-[Wed Sep 24 08:40:20 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:40:20 2025] [::1]:52004 [200]: GET /api/articles/id/5
-[Wed Sep 24 08:40:20 2025] [::1]:52004 Closing
-[Wed Sep 24 08:40:20 2025] [::1]:52014 Accepted
-[Wed Sep 24 08:40:20 2025] [::1]:52014 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:40:20 2025] [::1]:52014 Closing
-[Wed Sep 24 08:40:23 2025] [::1]:52042 Accepted
-[Wed Sep 24 08:40:24 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:40:24 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:40:24 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:40:24 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:40:24 2025] DB_HOST: localhost
-[Wed Sep 24 08:40:24 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:40:24 2025] [::1]:52042 [200]: GET /api/articles/id/5
-[Wed Sep 24 08:40:24 2025] [::1]:52042 Closing
-[Wed Sep 24 08:40:24 2025] [::1]:52052 Accepted
-[Wed Sep 24 08:40:24 2025] [::1]:52052 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:40:24 2025] [::1]:52052 Closing
-[Wed Sep 24 08:40:29 2025] [::1]:52076 Accepted
-[Wed Sep 24 08:40:29 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:40:29 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:40:29 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:40:29 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:40:29 2025] DB_HOST: localhost
-[Wed Sep 24 08:40:29 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:40:29 2025] [::1]:52076 [200]: GET /api/articles?page=1&limit=3
-[Wed Sep 24 08:40:29 2025] [::1]:52076 Closing
-[Wed Sep 24 08:40:29 2025] [::1]:52082 Accepted
-[Wed Sep 24 08:40:29 2025] [::1]:52082 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:40:29 2025] [::1]:52083 Accepted
-[Wed Sep 24 08:40:29 2025] [::1]:52082 Closing
-[Wed Sep 24 08:40:29 2025] [::1]:52083 [200]: GET /uploads/articles/article_1_68d103025e052.png
-[Wed Sep 24 08:40:29 2025] [::1]:52083 Closing
-[Wed Sep 24 08:40:31 2025] [::1]:52103 Accepted
-[Wed Sep 24 08:40:31 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:40:31 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:40:31 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:40:31 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:40:31 2025] DB_HOST: localhost
-[Wed Sep 24 08:40:31 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:40:31 2025] [::1]:52103 [200]: GET /api/articles/id/5
-[Wed Sep 24 08:40:31 2025] [::1]:52103 Closing
-[Wed Sep 24 08:40:31 2025] [::1]:52110 Accepted
-[Wed Sep 24 08:40:31 2025] [::1]:52110 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:40:31 2025] [::1]:52110 Closing
-[Wed Sep 24 08:41:08 2025] [::1]:52133 Accepted
-[Wed Sep 24 08:41:08 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:41:08 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:41:08 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:41:08 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:41:08 2025] DB_HOST: localhost
-[Wed Sep 24 08:41:08 2025] Route /api/article-delete/5 : vérification CSRF
-[Wed Sep 24 08:41:08 2025] Vérification CSRF...
-[Wed Sep 24 08:41:08 2025] Token CSRF reçu: non défini
-[Wed Sep 24 08:41:08 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:41:08 2025] Toutes les variables d'env: Array
+[Fri Sep 26 09:25:41 2025] PHP 8.4.4 Development Server (http://localhost:8000) started
+[Fri Sep 26 09:26:22 2025] [::1]:51591 Accepted
+[Fri Sep 26 09:26:23 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Sep 26 09:26:23 2025] Variables d'environnement chargées:
+[Fri Sep 26 09:26:23 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Fri Sep 26 09:26:23 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Fri Sep 26 09:26:23 2025] DB_HOST: localhost
+[Fri Sep 26 09:26:23 2025] Route /api/login : pas de vérification CSRF
+[Fri Sep 26 09:26:23 2025] [::1]:51591 [200]: POST /api/login
+[Fri Sep 26 09:26:23 2025] [::1]:51591 Closing
+[Fri Sep 26 09:26:29 2025] [::1]:51637 Accepted
+[Fri Sep 26 09:26:30 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Sep 26 09:26:30 2025] Variables d'environnement chargées:
+[Fri Sep 26 09:26:30 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Fri Sep 26 09:26:30 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Fri Sep 26 09:26:30 2025] DB_HOST: localhost
+[Fri Sep 26 09:26:30 2025] Méthode GET : pas de vérification CSRF nécessaire
+[Fri Sep 26 09:26:30 2025] [::1]:51637 [200]: GET /api/articles?page=1&limit=3
+[Fri Sep 26 09:26:30 2025] [::1]:51637 Closing
+[Fri Sep 26 09:26:52 2025] [::1]:51666 Accepted
+[Fri Sep 26 09:26:52 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Sep 26 09:26:52 2025] Variables d'environnement chargées:
+[Fri Sep 26 09:26:52 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Fri Sep 26 09:26:52 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Fri Sep 26 09:26:52 2025] DB_HOST: localhost
+[Fri Sep 26 09:26:52 2025] Route /api/articles : vérification CSRF
+[Fri Sep 26 09:26:52 2025] Vérification CSRF...
+[Fri Sep 26 09:26:52 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Fri Sep 26 09:26:52 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Fri Sep 26 09:26:52 2025] Toutes les variables d'env: Array
 (
     [DB_HOST] => localhost
     [DB_NAME] => infodotgame
@@ -363,269 +39,10 @@
     [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
 )
 
-[Wed Sep 24 08:41:08 2025] Token CSRF ou Secret manquant
-[Wed Sep 24 08:41:08 2025] [::1]:52133 [403]: DELETE /api/article-delete/5
-[Wed Sep 24 08:41:08 2025] [::1]:52133 Closing
-[Wed Sep 24 08:42:41 2025] [::1]:52205 Accepted
-[Wed Sep 24 08:42:42 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:42:42 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:42:42 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:42:42 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:42:42 2025] DB_HOST: localhost
-[Wed Sep 24 08:42:42 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:42:42 2025] [::1]:52205 [200]: GET /api/articles/id/5
-[Wed Sep 24 08:42:42 2025] [::1]:52205 Closing
-[Wed Sep 24 08:42:42 2025] [::1]:52212 Accepted
-[Wed Sep 24 08:42:42 2025] [::1]:52212 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:42:42 2025] [::1]:52212 Closing
-[Wed Sep 24 08:45:04 2025] [::1]:52340 Accepted
-[Wed Sep 24 08:45:05 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:45:05 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:45:05 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:45:05 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:45:05 2025] DB_HOST: localhost
-[Wed Sep 24 08:45:05 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:45:05 2025] [::1]:52340 [200]: GET /api/articles/id/5
-[Wed Sep 24 08:45:05 2025] [::1]:52340 Closing
-[Wed Sep 24 08:45:05 2025] [::1]:52346 Accepted
-[Wed Sep 24 08:45:05 2025] [::1]:52346 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:45:05 2025] [::1]:52346 Closing
-[Wed Sep 24 08:46:39 2025] [::1]:52423 Accepted
-[Wed Sep 24 08:46:40 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:46:40 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:46:40 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:46:40 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:46:40 2025] DB_HOST: localhost
-[Wed Sep 24 08:46:40 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:46:40 2025] [::1]:52423 [200]: GET /api/articles/id/5
-[Wed Sep 24 08:46:40 2025] [::1]:52423 Closing
-[Wed Sep 24 08:46:40 2025] [::1]:52432 Accepted
-[Wed Sep 24 08:46:40 2025] [::1]:52432 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:46:40 2025] [::1]:52432 Closing
-[Wed Sep 24 08:46:49 2025] [::1]:52461 Accepted
-[Wed Sep 24 08:46:50 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:46:50 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:46:50 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:46:50 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:46:50 2025] DB_HOST: localhost
-[Wed Sep 24 08:46:50 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:46:50 2025] [::1]:52461 [200]: GET /api/articles/id/5
-[Wed Sep 24 08:46:50 2025] [::1]:52461 Closing
-[Wed Sep 24 08:46:50 2025] [::1]:52468 Accepted
-[Wed Sep 24 08:46:50 2025] [::1]:52468 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:46:50 2025] [::1]:52468 Closing
-[Wed Sep 24 08:48:31 2025] [::1]:52536 Accepted
-[Wed Sep 24 08:48:31 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:48:31 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:48:31 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:48:31 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:48:31 2025] DB_HOST: localhost
-[Wed Sep 24 08:48:31 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:48:31 2025] [::1]:52536 [200]: GET /api/articles?page=1&limit=3
-[Wed Sep 24 08:48:31 2025] [::1]:52536 Closing
-[Wed Sep 24 08:48:31 2025] [::1]:52542 Accepted
-[Wed Sep 24 08:48:31 2025] [::1]:52542 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:48:31 2025] [::1]:52543 Accepted
-[Wed Sep 24 08:48:31 2025] [::1]:52542 Closing
-[Wed Sep 24 08:48:31 2025] [::1]:52543 [200]: GET /uploads/articles/article_1_68d103025e052.png
-[Wed Sep 24 08:48:31 2025] [::1]:52543 Closing
-[Wed Sep 24 08:48:33 2025] [::1]:52571 Accepted
-[Wed Sep 24 08:48:34 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:48:34 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:48:34 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:48:34 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:48:34 2025] DB_HOST: localhost
-[Wed Sep 24 08:48:34 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:48:34 2025] [::1]:52571 [200]: GET /api/articles?page=1&limit=3
-[Wed Sep 24 08:48:34 2025] [::1]:52571 Closing
-[Wed Sep 24 08:48:34 2025] [::1]:52578 Accepted
-[Wed Sep 24 08:48:34 2025] [::1]:52579 Accepted
-[Wed Sep 24 08:48:34 2025] [::1]:52579 [200]: GET /uploads/articles/article_1_68d103025e052.png
-[Wed Sep 24 08:48:34 2025] [::1]:52579 Closing
-[Wed Sep 24 08:48:34 2025] [::1]:52578 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:48:34 2025] [::1]:52578 Closing
-[Wed Sep 24 08:48:35 2025] [::1]:52600 Accepted
-[Wed Sep 24 08:48:36 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:48:36 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:48:36 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:48:36 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:48:36 2025] DB_HOST: localhost
-[Wed Sep 24 08:48:36 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:48:36 2025] [::1]:52600 [200]: GET /api/articles/id/5
-[Wed Sep 24 08:48:36 2025] [::1]:52600 Closing
-[Wed Sep 24 08:48:36 2025] [::1]:52607 Accepted
-[Wed Sep 24 08:48:36 2025] [::1]:52607 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:48:36 2025] [::1]:52607 Closing
-[Wed Sep 24 08:49:16 2025] [::1]:52671 Accepted
-[Wed Sep 24 08:49:16 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:49:16 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:49:16 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:49:16 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:49:16 2025] DB_HOST: localhost
-[Wed Sep 24 08:49:16 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:49:16 2025] [::1]:52671 [200]: GET /api/articles/id/5
-[Wed Sep 24 08:49:16 2025] [::1]:52671 Closing
-[Wed Sep 24 08:49:16 2025] [::1]:52678 Accepted
-[Wed Sep 24 08:49:16 2025] [::1]:52678 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:49:16 2025] [::1]:52678 Closing
-[Wed Sep 24 08:49:43 2025] [::1]:52706 Accepted
-[Wed Sep 24 08:49:43 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:49:43 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:49:43 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:49:43 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:49:43 2025] DB_HOST: localhost
-[Wed Sep 24 08:49:43 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:49:43 2025] [::1]:52706 [200]: GET /api/articles/id/5
-[Wed Sep 24 08:49:43 2025] [::1]:52706 Closing
-[Wed Sep 24 08:49:43 2025] [::1]:52713 Accepted
-[Wed Sep 24 08:49:43 2025] [::1]:52713 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:49:43 2025] [::1]:52713 Closing
-[Wed Sep 24 08:50:11 2025] [::1]:52775 Accepted
-[Wed Sep 24 08:50:12 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:50:12 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:50:12 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:50:12 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:50:12 2025] DB_HOST: localhost
-[Wed Sep 24 08:50:12 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:50:12 2025] [::1]:52775 [200]: GET /api/articles/id/5
-[Wed Sep 24 08:50:12 2025] [::1]:52775 Closing
-[Wed Sep 24 08:50:12 2025] [::1]:52782 Accepted
-[Wed Sep 24 08:50:12 2025] [::1]:52782 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:50:12 2025] [::1]:52782 Closing
-[Wed Sep 24 08:51:17 2025] [::1]:52840 Accepted
-[Wed Sep 24 08:51:17 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:51:17 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:51:17 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:51:17 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:51:17 2025] DB_HOST: localhost
-[Wed Sep 24 08:51:17 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:51:17 2025] [::1]:52840 [200]: GET /api/articles/id/5
-[Wed Sep 24 08:51:17 2025] [::1]:52840 Closing
-[Wed Sep 24 08:51:17 2025] [::1]:52851 Accepted
-[Wed Sep 24 08:51:17 2025] [::1]:52851 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:51:17 2025] [::1]:52851 Closing
-[Wed Sep 24 08:51:22 2025] [::1]:52873 Accepted
-[Wed Sep 24 08:51:23 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:51:23 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:51:23 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:51:23 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:51:23 2025] DB_HOST: localhost
-[Wed Sep 24 08:51:23 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:51:23 2025] [::1]:52873 [200]: GET /api/articles/id/5
-[Wed Sep 24 08:51:23 2025] [::1]:52873 Closing
-[Wed Sep 24 08:51:23 2025] [::1]:52886 Accepted
-[Wed Sep 24 08:51:23 2025] [::1]:52886 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:51:23 2025] [::1]:52886 Closing
-[Wed Sep 24 08:53:47 2025] [::1]:52987 Accepted
-[Wed Sep 24 08:53:47 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:53:47 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:53:47 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:53:47 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:53:47 2025] DB_HOST: localhost
-[Wed Sep 24 08:53:47 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:53:47 2025] [::1]:52987 [200]: GET /api/articles/id/5
-[Wed Sep 24 08:53:47 2025] [::1]:52987 Closing
-[Wed Sep 24 08:53:47 2025] [::1]:52993 Accepted
-[Wed Sep 24 08:53:47 2025] [::1]:52993 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:53:47 2025] [::1]:52993 Closing
-[Wed Sep 24 08:53:50 2025] [::1]:53016 Accepted
-[Wed Sep 24 08:53:50 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:53:50 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:53:50 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:53:50 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:53:50 2025] DB_HOST: localhost
-[Wed Sep 24 08:53:50 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:53:50 2025] [::1]:53016 [200]: GET /api/articles/id/5
-[Wed Sep 24 08:53:50 2025] [::1]:53016 Closing
-[Wed Sep 24 08:53:51 2025] [::1]:53022 Accepted
-[Wed Sep 24 08:53:51 2025] [::1]:53022 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:53:51 2025] [::1]:53022 Closing
-[Wed Sep 24 08:53:56 2025] [::1]:53046 Accepted
-[Wed Sep 24 08:53:56 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:53:56 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:53:56 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:53:56 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:53:56 2025] DB_HOST: localhost
-[Wed Sep 24 08:53:56 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:53:56 2025] [::1]:53046 [200]: GET /api/articles/id/5
-[Wed Sep 24 08:53:56 2025] [::1]:53046 Closing
-[Wed Sep 24 08:53:56 2025] [::1]:53052 Accepted
-[Wed Sep 24 08:53:56 2025] [::1]:53052 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:53:56 2025] [::1]:53052 Closing
-[Wed Sep 24 08:53:57 2025] [::1]:53072 Accepted
-[Wed Sep 24 08:53:57 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:53:57 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:53:57 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:53:57 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:53:57 2025] DB_HOST: localhost
-[Wed Sep 24 08:53:57 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:53:57 2025] [::1]:53072 [200]: GET /api/articles/id/5
-[Wed Sep 24 08:53:57 2025] [::1]:53072 Closing
-[Wed Sep 24 08:53:57 2025] [::1]:53078 Accepted
-[Wed Sep 24 08:53:57 2025] [::1]:53078 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:53:57 2025] [::1]:53078 Closing
-[Wed Sep 24 08:54:03 2025] [::1]:53101 Accepted
-[Wed Sep 24 08:54:04 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:54:04 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:54:04 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:54:04 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:54:04 2025] DB_HOST: localhost
-[Wed Sep 24 08:54:04 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:54:04 2025] [::1]:53101 [200]: GET /api/articles/id/5
-[Wed Sep 24 08:54:04 2025] [::1]:53101 Closing
-[Wed Sep 24 08:54:04 2025] [::1]:53107 Accepted
-[Wed Sep 24 08:54:04 2025] [::1]:53107 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:54:04 2025] [::1]:53107 Closing
-[Wed Sep 24 08:54:11 2025] [::1]:53159 Accepted
-[Wed Sep 24 08:54:12 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:54:12 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:54:12 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:54:12 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:54:12 2025] DB_HOST: localhost
-[Wed Sep 24 08:54:12 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:54:12 2025] [::1]:53159 [200]: GET /api/articles/id/5
-[Wed Sep 24 08:54:12 2025] [::1]:53159 Closing
-[Wed Sep 24 08:54:12 2025] [::1]:53167 Accepted
-[Wed Sep 24 08:54:12 2025] [::1]:53167 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:54:12 2025] [::1]:53167 Closing
-[Wed Sep 24 08:55:09 2025] [::1]:53242 Accepted
-[Wed Sep 24 08:55:09 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:55:09 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:55:09 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:55:09 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:55:09 2025] DB_HOST: localhost
-[Wed Sep 24 08:55:09 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:55:09 2025] [::1]:53242 [200]: GET /api/articles/id/5
-[Wed Sep 24 08:55:09 2025] [::1]:53242 Closing
-[Wed Sep 24 08:55:09 2025] [::1]:53249 Accepted
-[Wed Sep 24 08:55:10 2025] [::1]:53249 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:55:10 2025] [::1]:53249 Closing
-[Wed Sep 24 08:55:10 2025] [::1]:53269 Accepted
-[Wed Sep 24 08:55:11 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:55:11 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:55:11 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:55:11 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:55:11 2025] DB_HOST: localhost
-[Wed Sep 24 08:55:11 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:55:11 2025] [::1]:53269 [200]: GET /api/articles/id/5
-[Wed Sep 24 08:55:11 2025] [::1]:53269 Closing
-[Wed Sep 24 08:55:11 2025] [::1]:53275 Accepted
-[Wed Sep 24 08:55:11 2025] [::1]:53275 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:55:11 2025] [::1]:53275 Closing
-[Wed Sep 24 08:55:12 2025] [::1]:53298 Accepted
-[Wed Sep 24 08:55:12 2025] [::1]:53298 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:55:12 2025] [::1]:53298 Closing
-[Wed Sep 24 08:55:22 2025] [::1]:53318 Accepted
-[Wed Sep 24 08:55:23 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:55:23 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:55:23 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:55:23 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:55:23 2025] DB_HOST: localhost
-[Wed Sep 24 08:55:23 2025] Route /api/articles/5 : vérification CSRF
-[Wed Sep 24 08:55:23 2025] Vérification CSRF...
-[Wed Sep 24 08:55:23 2025] Token CSRF reçu: 
-[Wed Sep 24 08:55:23 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:55:23 2025] Toutes les variables d'env: Array
+[Fri Sep 26 09:26:52 2025] Vérification CSRF...
+[Fri Sep 26 09:26:52 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Fri Sep 26 09:26:52 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Fri Sep 26 09:26:52 2025] Toutes les variables d'env: Array
 (
     [DB_HOST] => localhost
     [DB_NAME] => infodotgame
@@ -637,23 +54,19 @@
     [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
 )
 
-[Wed Sep 24 08:55:23 2025] Token CSRF ou Secret manquant
-[Wed Sep 24 08:55:23 2025] [::1]:53318 [403]: PUT /api/articles/5
-[Wed Sep 24 08:55:23 2025] [::1]:53318 Closing
-[Wed Sep 24 08:56:32 2025] [::1]:53376 Accepted
-[Wed Sep 24 08:56:32 2025] [::1]:53376 [200]: GET /uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:56:32 2025] [::1]:53376 Closing
-[Wed Sep 24 08:56:42 2025] [::1]:53385 Accepted
-[Wed Sep 24 08:56:42 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:56:42 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:56:42 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:56:42 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:56:42 2025] DB_HOST: localhost
-[Wed Sep 24 08:56:42 2025] Route /api/articles/5 : vérification CSRF
-[Wed Sep 24 08:56:42 2025] Vérification CSRF...
-[Wed Sep 24 08:56:42 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:56:42 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:56:42 2025] Toutes les variables d'env: Array
+[Fri Sep 26 09:26:52 2025] [::1]:51666 [201]: POST /api/articles
+[Fri Sep 26 09:26:52 2025] [::1]:51666 Closing
+[Fri Sep 26 09:26:52 2025] [::1]:51670 Accepted
+[Fri Sep 26 09:26:53 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Sep 26 09:26:53 2025] Variables d'environnement chargées:
+[Fri Sep 26 09:26:53 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Fri Sep 26 09:26:53 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Fri Sep 26 09:26:53 2025] DB_HOST: localhost
+[Fri Sep 26 09:26:53 2025] Route /api/articles/9/image : vérification CSRF
+[Fri Sep 26 09:26:53 2025] Vérification CSRF...
+[Fri Sep 26 09:26:53 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Fri Sep 26 09:26:53 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Fri Sep 26 09:26:53 2025] Toutes les variables d'env: Array
 (
     [DB_HOST] => localhost
     [DB_NAME] => infodotgame
@@ -665,10 +78,10 @@
     [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
 )
 
-[Wed Sep 24 08:56:42 2025] Vérification CSRF...
-[Wed Sep 24 08:56:42 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:56:42 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:56:42 2025] Toutes les variables d'env: Array
+[Fri Sep 26 09:26:53 2025] Vérification CSRF...
+[Fri Sep 26 09:26:53 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Fri Sep 26 09:26:53 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Fri Sep 26 09:26:53 2025] Toutes les variables d'env: Array
 (
     [DB_HOST] => localhost
     [DB_NAME] => infodotgame
@@ -680,414 +93,17 @@
     [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
 )
 
-[Wed Sep 24 08:56:42 2025] Tentative de mise à jour de l'article : App\model\Article Object
+[Fri Sep 26 09:26:53 2025] Article récupéré : App\model\Article Object
 (
-    [id_article:App\model\Article:private] => 5
-    [cover_image:App\model\Article:private] => /uploads/articles/article_5_68d2c280e3ed5.png
-    [published_at:App\model\Article:private] => 2025-09-24 06:56:42
-    [created_at:App\model\Article:private] => 2025-09-23 15:53:36
-    [title:App\model\Article:private] => failexss
-    [slug:App\model\Article:private] => failexss-7002
-    [content:App\model\Article:private] => jerzojgeiozjgjeriozjhgogr
-fh465gtrf45f4j685efj468
-fsh4ryd54yjk4yer46to6u46dyk4t
-rskyijhgshfskjdnhbkfdnbqdfknhbkldf, aa aaqnbkqgdnmk
-    [introduction:App\model\Article:private] => aaaa alert(&quot;toto&quot;) aaaaa
-    [id_user:App\model\Article:private] => 1
-    [categories:App\model\Article:private] => Array
-        (
-        )
-
-    [tags:App\model\Article:private] => Array
-        (
-            [0] => xss
-            [1] => faille
-        )
-
-)
-
-[Wed Sep 24 08:56:42 2025] Paramètres de la requête de mise à jour : Array
-(
-    [id] => 5
-    [cover_image] => /uploads/articles/article_5_68d2c280e3ed5.png
-    [title] => failexss
-    [slug] => failexss-7002
-    [introduction] => aaaa alert(&quot;toto&quot;) aaaaa
-    [content] => jerzojgeiozjgjeriozjhgogr
-fh465gtrf45f4j685efj468
-fsh4ryd54yjk4yer46to6u46dyk4t
-rskyijhgshfskjdnhbkfdnbqdfknhbkldf, aa aaqnbkqgdnmk
-    [published_at] => 2025-09-24 06:56:42
-    [tags] => ["xss","faille"]
-)
-
-[Wed Sep 24 08:56:42 2025] Mise à jour des catégories pour l'article ID 5
-[Wed Sep 24 08:56:42 2025] Anciennes catégories supprimées
-[Wed Sep 24 08:56:42 2025] Toutes les nouvelles catégories ont été ajoutées
-[Wed Sep 24 08:56:42 2025] [::1]:53385 [200]: PUT /api/articles/5
-[Wed Sep 24 08:56:42 2025] [::1]:53385 Closing
-[Wed Sep 24 08:56:42 2025] [::1]:53389 Accepted
-[Wed Sep 24 08:56:43 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:56:43 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:56:43 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:56:43 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:56:43 2025] DB_HOST: localhost
-[Wed Sep 24 08:56:43 2025] Route /api/articles/5/image : vérification CSRF
-[Wed Sep 24 08:56:43 2025] Vérification CSRF...
-[Wed Sep 24 08:56:43 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:56:43 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:56:43 2025] Toutes les variables d'env: Array
-(
-    [DB_HOST] => localhost
-    [DB_NAME] => infodotgame
-    [DB_USER] => db_user
-    [DB_PASSWORD] => 12345
-    [DB_PORT] => 3315
-    [JWT_SECRET_KEY] => f982da955f9c94f234e8f05971d9f170b7118da9250399c9009f97c5483b90c8
-    [RECAPTCHA_SECRET_KEY] => 6LdPrM4rAAAAAEAQehIF1pwgQc5Y4AW-6YUkhiRU
-    [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-)
-
-[Wed Sep 24 08:56:43 2025] Vérification CSRF...
-[Wed Sep 24 08:56:43 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:56:43 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:56:43 2025] Toutes les variables d'env: Array
-(
-    [DB_HOST] => localhost
-    [DB_NAME] => infodotgame
-    [DB_USER] => db_user
-    [DB_PASSWORD] => 12345
-    [DB_PORT] => 3315
-    [JWT_SECRET_KEY] => f982da955f9c94f234e8f05971d9f170b7118da9250399c9009f97c5483b90c8
-    [RECAPTCHA_SECRET_KEY] => 6LdPrM4rAAAAAEAQehIF1pwgQc5Y4AW-6YUkhiRU
-    [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-)
-
-[Wed Sep 24 08:56:43 2025] Article récupéré : App\model\Article Object
-(
-    [id_article:App\model\Article:private] => 5
-    [cover_image:App\model\Article:private] => /uploads/articles/article_5_68d2c280e3ed5.png
-    [published_at:App\model\Article:private] => 2025-09-24 06:56:42
-    [created_at:App\model\Article:private] => 2025-09-23 15:53:36
-    [title:App\model\Article:private] => failexss
-    [slug:App\model\Article:private] => failexss-7002
-    [content:App\model\Article:private] => jerzojgeiozjgjeriozjhgogr
-fh465gtrf45f4j685efj468
-fsh4ryd54yjk4yer46to6u46dyk4t
-rskyijhgshfskjdnhbkfdnbqdfknhbkldf, aa aaqnbkqgdnmk
-    [introduction:App\model\Article:private] => aaaa alert(&quot;toto&quot;) aaaaa
-    [id_user:App\model\Article:private] => 1
-    [categories:App\model\Article:private] => Array
-        (
-        )
-
-    [tags:App\model\Article:private] => Array
-        (
-            [0] => xss
-            [1] => faille
-        )
-
-)
-
-[Wed Sep 24 08:56:43 2025] Tentative de suppression de l'ancienne image : E:\projet_info_dot_game\blog-jeux-video-backend\src\controller/../../public/uploads/articles/article_5_68d2c280e3ed5.png
-[Wed Sep 24 08:56:43 2025] Ancienne image supprimée avec succès
-[Wed Sep 24 08:56:43 2025] Chemin de l'image à sauvegarder : /uploads/articles/article_5_68d3962b65174.png
-[Wed Sep 24 08:56:43 2025] Article avant update : App\model\Article Object
-(
-    [id_article:App\model\Article:private] => 5
-    [cover_image:App\model\Article:private] => /uploads/articles/article_5_68d3962b65174.png
-    [published_at:App\model\Article:private] => 2025-09-24 06:56:42
-    [created_at:App\model\Article:private] => 2025-09-23 15:53:36
-    [title:App\model\Article:private] => failexss
-    [slug:App\model\Article:private] => failexss-7002
-    [content:App\model\Article:private] => jerzojgeiozjgjeriozjhgogr
-fh465gtrf45f4j685efj468
-fsh4ryd54yjk4yer46to6u46dyk4t
-rskyijhgshfskjdnhbkfdnbqdfknhbkldf, aa aaqnbkqgdnmk
-    [introduction:App\model\Article:private] => aaaa alert(&quot;toto&quot;) aaaaa
-    [id_user:App\model\Article:private] => 1
-    [categories:App\model\Article:private] => Array
-        (
-        )
-
-    [tags:App\model\Article:private] => Array
-        (
-            [0] => xss
-            [1] => faille
-        )
-
-)
-
-[Wed Sep 24 08:56:43 2025] Tentative de mise à jour de l'article : App\model\Article Object
-(
-    [id_article:App\model\Article:private] => 5
-    [cover_image:App\model\Article:private] => /uploads/articles/article_5_68d3962b65174.png
-    [published_at:App\model\Article:private] => 2025-09-24 06:56:42
-    [created_at:App\model\Article:private] => 2025-09-23 15:53:36
-    [title:App\model\Article:private] => failexss
-    [slug:App\model\Article:private] => failexss-7002
-    [content:App\model\Article:private] => jerzojgeiozjgjeriozjhgogr
-fh465gtrf45f4j685efj468
-fsh4ryd54yjk4yer46to6u46dyk4t
-rskyijhgshfskjdnhbkfdnbqdfknhbkldf, aa aaqnbkqgdnmk
-    [introduction:App\model\Article:private] => aaaa alert(&quot;toto&quot;) aaaaa
-    [id_user:App\model\Article:private] => 1
-    [categories:App\model\Article:private] => Array
-        (
-        )
-
-    [tags:App\model\Article:private] => Array
-        (
-            [0] => xss
-            [1] => faille
-        )
-
-)
-
-[Wed Sep 24 08:56:43 2025] Paramètres de la requête de mise à jour : Array
-(
-    [id] => 5
-    [cover_image] => /uploads/articles/article_5_68d3962b65174.png
-    [title] => failexss
-    [slug] => failexss-7002
-    [introduction] => aaaa alert(&quot;toto&quot;) aaaaa
-    [content] => jerzojgeiozjgjeriozjhgogr
-fh465gtrf45f4j685efj468
-fsh4ryd54yjk4yer46to6u46dyk4t
-rskyijhgshfskjdnhbkfdnbqdfknhbkldf, aa aaqnbkqgdnmk
-    [published_at] => 2025-09-24 06:56:42
-    [tags] => ["xss","faille"]
-)
-
-[Wed Sep 24 08:56:43 2025] Mise à jour des catégories pour l'article ID 5
-[Wed Sep 24 08:56:43 2025] Anciennes catégories supprimées
-[Wed Sep 24 08:56:43 2025] Toutes les nouvelles catégories ont été ajoutées
-[Wed Sep 24 08:56:43 2025] Résultat de la mise à jour : succès
-[Wed Sep 24 08:56:43 2025] [::1]:53389 [200]: POST /api/articles/5/image
-[Wed Sep 24 08:56:43 2025] [::1]:53389 Closing
-[Wed Sep 24 08:56:43 2025] [::1]:53415 Accepted
-[Wed Sep 24 08:56:44 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:56:44 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:56:44 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:56:44 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:56:44 2025] DB_HOST: localhost
-[Wed Sep 24 08:56:44 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:56:44 2025] [::1]:53415 [200]: GET /api/articles/id/5
-[Wed Sep 24 08:56:44 2025] [::1]:53415 Closing
-[Wed Sep 24 08:56:44 2025] [::1]:53421 Accepted
-[Wed Sep 24 08:56:44 2025] [::1]:53421 [200]: GET /uploads/articles/article_5_68d3962b65174.png
-[Wed Sep 24 08:56:44 2025] [::1]:53421 Closing
-[Wed Sep 24 08:56:49 2025] [::1]:53422 Accepted
-[Wed Sep 24 08:56:49 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:56:49 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:56:49 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:56:49 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:56:49 2025] DB_HOST: localhost
-[Wed Sep 24 08:56:49 2025] Route /api/article-delete/5 : vérification CSRF
-[Wed Sep 24 08:56:49 2025] Vérification CSRF...
-[Wed Sep 24 08:56:49 2025] Token CSRF reçu: non défini
-[Wed Sep 24 08:56:49 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:56:49 2025] Toutes les variables d'env: Array
-(
-    [DB_HOST] => localhost
-    [DB_NAME] => infodotgame
-    [DB_USER] => db_user
-    [DB_PASSWORD] => 12345
-    [DB_PORT] => 3315
-    [JWT_SECRET_KEY] => f982da955f9c94f234e8f05971d9f170b7118da9250399c9009f97c5483b90c8
-    [RECAPTCHA_SECRET_KEY] => 6LdPrM4rAAAAAEAQehIF1pwgQc5Y4AW-6YUkhiRU
-    [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-)
-
-[Wed Sep 24 08:56:49 2025] Token CSRF ou Secret manquant
-[Wed Sep 24 08:56:49 2025] [::1]:53422 [403]: DELETE /api/article-delete/5
-[Wed Sep 24 08:56:49 2025] [::1]:53422 Closing
-[Wed Sep 24 08:56:50 2025] [::1]:53427 Accepted
-[Wed Sep 24 08:56:50 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:56:50 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:56:50 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:56:50 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:56:50 2025] DB_HOST: localhost
-[Wed Sep 24 08:56:50 2025] Route /api/article-delete/5 : vérification CSRF
-[Wed Sep 24 08:56:50 2025] Vérification CSRF...
-[Wed Sep 24 08:56:50 2025] Token CSRF reçu: 
-[Wed Sep 24 08:56:50 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:56:50 2025] Toutes les variables d'env: Array
-(
-    [DB_HOST] => localhost
-    [DB_NAME] => infodotgame
-    [DB_USER] => db_user
-    [DB_PASSWORD] => 12345
-    [DB_PORT] => 3315
-    [JWT_SECRET_KEY] => f982da955f9c94f234e8f05971d9f170b7118da9250399c9009f97c5483b90c8
-    [RECAPTCHA_SECRET_KEY] => 6LdPrM4rAAAAAEAQehIF1pwgQc5Y4AW-6YUkhiRU
-    [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-)
-
-[Wed Sep 24 08:56:50 2025] Token CSRF ou Secret manquant
-[Wed Sep 24 08:56:50 2025] [::1]:53427 [403]: DELETE /api/article-delete/5
-[Wed Sep 24 08:56:50 2025] [::1]:53427 Closing
-[Wed Sep 24 08:57:10 2025] [::1]:53463 Accepted
-[Wed Sep 24 08:57:11 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:57:11 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:57:11 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:57:11 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:57:11 2025] DB_HOST: localhost
-[Wed Sep 24 08:57:11 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:57:11 2025] [::1]:53463 [200]: GET /api/articles/id/5
-[Wed Sep 24 08:57:11 2025] [::1]:53463 Closing
-[Wed Sep 24 08:57:11 2025] [::1]:53469 Accepted
-[Wed Sep 24 08:57:11 2025] [::1]:53469 [200]: GET /uploads/articles/article_5_68d3962b65174.png
-[Wed Sep 24 08:57:11 2025] [::1]:53469 Closing
-[Wed Sep 24 08:57:13 2025] [::1]:53473 Accepted
-[Wed Sep 24 08:57:13 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:57:13 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:57:13 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:57:13 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:57:13 2025] DB_HOST: localhost
-[Wed Sep 24 08:57:13 2025] Route /api/article-delete/5 : vérification CSRF
-[Wed Sep 24 08:57:13 2025] Vérification CSRF...
-[Wed Sep 24 08:57:13 2025] Token CSRF reçu: non défini
-[Wed Sep 24 08:57:13 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:57:13 2025] Toutes les variables d'env: Array
-(
-    [DB_HOST] => localhost
-    [DB_NAME] => infodotgame
-    [DB_USER] => db_user
-    [DB_PASSWORD] => 12345
-    [DB_PORT] => 3315
-    [JWT_SECRET_KEY] => f982da955f9c94f234e8f05971d9f170b7118da9250399c9009f97c5483b90c8
-    [RECAPTCHA_SECRET_KEY] => 6LdPrM4rAAAAAEAQehIF1pwgQc5Y4AW-6YUkhiRU
-    [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-)
-
-[Wed Sep 24 08:57:13 2025] Token CSRF ou Secret manquant
-[Wed Sep 24 08:57:13 2025] [::1]:53473 [403]: DELETE /api/article-delete/5
-[Wed Sep 24 08:57:13 2025] [::1]:53473 Closing
-[Wed Sep 24 08:57:13 2025] [::1]:53477 Accepted
-[Wed Sep 24 08:57:14 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:57:14 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:57:14 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:57:14 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:57:14 2025] DB_HOST: localhost
-[Wed Sep 24 08:57:14 2025] Route /api/article-delete/5 : vérification CSRF
-[Wed Sep 24 08:57:14 2025] Vérification CSRF...
-[Wed Sep 24 08:57:14 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:57:14 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:57:14 2025] Toutes les variables d'env: Array
-(
-    [DB_HOST] => localhost
-    [DB_NAME] => infodotgame
-    [DB_USER] => db_user
-    [DB_PASSWORD] => 12345
-    [DB_PORT] => 3315
-    [JWT_SECRET_KEY] => f982da955f9c94f234e8f05971d9f170b7118da9250399c9009f97c5483b90c8
-    [RECAPTCHA_SECRET_KEY] => 6LdPrM4rAAAAAEAQehIF1pwgQc5Y4AW-6YUkhiRU
-    [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-)
-
-[Wed Sep 24 08:57:14 2025] [::1]:53477 [200]: DELETE /api/article-delete/5
-[Wed Sep 24 08:57:14 2025] [::1]:53477 Closing
-[Wed Sep 24 08:57:15 2025] [::1]:53500 Accepted
-[Wed Sep 24 08:57:15 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:57:15 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:57:15 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:57:15 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:57:15 2025] DB_HOST: localhost
-[Wed Sep 24 08:57:15 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:57:15 2025] [::1]:53500 [200]: GET /api/articles?page=1&limit=3
-[Wed Sep 24 08:57:15 2025] [::1]:53500 Closing
-[Wed Sep 24 08:57:15 2025] [::1]:53506 Accepted
-[Wed Sep 24 08:57:15 2025] [::1]:53506 [200]: GET /uploads/articles/article_1_68d103025e052.png
-[Wed Sep 24 08:57:15 2025] [::1]:53506 Closing
-[Wed Sep 24 08:57:38 2025] [::1]:53536 Accepted
-[Wed Sep 24 08:57:38 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:57:38 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:57:38 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:57:38 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:57:38 2025] DB_HOST: localhost
-[Wed Sep 24 08:57:38 2025] Route /api/articles : vérification CSRF
-[Wed Sep 24 08:57:38 2025] Vérification CSRF...
-[Wed Sep 24 08:57:38 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:57:38 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:57:38 2025] Toutes les variables d'env: Array
-(
-    [DB_HOST] => localhost
-    [DB_NAME] => infodotgame
-    [DB_USER] => db_user
-    [DB_PASSWORD] => 12345
-    [DB_PORT] => 3315
-    [JWT_SECRET_KEY] => f982da955f9c94f234e8f05971d9f170b7118da9250399c9009f97c5483b90c8
-    [RECAPTCHA_SECRET_KEY] => 6LdPrM4rAAAAAEAQehIF1pwgQc5Y4AW-6YUkhiRU
-    [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-)
-
-[Wed Sep 24 08:57:38 2025] Vérification CSRF...
-[Wed Sep 24 08:57:38 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:57:38 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:57:38 2025] Toutes les variables d'env: Array
-(
-    [DB_HOST] => localhost
-    [DB_NAME] => infodotgame
-    [DB_USER] => db_user
-    [DB_PASSWORD] => 12345
-    [DB_PORT] => 3315
-    [JWT_SECRET_KEY] => f982da955f9c94f234e8f05971d9f170b7118da9250399c9009f97c5483b90c8
-    [RECAPTCHA_SECRET_KEY] => 6LdPrM4rAAAAAEAQehIF1pwgQc5Y4AW-6YUkhiRU
-    [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-)
-
-[Wed Sep 24 08:57:38 2025] [::1]:53536 [201]: POST /api/articles
-[Wed Sep 24 08:57:38 2025] [::1]:53536 Closing
-[Wed Sep 24 08:57:38 2025] [::1]:53540 Accepted
-[Wed Sep 24 08:57:39 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:57:39 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:57:39 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:57:39 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:57:39 2025] DB_HOST: localhost
-[Wed Sep 24 08:57:39 2025] Route /api/articles/6/image : vérification CSRF
-[Wed Sep 24 08:57:39 2025] Vérification CSRF...
-[Wed Sep 24 08:57:39 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:57:39 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:57:39 2025] Toutes les variables d'env: Array
-(
-    [DB_HOST] => localhost
-    [DB_NAME] => infodotgame
-    [DB_USER] => db_user
-    [DB_PASSWORD] => 12345
-    [DB_PORT] => 3315
-    [JWT_SECRET_KEY] => f982da955f9c94f234e8f05971d9f170b7118da9250399c9009f97c5483b90c8
-    [RECAPTCHA_SECRET_KEY] => 6LdPrM4rAAAAAEAQehIF1pwgQc5Y4AW-6YUkhiRU
-    [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-)
-
-[Wed Sep 24 08:57:39 2025] Vérification CSRF...
-[Wed Sep 24 08:57:39 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:57:39 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:57:39 2025] Toutes les variables d'env: Array
-(
-    [DB_HOST] => localhost
-    [DB_NAME] => infodotgame
-    [DB_USER] => db_user
-    [DB_PASSWORD] => 12345
-    [DB_PORT] => 3315
-    [JWT_SECRET_KEY] => f982da955f9c94f234e8f05971d9f170b7118da9250399c9009f97c5483b90c8
-    [RECAPTCHA_SECRET_KEY] => 6LdPrM4rAAAAAEAQehIF1pwgQc5Y4AW-6YUkhiRU
-    [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-)
-
-[Wed Sep 24 08:57:39 2025] Article récupéré : App\model\Article Object
-(
-    [id_article:App\model\Article:private] => 6
+    [id_article:App\model\Article:private] => 9
     [cover_image:App\model\Article:private] => 
-    [published_at:App\model\Article:private] => 2025-09-24 06:57:38
-    [created_at:App\model\Article:private] => 2025-09-24 06:57:38
+    [published_at:App\model\Article:private] => 2025-09-26 07:26:52
+    [created_at:App\model\Article:private] => 2025-09-26 07:26:52
     [title:App\model\Article:private] => testtt
-    [slug:App\model\Article:private] => testtt-7058
-    [content:App\model\Article:private] => hiuzehgireiuhgurehiurgehghiurehge
-aehndzlhuehghgiofhudfhsoz
-hkjhejziohiojeqiofhboifeahbihfeiobioheiugjrg
-jgzreherhehgfhgfhqiughhfsugghfiud
+    [slug:App\model\Article:private] => testtt-1612
+    [content:App\model\Article:private] => ufehzuhgoréhgéiéhç_rgj"hghejpvioreh_gzijpogbh_ç"ahgj
+""h((uzhj(tz(h_tjzhjehetzh'uj(-j-iè-oyjghghstz
+hnjegjnjhgjqfbgibqilsbgisdfl
     [introduction:App\model\Article:private] => 
     [id_user:App\model\Article:private] => 1
     [categories:App\model\Article:private] => Array
@@ -1096,24 +112,24 @@ jgzreherhehgfhgfhqiughhfsugghfiud
 
     [tags:App\model\Article:private] => Array
         (
-            [0] => test
+            [0] => etst
+            [1] => tezte
         )
 
 )
 
-[Wed Sep 24 08:57:39 2025] Chemin de l'image à sauvegarder : /uploads/articles/article_6_68d3966370101.png
-[Wed Sep 24 08:57:39 2025] Article avant update : App\model\Article Object
+[Fri Sep 26 09:26:53 2025] Chemin de l'image à sauvegarder : /uploads/articles/article_9_68d6403d6861d.png
+[Fri Sep 26 09:26:53 2025] Article avant update : App\model\Article Object
 (
-    [id_article:App\model\Article:private] => 6
-    [cover_image:App\model\Article:private] => /uploads/articles/article_6_68d3966370101.png
-    [published_at:App\model\Article:private] => 2025-09-24 06:57:38
-    [created_at:App\model\Article:private] => 2025-09-24 06:57:38
+    [id_article:App\model\Article:private] => 9
+    [cover_image:App\model\Article:private] => /uploads/articles/article_9_68d6403d6861d.png
+    [published_at:App\model\Article:private] => 2025-09-26 07:26:52
+    [created_at:App\model\Article:private] => 2025-09-26 07:26:52
     [title:App\model\Article:private] => testtt
-    [slug:App\model\Article:private] => testtt-7058
-    [content:App\model\Article:private] => hiuzehgireiuhgurehiurgehghiurehge
-aehndzlhuehghgiofhudfhsoz
-hkjhejziohiojeqiofhboifeahbihfeiobioheiugjrg
-jgzreherhehgfhgfhqiughhfsugghfiud
+    [slug:App\model\Article:private] => testtt-1612
+    [content:App\model\Article:private] => ufehzuhgoréhgéiéhç_rgj"hghejpvioreh_gzijpogbh_ç"ahgj
+""h((uzhj(tz(h_tjzhjehetzh'uj(-j-iè-oyjghghstz
+hnjegjnjhgjqfbgibqilsbgisdfl
     [introduction:App\model\Article:private] => 
     [id_user:App\model\Article:private] => 1
     [categories:App\model\Article:private] => Array
@@ -1122,23 +138,23 @@ jgzreherhehgfhgfhqiughhfsugghfiud
 
     [tags:App\model\Article:private] => Array
         (
-            [0] => test
+            [0] => etst
+            [1] => tezte
         )
 
 )
 
-[Wed Sep 24 08:57:39 2025] Tentative de mise à jour de l'article : App\model\Article Object
+[Fri Sep 26 09:26:53 2025] Tentative de mise à jour de l'article : App\model\Article Object
 (
-    [id_article:App\model\Article:private] => 6
-    [cover_image:App\model\Article:private] => /uploads/articles/article_6_68d3966370101.png
-    [published_at:App\model\Article:private] => 2025-09-24 06:57:38
-    [created_at:App\model\Article:private] => 2025-09-24 06:57:38
+    [id_article:App\model\Article:private] => 9
+    [cover_image:App\model\Article:private] => /uploads/articles/article_9_68d6403d6861d.png
+    [published_at:App\model\Article:private] => 2025-09-26 07:26:52
+    [created_at:App\model\Article:private] => 2025-09-26 07:26:52
     [title:App\model\Article:private] => testtt
-    [slug:App\model\Article:private] => testtt-7058
-    [content:App\model\Article:private] => hiuzehgireiuhgurehiurgehghiurehge
-aehndzlhuehghgiofhudfhsoz
-hkjhejziohiojeqiofhboifeahbihfeiobioheiugjrg
-jgzreherhehgfhgfhqiughhfsugghfiud
+    [slug:App\model\Article:private] => testtt-1612
+    [content:App\model\Article:private] => ufehzuhgoréhgéiéhç_rgj"hghejpvioreh_gzijpogbh_ç"ahgj
+""h((uzhj(tz(h_tjzhjehetzh'uj(-j-iè-oyjghghstz
+hnjegjnjhgjqfbgibqilsbgisdfl
     [introduction:App\model\Article:private] => 
     [id_user:App\model\Article:private] => 1
     [categories:App\model\Article:private] => Array
@@ -1147,55 +163,97 @@ jgzreherhehgfhgfhqiughhfsugghfiud
 
     [tags:App\model\Article:private] => Array
         (
-            [0] => test
+            [0] => etst
+            [1] => tezte
         )
 
 )
 
-[Wed Sep 24 08:57:39 2025] Paramètres de la requête de mise à jour : Array
+[Fri Sep 26 09:26:53 2025] Paramètres de la requête de mise à jour : Array
 (
-    [id] => 6
-    [cover_image] => /uploads/articles/article_6_68d3966370101.png
+    [id] => 9
+    [cover_image] => /uploads/articles/article_9_68d6403d6861d.png
     [title] => testtt
-    [slug] => testtt-7058
+    [slug] => testtt-1612
     [introduction] => 
-    [content] => hiuzehgireiuhgurehiurgehghiurehge
-aehndzlhuehghgiofhudfhsoz
-hkjhejziohiojeqiofhboifeahbihfeiobioheiugjrg
-jgzreherhehgfhgfhqiughhfsugghfiud
-    [published_at] => 2025-09-24 06:57:38
-    [tags] => ["test"]
+    [content] => ufehzuhgoréhgéiéhç_rgj"hghejpvioreh_gzijpogbh_ç"ahgj
+""h((uzhj(tz(h_tjzhjehetzh'uj(-j-iè-oyjghghstz
+hnjegjnjhgjqfbgibqilsbgisdfl
+    [published_at] => 2025-09-26 07:26:52
+    [tags] => ["etst","tezte"]
 )
 
-[Wed Sep 24 08:57:39 2025] Mise à jour des catégories pour l'article ID 6
-[Wed Sep 24 08:57:39 2025] Anciennes catégories supprimées
-[Wed Sep 24 08:57:39 2025] Toutes les nouvelles catégories ont été ajoutées
-[Wed Sep 24 08:57:39 2025] Résultat de la mise à jour : succès
-[Wed Sep 24 08:57:39 2025] [::1]:53540 [200]: POST /api/articles/6/image
-[Wed Sep 24 08:57:39 2025] [::1]:53540 Closing
-[Wed Sep 24 08:57:39 2025] [::1]:53565 Accepted
-[Wed Sep 24 08:57:40 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:57:40 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:57:40 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:57:40 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:57:40 2025] DB_HOST: localhost
-[Wed Sep 24 08:57:40 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:57:40 2025] [::1]:53565 [200]: GET /api/articles/id/6
-[Wed Sep 24 08:57:40 2025] [::1]:53565 Closing
-[Wed Sep 24 08:57:40 2025] [::1]:53571 Accepted
-[Wed Sep 24 08:57:40 2025] [::1]:53571 [200]: GET /uploads/articles/article_6_68d3966370101.png
-[Wed Sep 24 08:57:40 2025] [::1]:53571 Closing
-[Wed Sep 24 08:57:48 2025] [::1]:53572 Accepted
-[Wed Sep 24 08:57:48 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:57:48 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:57:48 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:57:48 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:57:48 2025] DB_HOST: localhost
-[Wed Sep 24 08:57:48 2025] Route /api/article-delete/6 : vérification CSRF
-[Wed Sep 24 08:57:48 2025] Vérification CSRF...
-[Wed Sep 24 08:57:48 2025] Token CSRF reçu: non défini
-[Wed Sep 24 08:57:48 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:57:48 2025] Toutes les variables d'env: Array
+[Fri Sep 26 09:26:53 2025] Mise à jour des catégories pour l'article ID 9
+[Fri Sep 26 09:26:53 2025] Anciennes catégories supprimées
+[Fri Sep 26 09:26:53 2025] Toutes les nouvelles catégories ont été ajoutées
+[Fri Sep 26 09:26:53 2025] Résultat de la mise à jour : succès
+[Fri Sep 26 09:26:53 2025] [::1]:51670 [200]: POST /api/articles/9/image
+[Fri Sep 26 09:26:53 2025] [::1]:51670 Closing
+[Fri Sep 26 09:26:53 2025] [::1]:51695 Accepted
+[Fri Sep 26 09:26:54 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Sep 26 09:26:54 2025] Variables d'environnement chargées:
+[Fri Sep 26 09:26:54 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Fri Sep 26 09:26:54 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Fri Sep 26 09:26:54 2025] DB_HOST: localhost
+[Fri Sep 26 09:26:54 2025] Méthode GET : pas de vérification CSRF nécessaire
+[Fri Sep 26 09:26:54 2025] [::1]:51695 [200]: GET /api/articles/id/9
+[Fri Sep 26 09:26:54 2025] [::1]:51695 Closing
+[Fri Sep 26 09:26:56 2025] [::1]:51703 Accepted
+[Fri Sep 26 09:26:56 2025] [::1]:51703 [200]: GET /uploads/articles/article_9_68d6403d6861d.png
+[Fri Sep 26 09:26:56 2025] [::1]:51703 Closing
+[Fri Sep 26 09:26:58 2025] [::1]:51724 Accepted
+[Fri Sep 26 09:26:58 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Sep 26 09:26:58 2025] Variables d'environnement chargées:
+[Fri Sep 26 09:26:58 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Fri Sep 26 09:26:58 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Fri Sep 26 09:26:58 2025] DB_HOST: localhost
+[Fri Sep 26 09:26:58 2025] Méthode GET : pas de vérification CSRF nécessaire
+[Fri Sep 26 09:26:58 2025] [::1]:51724 [200]: GET /api/articles?page=1&limit=3
+[Fri Sep 26 09:26:58 2025] [::1]:51724 Closing
+[Fri Sep 26 09:26:58 2025] [::1]:51729 Accepted
+[Fri Sep 26 09:26:58 2025] [::1]:51729 [200]: GET /uploads/articles/article_9_68d6403d6861d.png
+[Fri Sep 26 09:26:58 2025] [::1]:51729 Closing
+[Fri Sep 26 09:26:58 2025] [::1]:51730 Accepted
+[Fri Sep 26 09:26:58 2025] [::1]:51730 [200]: GET /uploads/articles/article_8_68d398b9bc151.png
+[Fri Sep 26 09:26:58 2025] [::1]:51730 Closing
+[Fri Sep 26 09:27:03 2025] [::1]:51750 Accepted
+[Fri Sep 26 09:27:03 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Sep 26 09:27:03 2025] Variables d'environnement chargées:
+[Fri Sep 26 09:27:03 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Fri Sep 26 09:27:03 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Fri Sep 26 09:27:03 2025] DB_HOST: localhost
+[Fri Sep 26 09:27:03 2025] Méthode GET : pas de vérification CSRF nécessaire
+[Fri Sep 26 09:27:03 2025] [::1]:51750 [200]: GET /api/articles/id/9
+[Fri Sep 26 09:27:03 2025] [::1]:51750 Closing
+[Fri Sep 26 09:27:03 2025] [::1]:51756 Accepted
+[Fri Sep 26 09:27:03 2025] [::1]:51756 [200]: GET /uploads/articles/article_9_68d6403d6861d.png
+[Fri Sep 26 09:27:03 2025] [::1]:51756 Closing
+[Fri Sep 26 09:28:50 2025] [::1]:51804 Accepted
+[Fri Sep 26 09:28:50 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Sep 26 09:28:50 2025] Variables d'environnement chargées:
+[Fri Sep 26 09:28:50 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Fri Sep 26 09:28:50 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Fri Sep 26 09:28:50 2025] DB_HOST: localhost
+[Fri Sep 26 09:28:50 2025] Méthode GET : pas de vérification CSRF nécessaire
+[Fri Sep 26 09:28:50 2025] [::1]:51804 [200]: GET /api/articles?page=1&limit=3
+[Fri Sep 26 09:28:50 2025] [::1]:51804 Closing
+[Fri Sep 26 09:28:50 2025] [::1]:51810 Accepted
+[Fri Sep 26 09:28:50 2025] [::1]:51811 Accepted
+[Fri Sep 26 09:28:50 2025] [::1]:51811 [200]: GET /uploads/articles/article_8_68d398b9bc151.png
+[Fri Sep 26 09:28:50 2025] [::1]:51810 [200]: GET /uploads/articles/article_9_68d6403d6861d.png
+[Fri Sep 26 09:28:50 2025] [::1]:51811 Closing
+[Fri Sep 26 09:28:50 2025] [::1]:51810 Closing
+[Fri Sep 26 09:29:07 2025] [::1]:51839 Accepted
+[Fri Sep 26 09:29:08 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Sep 26 09:29:08 2025] Variables d'environnement chargées:
+[Fri Sep 26 09:29:08 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Fri Sep 26 09:29:08 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Fri Sep 26 09:29:08 2025] DB_HOST: localhost
+[Fri Sep 26 09:29:08 2025] Route /api/articles : vérification CSRF
+[Fri Sep 26 09:29:08 2025] Vérification CSRF...
+[Fri Sep 26 09:29:08 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Fri Sep 26 09:29:08 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Fri Sep 26 09:29:08 2025] Toutes les variables d'env: Array
 (
     [DB_HOST] => localhost
     [DB_NAME] => infodotgame
@@ -1207,20 +265,10 @@ jgzreherhehgfhgfhqiughhfsugghfiud
     [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
 )
 
-[Wed Sep 24 08:57:48 2025] Token CSRF ou Secret manquant
-[Wed Sep 24 08:57:48 2025] [::1]:53572 [403]: DELETE /api/article-delete/6
-[Wed Sep 24 08:57:48 2025] [::1]:53572 Closing
-[Wed Sep 24 08:57:49 2025] [::1]:53576 Accepted
-[Wed Sep 24 08:57:49 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:57:49 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:57:49 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:57:49 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:57:49 2025] DB_HOST: localhost
-[Wed Sep 24 08:57:49 2025] Route /api/article-delete/6 : vérification CSRF
-[Wed Sep 24 08:57:49 2025] Vérification CSRF...
-[Wed Sep 24 08:57:49 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:57:49 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:57:49 2025] Toutes les variables d'env: Array
+[Fri Sep 26 09:29:08 2025] Vérification CSRF...
+[Fri Sep 26 09:29:08 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Fri Sep 26 09:29:08 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Fri Sep 26 09:29:08 2025] Toutes les variables d'env: Array
 (
     [DB_HOST] => localhost
     [DB_NAME] => infodotgame
@@ -1232,43 +280,19 @@ jgzreherhehgfhgfhqiughhfsugghfiud
     [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
 )
 
-[Wed Sep 24 08:57:49 2025] [::1]:53576 [200]: DELETE /api/article-delete/6
-[Wed Sep 24 08:57:49 2025] [::1]:53576 Closing
-[Wed Sep 24 08:57:50 2025] [::1]:53601 Accepted
-[Wed Sep 24 08:57:51 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:57:51 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:57:51 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:57:51 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:57:51 2025] DB_HOST: localhost
-[Wed Sep 24 08:57:51 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:57:51 2025] [::1]:53601 [200]: GET /api/articles?page=1&limit=3
-[Wed Sep 24 08:57:51 2025] [::1]:53601 Closing
-[Wed Sep 24 08:57:51 2025] [::1]:53607 Accepted
-[Wed Sep 24 08:57:51 2025] [::1]:53607 [200]: GET /uploads/articles/article_1_68d103025e052.png
-[Wed Sep 24 08:57:51 2025] [::1]:53607 Closing
-[Wed Sep 24 08:59:49 2025] [::1]:53675 Accepted
-[Wed Sep 24 08:59:49 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:59:49 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:59:49 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:59:49 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:59:49 2025] DB_HOST: localhost
-[Wed Sep 24 08:59:49 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:59:49 2025] [::1]:53675 [200]: GET /api/articles/id/1
-[Wed Sep 24 08:59:49 2025] [::1]:53675 Closing
-[Wed Sep 24 08:59:49 2025] [::1]:53680 Accepted
-[Wed Sep 24 08:59:49 2025] [::1]:53680 [200]: GET /uploads/articles/article_1_68d103025e052.png
-[Wed Sep 24 08:59:49 2025] [::1]:53680 Closing
-[Wed Sep 24 08:59:51 2025] [::1]:53682 Accepted
-[Wed Sep 24 08:59:52 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:59:52 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:59:52 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:59:52 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:59:52 2025] DB_HOST: localhost
-[Wed Sep 24 08:59:52 2025] Route /api/article-delete/1 : vérification CSRF
-[Wed Sep 24 08:59:52 2025] Vérification CSRF...
-[Wed Sep 24 08:59:52 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:59:52 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:59:52 2025] Toutes les variables d'env: Array
+[Fri Sep 26 09:29:08 2025] [::1]:51839 [201]: POST /api/articles
+[Fri Sep 26 09:29:08 2025] [::1]:51839 Closing
+[Fri Sep 26 09:29:08 2025] [::1]:51843 Accepted
+[Fri Sep 26 09:29:08 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Sep 26 09:29:08 2025] Variables d'environnement chargées:
+[Fri Sep 26 09:29:08 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Fri Sep 26 09:29:08 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Fri Sep 26 09:29:08 2025] DB_HOST: localhost
+[Fri Sep 26 09:29:08 2025] Route /api/articles/10/image : vérification CSRF
+[Fri Sep 26 09:29:08 2025] Vérification CSRF...
+[Fri Sep 26 09:29:08 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Fri Sep 26 09:29:08 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Fri Sep 26 09:29:08 2025] Toutes les variables d'env: Array
 (
     [DB_HOST] => localhost
     [DB_NAME] => infodotgame
@@ -1280,28 +304,10 @@ jgzreherhehgfhgfhqiughhfsugghfiud
     [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
 )
 
-[Wed Sep 24 08:59:52 2025] [::1]:53682 [200]: DELETE /api/article-delete/1
-[Wed Sep 24 08:59:52 2025] [::1]:53682 Closing
-[Wed Sep 24 08:59:52 2025] [::1]:53706 Accepted
-[Wed Sep 24 08:59:53 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 08:59:53 2025] Variables d'environnement chargées:
-[Wed Sep 24 08:59:53 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:59:53 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 08:59:53 2025] DB_HOST: localhost
-[Wed Sep 24 08:59:53 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 08:59:53 2025] [::1]:53706 [200]: GET /api/articles?page=1&limit=3
-[Wed Sep 24 08:59:53 2025] [::1]:53706 Closing
-[Wed Sep 24 09:00:36 2025] [::1]:53753 Accepted
-[Wed Sep 24 09:00:36 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 09:00:36 2025] Variables d'environnement chargées:
-[Wed Sep 24 09:00:36 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:00:36 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:00:36 2025] DB_HOST: localhost
-[Wed Sep 24 09:00:36 2025] Route /api/articles : vérification CSRF
-[Wed Sep 24 09:00:36 2025] Vérification CSRF...
-[Wed Sep 24 09:00:36 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:00:36 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:00:36 2025] Toutes les variables d'env: Array
+[Fri Sep 26 09:29:08 2025] Vérification CSRF...
+[Fri Sep 26 09:29:08 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Fri Sep 26 09:29:08 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Fri Sep 26 09:29:08 2025] Toutes les variables d'env: Array
 (
     [DB_HOST] => localhost
     [DB_NAME] => infodotgame
@@ -1313,73 +319,18 @@ jgzreherhehgfhgfhqiughhfsugghfiud
     [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
 )
 
-[Wed Sep 24 09:00:36 2025] Vérification CSRF...
-[Wed Sep 24 09:00:36 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:00:36 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:00:36 2025] Toutes les variables d'env: Array
+[Fri Sep 26 09:29:08 2025] Article récupéré : App\model\Article Object
 (
-    [DB_HOST] => localhost
-    [DB_NAME] => infodotgame
-    [DB_USER] => db_user
-    [DB_PASSWORD] => 12345
-    [DB_PORT] => 3315
-    [JWT_SECRET_KEY] => f982da955f9c94f234e8f05971d9f170b7118da9250399c9009f97c5483b90c8
-    [RECAPTCHA_SECRET_KEY] => 6LdPrM4rAAAAAEAQehIF1pwgQc5Y4AW-6YUkhiRU
-    [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-)
-
-[Wed Sep 24 09:00:36 2025] [::1]:53753 [201]: POST /api/articles
-[Wed Sep 24 09:00:36 2025] [::1]:53753 Closing
-[Wed Sep 24 09:00:36 2025] [::1]:53757 Accepted
-[Wed Sep 24 09:00:36 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 09:00:36 2025] Variables d'environnement chargées:
-[Wed Sep 24 09:00:36 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:00:36 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:00:36 2025] DB_HOST: localhost
-[Wed Sep 24 09:00:36 2025] Route /api/articles/7/image : vérification CSRF
-[Wed Sep 24 09:00:36 2025] Vérification CSRF...
-[Wed Sep 24 09:00:36 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:00:36 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:00:36 2025] Toutes les variables d'env: Array
-(
-    [DB_HOST] => localhost
-    [DB_NAME] => infodotgame
-    [DB_USER] => db_user
-    [DB_PASSWORD] => 12345
-    [DB_PORT] => 3315
-    [JWT_SECRET_KEY] => f982da955f9c94f234e8f05971d9f170b7118da9250399c9009f97c5483b90c8
-    [RECAPTCHA_SECRET_KEY] => 6LdPrM4rAAAAAEAQehIF1pwgQc5Y4AW-6YUkhiRU
-    [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-)
-
-[Wed Sep 24 09:00:36 2025] Vérification CSRF...
-[Wed Sep 24 09:00:36 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:00:36 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:00:36 2025] Toutes les variables d'env: Array
-(
-    [DB_HOST] => localhost
-    [DB_NAME] => infodotgame
-    [DB_USER] => db_user
-    [DB_PASSWORD] => 12345
-    [DB_PORT] => 3315
-    [JWT_SECRET_KEY] => f982da955f9c94f234e8f05971d9f170b7118da9250399c9009f97c5483b90c8
-    [RECAPTCHA_SECRET_KEY] => 6LdPrM4rAAAAAEAQehIF1pwgQc5Y4AW-6YUkhiRU
-    [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-)
-
-[Wed Sep 24 09:00:36 2025] Article récupéré : App\model\Article Object
-(
-    [id_article:App\model\Article:private] => 7
+    [id_article:App\model\Article:private] => 10
     [cover_image:App\model\Article:private] => 
-    [published_at:App\model\Article:private] => 2025-09-24 07:00:36
-    [created_at:App\model\Article:private] => 2025-09-24 07:00:36
-    [title:App\model\Article:private] => testttt
-    [slug:App\model\Article:private] => testttt-7236
-    [content:App\model\Article:private] => znrrgjhrenghrehghrehzohezoggehzbveabio
-vaznvnajgvzahviuazbviaiuzvbqbzbdafiuhrbiuzgb
-qzvhnaqghozeapghrzhguvbibaviabvijaivbab
-gnzhhaihzihbzhghgrbzjqjvjfbqj
-    [introduction:App\model\Article:private] => 
+    [published_at:App\model\Article:private] => 2025-09-26 07:29:08
+    [created_at:App\model\Article:private] => 2025-09-26 07:29:08
+    [title:App\model\Article:private] => testtt
+    [slug:App\model\Article:private] => testtt-1748
+    [content:App\model\Article:private] => hfzeehoighreezgiohiorzgihehghuiezhigiu
+gjhiotejthiottjioezhiothegioteshiotsei
+ehnehhnfehgnbfmdqbrjjçbàçeghrz"hbiod
+    [introduction:App\model\Article:private] => rgjrenhglerzhntekjanhgjkbejrngbreqgbequgherqugb
     [id_user:App\model\Article:private] => 1
     [categories:App\model\Article:private] => Array
         (
@@ -1392,20 +343,19 @@ gnzhhaihzihbzhghgrbzjqjvjfbqj
 
 )
 
-[Wed Sep 24 09:00:36 2025] Chemin de l'image à sauvegarder : /uploads/articles/article_7_68d39714ea47e.png
-[Wed Sep 24 09:00:36 2025] Article avant update : App\model\Article Object
+[Fri Sep 26 09:29:08 2025] Chemin de l'image à sauvegarder : /uploads/articles/article_10_68d640c4cefb6.png
+[Fri Sep 26 09:29:08 2025] Article avant update : App\model\Article Object
 (
-    [id_article:App\model\Article:private] => 7
-    [cover_image:App\model\Article:private] => /uploads/articles/article_7_68d39714ea47e.png
-    [published_at:App\model\Article:private] => 2025-09-24 07:00:36
-    [created_at:App\model\Article:private] => 2025-09-24 07:00:36
-    [title:App\model\Article:private] => testttt
-    [slug:App\model\Article:private] => testttt-7236
-    [content:App\model\Article:private] => znrrgjhrenghrehghrehzohezoggehzbveabio
-vaznvnajgvzahviuazbviaiuzvbqbzbdafiuhrbiuzgb
-qzvhnaqghozeapghrzhguvbibaviabvijaivbab
-gnzhhaihzihbzhghgrbzjqjvjfbqj
-    [introduction:App\model\Article:private] => 
+    [id_article:App\model\Article:private] => 10
+    [cover_image:App\model\Article:private] => /uploads/articles/article_10_68d640c4cefb6.png
+    [published_at:App\model\Article:private] => 2025-09-26 07:29:08
+    [created_at:App\model\Article:private] => 2025-09-26 07:29:08
+    [title:App\model\Article:private] => testtt
+    [slug:App\model\Article:private] => testtt-1748
+    [content:App\model\Article:private] => hfzeehoighreezgiohiorzgihehghuiezhigiu
+gjhiotejthiottjioezhiothegioteshiotsei
+ehnehhnfehgnbfmdqbrjjçbàçeghrz"hbiod
+    [introduction:App\model\Article:private] => rgjrenhglerzhntekjanhgjkbejrngbreqgbequgherqugb
     [id_user:App\model\Article:private] => 1
     [categories:App\model\Article:private] => Array
         (
@@ -1418,19 +368,18 @@ gnzhhaihzihbzhghgrbzjqjvjfbqj
 
 )
 
-[Wed Sep 24 09:00:36 2025] Tentative de mise à jour de l'article : App\model\Article Object
+[Fri Sep 26 09:29:08 2025] Tentative de mise à jour de l'article : App\model\Article Object
 (
-    [id_article:App\model\Article:private] => 7
-    [cover_image:App\model\Article:private] => /uploads/articles/article_7_68d39714ea47e.png
-    [published_at:App\model\Article:private] => 2025-09-24 07:00:36
-    [created_at:App\model\Article:private] => 2025-09-24 07:00:36
-    [title:App\model\Article:private] => testttt
-    [slug:App\model\Article:private] => testttt-7236
-    [content:App\model\Article:private] => znrrgjhrenghrehghrehzohezoggehzbveabio
-vaznvnajgvzahviuazbviaiuzvbqbzbdafiuhrbiuzgb
-qzvhnaqghozeapghrzhguvbibaviabvijaivbab
-gnzhhaihzihbzhghgrbzjqjvjfbqj
-    [introduction:App\model\Article:private] => 
+    [id_article:App\model\Article:private] => 10
+    [cover_image:App\model\Article:private] => /uploads/articles/article_10_68d640c4cefb6.png
+    [published_at:App\model\Article:private] => 2025-09-26 07:29:08
+    [created_at:App\model\Article:private] => 2025-09-26 07:29:08
+    [title:App\model\Article:private] => testtt
+    [slug:App\model\Article:private] => testtt-1748
+    [content:App\model\Article:private] => hfzeehoighreezgiohiorzgihehghuiezhigiu
+gjhiotejthiottjioezhiothegioteshiotsei
+ehnehhnfehgnbfmdqbrjjçbàçeghrz"hbiod
+    [introduction:App\model\Article:private] => rgjrenhglerzhntekjanhgjkbejrngbreqgbequgherqugb
     [id_user:App\model\Article:private] => 1
     [categories:App\model\Article:private] => Array
         (
@@ -1443,836 +392,53 @@ gnzhhaihzihbzhghgrbzjqjvjfbqj
 
 )
 
-[Wed Sep 24 09:00:36 2025] Paramètres de la requête de mise à jour : Array
+[Fri Sep 26 09:29:08 2025] Paramètres de la requête de mise à jour : Array
 (
-    [id] => 7
-    [cover_image] => /uploads/articles/article_7_68d39714ea47e.png
-    [title] => testttt
-    [slug] => testttt-7236
-    [introduction] => 
-    [content] => znrrgjhrenghrehghrehzohezoggehzbveabio
-vaznvnajgvzahviuazbviaiuzvbqbzbdafiuhrbiuzgb
-qzvhnaqghozeapghrzhguvbibaviabvijaivbab
-gnzhhaihzihbzhghgrbzjqjvjfbqj
-    [published_at] => 2025-09-24 07:00:36
+    [id] => 10
+    [cover_image] => /uploads/articles/article_10_68d640c4cefb6.png
+    [title] => testtt
+    [slug] => testtt-1748
+    [introduction] => rgjrenhglerzhntekjanhgjkbejrngbreqgbequgherqugb
+    [content] => hfzeehoighreezgiohiorzgihehghuiezhigiu
+gjhiotejthiottjioezhiothegioteshiotsei
+ehnehhnfehgnbfmdqbrjjçbàçeghrz"hbiod
+    [published_at] => 2025-09-26 07:29:08
     [tags] => ["testtt"]
 )
 
-[Wed Sep 24 09:00:36 2025] Mise à jour des catégories pour l'article ID 7
-[Wed Sep 24 09:00:36 2025] Anciennes catégories supprimées
-[Wed Sep 24 09:00:36 2025] Toutes les nouvelles catégories ont été ajoutées
-[Wed Sep 24 09:00:36 2025] Résultat de la mise à jour : succès
-[Wed Sep 24 09:00:36 2025] [::1]:53757 [200]: POST /api/articles/7/image
-[Wed Sep 24 09:00:36 2025] [::1]:53757 Closing
-[Wed Sep 24 09:00:37 2025] [::1]:53782 Accepted
-[Wed Sep 24 09:00:37 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 09:00:37 2025] Variables d'environnement chargées:
-[Wed Sep 24 09:00:37 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:00:37 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:00:37 2025] DB_HOST: localhost
-[Wed Sep 24 09:00:37 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 09:00:37 2025] [::1]:53782 [200]: GET /api/articles/id/7
-[Wed Sep 24 09:00:37 2025] [::1]:53782 Closing
-[Wed Sep 24 09:00:37 2025] [::1]:53789 Accepted
-[Wed Sep 24 09:00:37 2025] [::1]:53789 [200]: GET /uploads/articles/article_7_68d39714ea47e.png
-[Wed Sep 24 09:00:37 2025] [::1]:53789 Closing
-[Wed Sep 24 09:00:39 2025] [::1]:53809 Accepted
-[Wed Sep 24 09:00:39 2025] [::1]:53809 [200]: GET /uploads/articles/article_7_68d39714ea47e.png
-[Wed Sep 24 09:00:39 2025] [::1]:53809 Closing
-[Wed Sep 24 09:00:53 2025] [::1]:53821 Accepted
-[Wed Sep 24 09:00:53 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 09:00:53 2025] Variables d'environnement chargées:
-[Wed Sep 24 09:00:53 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:00:53 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:00:53 2025] DB_HOST: localhost
-[Wed Sep 24 09:00:53 2025] Route /api/articles/7 : vérification CSRF
-[Wed Sep 24 09:00:53 2025] Vérification CSRF...
-[Wed Sep 24 09:00:53 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:00:53 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:00:53 2025] Toutes les variables d'env: Array
-(
-    [DB_HOST] => localhost
-    [DB_NAME] => infodotgame
-    [DB_USER] => db_user
-    [DB_PASSWORD] => 12345
-    [DB_PORT] => 3315
-    [JWT_SECRET_KEY] => f982da955f9c94f234e8f05971d9f170b7118da9250399c9009f97c5483b90c8
-    [RECAPTCHA_SECRET_KEY] => 6LdPrM4rAAAAAEAQehIF1pwgQc5Y4AW-6YUkhiRU
-    [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-)
-
-[Wed Sep 24 09:00:53 2025] Vérification CSRF...
-[Wed Sep 24 09:00:53 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:00:53 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:00:53 2025] Toutes les variables d'env: Array
-(
-    [DB_HOST] => localhost
-    [DB_NAME] => infodotgame
-    [DB_USER] => db_user
-    [DB_PASSWORD] => 12345
-    [DB_PORT] => 3315
-    [JWT_SECRET_KEY] => f982da955f9c94f234e8f05971d9f170b7118da9250399c9009f97c5483b90c8
-    [RECAPTCHA_SECRET_KEY] => 6LdPrM4rAAAAAEAQehIF1pwgQc5Y4AW-6YUkhiRU
-    [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-)
-
-[Wed Sep 24 09:00:53 2025] Tentative de mise à jour de l'article : App\model\Article Object
-(
-    [id_article:App\model\Article:private] => 7
-    [cover_image:App\model\Article:private] => /uploads/articles/article_7_68d39714ea47e.png
-    [published_at:App\model\Article:private] => 2025-09-24 07:00:53
-    [created_at:App\model\Article:private] => 2025-09-24 07:00:36
-    [title:App\model\Article:private] => testtttssss
-    [slug:App\model\Article:private] => testtttssss-7253
-    [content:App\model\Article:private] => znrrgjhrenghrehghrehzohezoggehzbveabio
-vaznvnajgvzahviuazbviaiuzvbqbzbdafiuhrbiuzgb
-qzvhnaqghozeapghrzhguvbibaviabvijaivbab
-gnzhhaihzihbzhghgrbzjqjvjfbqj
-    [introduction:App\model\Article:private] => gbsbghshguihshfugsfvjsvsqbvsbqvbvibiavivbifisv
-    [id_user:App\model\Article:private] => 1
-    [categories:App\model\Article:private] => Array
-        (
-        )
-
-    [tags:App\model\Article:private] => Array
-        (
-            [0] => testttsss
-            [1] => gsgjg
-        )
-
-)
-
-[Wed Sep 24 09:00:53 2025] Paramètres de la requête de mise à jour : Array
-(
-    [id] => 7
-    [cover_image] => /uploads/articles/article_7_68d39714ea47e.png
-    [title] => testtttssss
-    [slug] => testtttssss-7253
-    [introduction] => gbsbghshguihshfugsfvjsvsqbvsbqvbvibiavivbifisv
-    [content] => znrrgjhrenghrehghrehzohezoggehzbveabio
-vaznvnajgvzahviuazbviaiuzvbqbzbdafiuhrbiuzgb
-qzvhnaqghozeapghrzhguvbibaviabvijaivbab
-gnzhhaihzihbzhghgrbzjqjvjfbqj
-    [published_at] => 2025-09-24 07:00:53
-    [tags] => ["testttsss","gsgjg"]
-)
-
-[Wed Sep 24 09:00:53 2025] Mise à jour des catégories pour l'article ID 7
-[Wed Sep 24 09:00:53 2025] Anciennes catégories supprimées
-[Wed Sep 24 09:00:53 2025] Toutes les nouvelles catégories ont été ajoutées
-[Wed Sep 24 09:00:53 2025] [::1]:53821 [200]: PUT /api/articles/7
-[Wed Sep 24 09:00:53 2025] [::1]:53821 Closing
-[Wed Sep 24 09:00:53 2025] [::1]:53825 Accepted
-[Wed Sep 24 09:00:54 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 09:00:54 2025] Variables d'environnement chargées:
-[Wed Sep 24 09:00:54 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:00:54 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:00:54 2025] DB_HOST: localhost
-[Wed Sep 24 09:00:54 2025] Route /api/articles/7/image : vérification CSRF
-[Wed Sep 24 09:00:54 2025] Vérification CSRF...
-[Wed Sep 24 09:00:54 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:00:54 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:00:54 2025] Toutes les variables d'env: Array
-(
-    [DB_HOST] => localhost
-    [DB_NAME] => infodotgame
-    [DB_USER] => db_user
-    [DB_PASSWORD] => 12345
-    [DB_PORT] => 3315
-    [JWT_SECRET_KEY] => f982da955f9c94f234e8f05971d9f170b7118da9250399c9009f97c5483b90c8
-    [RECAPTCHA_SECRET_KEY] => 6LdPrM4rAAAAAEAQehIF1pwgQc5Y4AW-6YUkhiRU
-    [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-)
-
-[Wed Sep 24 09:00:54 2025] Vérification CSRF...
-[Wed Sep 24 09:00:54 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:00:54 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:00:54 2025] Toutes les variables d'env: Array
-(
-    [DB_HOST] => localhost
-    [DB_NAME] => infodotgame
-    [DB_USER] => db_user
-    [DB_PASSWORD] => 12345
-    [DB_PORT] => 3315
-    [JWT_SECRET_KEY] => f982da955f9c94f234e8f05971d9f170b7118da9250399c9009f97c5483b90c8
-    [RECAPTCHA_SECRET_KEY] => 6LdPrM4rAAAAAEAQehIF1pwgQc5Y4AW-6YUkhiRU
-    [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-)
-
-[Wed Sep 24 09:00:54 2025] Article récupéré : App\model\Article Object
-(
-    [id_article:App\model\Article:private] => 7
-    [cover_image:App\model\Article:private] => /uploads/articles/article_7_68d39714ea47e.png
-    [published_at:App\model\Article:private] => 2025-09-24 07:00:53
-    [created_at:App\model\Article:private] => 2025-09-24 07:00:36
-    [title:App\model\Article:private] => testtttssss
-    [slug:App\model\Article:private] => testtttssss-7253
-    [content:App\model\Article:private] => znrrgjhrenghrehghrehzohezoggehzbveabio
-vaznvnajgvzahviuazbviaiuzvbqbzbdafiuhrbiuzgb
-qzvhnaqghozeapghrzhguvbibaviabvijaivbab
-gnzhhaihzihbzhghgrbzjqjvjfbqj
-    [introduction:App\model\Article:private] => gbsbghshguihshfugsfvjsvsqbvsbqvbvibiavivbifisv
-    [id_user:App\model\Article:private] => 1
-    [categories:App\model\Article:private] => Array
-        (
-        )
-
-    [tags:App\model\Article:private] => Array
-        (
-            [0] => testttsss
-            [1] => gsgjg
-        )
-
-)
-
-[Wed Sep 24 09:00:54 2025] Tentative de suppression de l'ancienne image : E:\projet_info_dot_game\blog-jeux-video-backend\src\controller/../../public/uploads/articles/article_7_68d39714ea47e.png
-[Wed Sep 24 09:00:54 2025] Ancienne image supprimée avec succès
-[Wed Sep 24 09:00:54 2025] Chemin de l'image à sauvegarder : /uploads/articles/article_7_68d397266fe7d.png
-[Wed Sep 24 09:00:54 2025] Article avant update : App\model\Article Object
-(
-    [id_article:App\model\Article:private] => 7
-    [cover_image:App\model\Article:private] => /uploads/articles/article_7_68d397266fe7d.png
-    [published_at:App\model\Article:private] => 2025-09-24 07:00:53
-    [created_at:App\model\Article:private] => 2025-09-24 07:00:36
-    [title:App\model\Article:private] => testtttssss
-    [slug:App\model\Article:private] => testtttssss-7253
-    [content:App\model\Article:private] => znrrgjhrenghrehghrehzohezoggehzbveabio
-vaznvnajgvzahviuazbviaiuzvbqbzbdafiuhrbiuzgb
-qzvhnaqghozeapghrzhguvbibaviabvijaivbab
-gnzhhaihzihbzhghgrbzjqjvjfbqj
-    [introduction:App\model\Article:private] => gbsbghshguihshfugsfvjsvsqbvsbqvbvibiavivbifisv
-    [id_user:App\model\Article:private] => 1
-    [categories:App\model\Article:private] => Array
-        (
-        )
-
-    [tags:App\model\Article:private] => Array
-        (
-            [0] => testttsss
-            [1] => gsgjg
-        )
-
-)
-
-[Wed Sep 24 09:00:54 2025] Tentative de mise à jour de l'article : App\model\Article Object
-(
-    [id_article:App\model\Article:private] => 7
-    [cover_image:App\model\Article:private] => /uploads/articles/article_7_68d397266fe7d.png
-    [published_at:App\model\Article:private] => 2025-09-24 07:00:53
-    [created_at:App\model\Article:private] => 2025-09-24 07:00:36
-    [title:App\model\Article:private] => testtttssss
-    [slug:App\model\Article:private] => testtttssss-7253
-    [content:App\model\Article:private] => znrrgjhrenghrehghrehzohezoggehzbveabio
-vaznvnajgvzahviuazbviaiuzvbqbzbdafiuhrbiuzgb
-qzvhnaqghozeapghrzhguvbibaviabvijaivbab
-gnzhhaihzihbzhghgrbzjqjvjfbqj
-    [introduction:App\model\Article:private] => gbsbghshguihshfugsfvjsvsqbvsbqvbvibiavivbifisv
-    [id_user:App\model\Article:private] => 1
-    [categories:App\model\Article:private] => Array
-        (
-        )
-
-    [tags:App\model\Article:private] => Array
-        (
-            [0] => testttsss
-            [1] => gsgjg
-        )
-
-)
-
-[Wed Sep 24 09:00:54 2025] Paramètres de la requête de mise à jour : Array
-(
-    [id] => 7
-    [cover_image] => /uploads/articles/article_7_68d397266fe7d.png
-    [title] => testtttssss
-    [slug] => testtttssss-7253
-    [introduction] => gbsbghshguihshfugsfvjsvsqbvsbqvbvibiavivbifisv
-    [content] => znrrgjhrenghrehghrehzohezoggehzbveabio
-vaznvnajgvzahviuazbviaiuzvbqbzbdafiuhrbiuzgb
-qzvhnaqghozeapghrzhguvbibaviabvijaivbab
-gnzhhaihzihbzhghgrbzjqjvjfbqj
-    [published_at] => 2025-09-24 07:00:53
-    [tags] => ["testttsss","gsgjg"]
-)
-
-[Wed Sep 24 09:00:54 2025] Mise à jour des catégories pour l'article ID 7
-[Wed Sep 24 09:00:54 2025] Anciennes catégories supprimées
-[Wed Sep 24 09:00:54 2025] Toutes les nouvelles catégories ont été ajoutées
-[Wed Sep 24 09:00:54 2025] Résultat de la mise à jour : succès
-[Wed Sep 24 09:00:54 2025] [::1]:53825 [200]: POST /api/articles/7/image
-[Wed Sep 24 09:00:54 2025] [::1]:53825 Closing
-[Wed Sep 24 09:00:54 2025] [::1]:53850 Accepted
-[Wed Sep 24 09:00:55 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 09:00:55 2025] Variables d'environnement chargées:
-[Wed Sep 24 09:00:55 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:00:55 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:00:55 2025] DB_HOST: localhost
-[Wed Sep 24 09:00:55 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 09:00:55 2025] [::1]:53850 [200]: GET /api/articles/id/7
-[Wed Sep 24 09:00:55 2025] [::1]:53850 Closing
-[Wed Sep 24 09:00:55 2025] [::1]:53856 Accepted
-[Wed Sep 24 09:00:55 2025] [::1]:53856 [200]: GET /uploads/articles/article_7_68d397266fe7d.png
-[Wed Sep 24 09:00:55 2025] [::1]:53856 Closing
-[Wed Sep 24 09:00:59 2025] [::1]:53876 Accepted
-[Wed Sep 24 09:00:59 2025] [::1]:53876 [200]: GET /uploads/articles/article_7_68d397266fe7d.png
-[Wed Sep 24 09:00:59 2025] [::1]:53876 Closing
-[Wed Sep 24 09:01:05 2025] [::1]:53880 Accepted
-[Wed Sep 24 09:01:06 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 09:01:06 2025] Variables d'environnement chargées:
-[Wed Sep 24 09:01:06 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:01:06 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:01:06 2025] DB_HOST: localhost
-[Wed Sep 24 09:01:06 2025] Route /api/articles/7 : vérification CSRF
-[Wed Sep 24 09:01:06 2025] Vérification CSRF...
-[Wed Sep 24 09:01:06 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:01:06 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:01:06 2025] Toutes les variables d'env: Array
-(
-    [DB_HOST] => localhost
-    [DB_NAME] => infodotgame
-    [DB_USER] => db_user
-    [DB_PASSWORD] => 12345
-    [DB_PORT] => 3315
-    [JWT_SECRET_KEY] => f982da955f9c94f234e8f05971d9f170b7118da9250399c9009f97c5483b90c8
-    [RECAPTCHA_SECRET_KEY] => 6LdPrM4rAAAAAEAQehIF1pwgQc5Y4AW-6YUkhiRU
-    [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-)
-
-[Wed Sep 24 09:01:06 2025] Vérification CSRF...
-[Wed Sep 24 09:01:06 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:01:06 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:01:06 2025] Toutes les variables d'env: Array
-(
-    [DB_HOST] => localhost
-    [DB_NAME] => infodotgame
-    [DB_USER] => db_user
-    [DB_PASSWORD] => 12345
-    [DB_PORT] => 3315
-    [JWT_SECRET_KEY] => f982da955f9c94f234e8f05971d9f170b7118da9250399c9009f97c5483b90c8
-    [RECAPTCHA_SECRET_KEY] => 6LdPrM4rAAAAAEAQehIF1pwgQc5Y4AW-6YUkhiRU
-    [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-)
-
-[Wed Sep 24 09:01:06 2025] Tentative de mise à jour de l'article : App\model\Article Object
-(
-    [id_article:App\model\Article:private] => 7
-    [cover_image:App\model\Article:private] => /uploads/articles/article_7_68d397266fe7d.png
-    [published_at:App\model\Article:private] => 2025-09-24 07:01:06
-    [created_at:App\model\Article:private] => 2025-09-24 07:00:36
-    [title:App\model\Article:private] => testtttssss
-    [slug:App\model\Article:private] => testtttssss-7266
-    [content:App\model\Article:private] => znrrgjhrenghrehghrehzohezoggehzbveabio
-vaznvnajgvzahviuazbviaiuzvbqbzbdafiuhrbiuzgb
-qzvhnaqghozeapghrzhguvbibaviabvijaivbab
-gnzhhaihzihbzhghgrbzjqjvjfbqj
-    [introduction:App\model\Article:private] => gbsbghshguihshfugsfvjsvsqbvsbqvbvibiavivbifisv
-    [id_user:App\model\Article:private] => 1
-    [categories:App\model\Article:private] => Array
-        (
-        )
-
-    [tags:App\model\Article:private] => Array
-        (
-            [0] => testttsss
-            [1] => gsgjg
-        )
-
-)
-
-[Wed Sep 24 09:01:06 2025] Paramètres de la requête de mise à jour : Array
-(
-    [id] => 7
-    [cover_image] => /uploads/articles/article_7_68d397266fe7d.png
-    [title] => testtttssss
-    [slug] => testtttssss-7266
-    [introduction] => gbsbghshguihshfugsfvjsvsqbvsbqvbvibiavivbifisv
-    [content] => znrrgjhrenghrehghrehzohezoggehzbveabio
-vaznvnajgvzahviuazbviaiuzvbqbzbdafiuhrbiuzgb
-qzvhnaqghozeapghrzhguvbibaviabvijaivbab
-gnzhhaihzihbzhghgrbzjqjvjfbqj
-    [published_at] => 2025-09-24 07:01:06
-    [tags] => ["testttsss","gsgjg"]
-)
-
-[Wed Sep 24 09:01:06 2025] Mise à jour des catégories pour l'article ID 7
-[Wed Sep 24 09:01:06 2025] Anciennes catégories supprimées
-[Wed Sep 24 09:01:06 2025] Toutes les nouvelles catégories ont été ajoutées
-[Wed Sep 24 09:01:06 2025] [::1]:53880 [200]: PUT /api/articles/7
-[Wed Sep 24 09:01:06 2025] [::1]:53880 Closing
-[Wed Sep 24 09:01:06 2025] [::1]:53884 Accepted
-[Wed Sep 24 09:01:06 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 09:01:06 2025] Variables d'environnement chargées:
-[Wed Sep 24 09:01:06 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:01:06 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:01:06 2025] DB_HOST: localhost
-[Wed Sep 24 09:01:06 2025] Route /api/articles/7/image : vérification CSRF
-[Wed Sep 24 09:01:06 2025] Vérification CSRF...
-[Wed Sep 24 09:01:06 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:01:06 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:01:06 2025] Toutes les variables d'env: Array
-(
-    [DB_HOST] => localhost
-    [DB_NAME] => infodotgame
-    [DB_USER] => db_user
-    [DB_PASSWORD] => 12345
-    [DB_PORT] => 3315
-    [JWT_SECRET_KEY] => f982da955f9c94f234e8f05971d9f170b7118da9250399c9009f97c5483b90c8
-    [RECAPTCHA_SECRET_KEY] => 6LdPrM4rAAAAAEAQehIF1pwgQc5Y4AW-6YUkhiRU
-    [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-)
-
-[Wed Sep 24 09:01:06 2025] Vérification CSRF...
-[Wed Sep 24 09:01:06 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:01:06 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:01:06 2025] Toutes les variables d'env: Array
-(
-    [DB_HOST] => localhost
-    [DB_NAME] => infodotgame
-    [DB_USER] => db_user
-    [DB_PASSWORD] => 12345
-    [DB_PORT] => 3315
-    [JWT_SECRET_KEY] => f982da955f9c94f234e8f05971d9f170b7118da9250399c9009f97c5483b90c8
-    [RECAPTCHA_SECRET_KEY] => 6LdPrM4rAAAAAEAQehIF1pwgQc5Y4AW-6YUkhiRU
-    [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-)
-
-[Wed Sep 24 09:01:06 2025] Article récupéré : App\model\Article Object
-(
-    [id_article:App\model\Article:private] => 7
-    [cover_image:App\model\Article:private] => /uploads/articles/article_7_68d397266fe7d.png
-    [published_at:App\model\Article:private] => 2025-09-24 07:01:06
-    [created_at:App\model\Article:private] => 2025-09-24 07:00:36
-    [title:App\model\Article:private] => testtttssss
-    [slug:App\model\Article:private] => testtttssss-7266
-    [content:App\model\Article:private] => znrrgjhrenghrehghrehzohezoggehzbveabio
-vaznvnajgvzahviuazbviaiuzvbqbzbdafiuhrbiuzgb
-qzvhnaqghozeapghrzhguvbibaviabvijaivbab
-gnzhhaihzihbzhghgrbzjqjvjfbqj
-    [introduction:App\model\Article:private] => gbsbghshguihshfugsfvjsvsqbvsbqvbvibiavivbifisv
-    [id_user:App\model\Article:private] => 1
-    [categories:App\model\Article:private] => Array
-        (
-        )
-
-    [tags:App\model\Article:private] => Array
-        (
-            [0] => testttsss
-            [1] => gsgjg
-        )
-
-)
-
-[Wed Sep 24 09:01:06 2025] Tentative de suppression de l'ancienne image : E:\projet_info_dot_game\blog-jeux-video-backend\src\controller/../../public/uploads/articles/article_7_68d397266fe7d.png
-[Wed Sep 24 09:01:06 2025] Ancienne image supprimée avec succès
-[Wed Sep 24 09:01:06 2025] Chemin de l'image à sauvegarder : /uploads/articles/article_7_68d39732c4ba6.png
-[Wed Sep 24 09:01:06 2025] Article avant update : App\model\Article Object
-(
-    [id_article:App\model\Article:private] => 7
-    [cover_image:App\model\Article:private] => /uploads/articles/article_7_68d39732c4ba6.png
-    [published_at:App\model\Article:private] => 2025-09-24 07:01:06
-    [created_at:App\model\Article:private] => 2025-09-24 07:00:36
-    [title:App\model\Article:private] => testtttssss
-    [slug:App\model\Article:private] => testtttssss-7266
-    [content:App\model\Article:private] => znrrgjhrenghrehghrehzohezoggehzbveabio
-vaznvnajgvzahviuazbviaiuzvbqbzbdafiuhrbiuzgb
-qzvhnaqghozeapghrzhguvbibaviabvijaivbab
-gnzhhaihzihbzhghgrbzjqjvjfbqj
-    [introduction:App\model\Article:private] => gbsbghshguihshfugsfvjsvsqbvsbqvbvibiavivbifisv
-    [id_user:App\model\Article:private] => 1
-    [categories:App\model\Article:private] => Array
-        (
-        )
-
-    [tags:App\model\Article:private] => Array
-        (
-            [0] => testttsss
-            [1] => gsgjg
-        )
-
-)
-
-[Wed Sep 24 09:01:06 2025] Tentative de mise à jour de l'article : App\model\Article Object
-(
-    [id_article:App\model\Article:private] => 7
-    [cover_image:App\model\Article:private] => /uploads/articles/article_7_68d39732c4ba6.png
-    [published_at:App\model\Article:private] => 2025-09-24 07:01:06
-    [created_at:App\model\Article:private] => 2025-09-24 07:00:36
-    [title:App\model\Article:private] => testtttssss
-    [slug:App\model\Article:private] => testtttssss-7266
-    [content:App\model\Article:private] => znrrgjhrenghrehghrehzohezoggehzbveabio
-vaznvnajgvzahviuazbviaiuzvbqbzbdafiuhrbiuzgb
-qzvhnaqghozeapghrzhguvbibaviabvijaivbab
-gnzhhaihzihbzhghgrbzjqjvjfbqj
-    [introduction:App\model\Article:private] => gbsbghshguihshfugsfvjsvsqbvsbqvbvibiavivbifisv
-    [id_user:App\model\Article:private] => 1
-    [categories:App\model\Article:private] => Array
-        (
-        )
-
-    [tags:App\model\Article:private] => Array
-        (
-            [0] => testttsss
-            [1] => gsgjg
-        )
-
-)
-
-[Wed Sep 24 09:01:06 2025] Paramètres de la requête de mise à jour : Array
-(
-    [id] => 7
-    [cover_image] => /uploads/articles/article_7_68d39732c4ba6.png
-    [title] => testtttssss
-    [slug] => testtttssss-7266
-    [introduction] => gbsbghshguihshfugsfvjsvsqbvsbqvbvibiavivbifisv
-    [content] => znrrgjhrenghrehghrehzohezoggehzbveabio
-vaznvnajgvzahviuazbviaiuzvbqbzbdafiuhrbiuzgb
-qzvhnaqghozeapghrzhguvbibaviabvijaivbab
-gnzhhaihzihbzhghgrbzjqjvjfbqj
-    [published_at] => 2025-09-24 07:01:06
-    [tags] => ["testttsss","gsgjg"]
-)
-
-[Wed Sep 24 09:01:06 2025] Mise à jour des catégories pour l'article ID 7
-[Wed Sep 24 09:01:06 2025] Anciennes catégories supprimées
-[Wed Sep 24 09:01:06 2025] Toutes les nouvelles catégories ont été ajoutées
-[Wed Sep 24 09:01:06 2025] Résultat de la mise à jour : succès
-[Wed Sep 24 09:01:06 2025] [::1]:53884 [200]: POST /api/articles/7/image
-[Wed Sep 24 09:01:06 2025] [::1]:53884 Closing
-[Wed Sep 24 09:01:07 2025] [::1]:53909 Accepted
-[Wed Sep 24 09:01:07 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 09:01:07 2025] Variables d'environnement chargées:
-[Wed Sep 24 09:01:07 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:01:07 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:01:07 2025] DB_HOST: localhost
-[Wed Sep 24 09:01:07 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 09:01:07 2025] [::1]:53909 [200]: GET /api/articles/id/7
-[Wed Sep 24 09:01:07 2025] [::1]:53909 Closing
-[Wed Sep 24 09:01:07 2025] [::1]:53915 Accepted
-[Wed Sep 24 09:01:07 2025] [::1]:53915 [200]: GET /uploads/articles/article_7_68d39732c4ba6.png
-[Wed Sep 24 09:01:07 2025] [::1]:53915 Closing
-[Wed Sep 24 09:01:09 2025] [::1]:53916 Accepted
-[Wed Sep 24 09:01:10 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 09:01:10 2025] Variables d'environnement chargées:
-[Wed Sep 24 09:01:10 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:01:10 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:01:10 2025] DB_HOST: localhost
-[Wed Sep 24 09:01:10 2025] Route /api/article-delete/7 : vérification CSRF
-[Wed Sep 24 09:01:10 2025] Vérification CSRF...
-[Wed Sep 24 09:01:10 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:01:10 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:01:10 2025] Toutes les variables d'env: Array
-(
-    [DB_HOST] => localhost
-    [DB_NAME] => infodotgame
-    [DB_USER] => db_user
-    [DB_PASSWORD] => 12345
-    [DB_PORT] => 3315
-    [JWT_SECRET_KEY] => f982da955f9c94f234e8f05971d9f170b7118da9250399c9009f97c5483b90c8
-    [RECAPTCHA_SECRET_KEY] => 6LdPrM4rAAAAAEAQehIF1pwgQc5Y4AW-6YUkhiRU
-    [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-)
-
-[Wed Sep 24 09:01:10 2025] [::1]:53916 [200]: DELETE /api/article-delete/7
-[Wed Sep 24 09:01:10 2025] [::1]:53916 Closing
-[Wed Sep 24 09:01:10 2025] [::1]:53939 Accepted
-[Wed Sep 24 09:01:11 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 09:01:11 2025] Variables d'environnement chargées:
-[Wed Sep 24 09:01:11 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:01:11 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:01:11 2025] DB_HOST: localhost
-[Wed Sep 24 09:01:11 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 09:01:11 2025] [::1]:53939 [200]: GET /api/articles?page=1&limit=3
-[Wed Sep 24 09:01:11 2025] [::1]:53939 Closing
-[Wed Sep 24 09:01:45 2025] [::1]:53999 Accepted
-[Wed Sep 24 09:01:46 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 09:01:46 2025] Variables d'environnement chargées:
-[Wed Sep 24 09:01:46 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:01:46 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:01:46 2025] DB_HOST: localhost
-[Wed Sep 24 09:01:46 2025] Route /api/register : pas de vérification CSRF
-[Wed Sep 24 09:01:46 2025] Validation data: {"csrf_token":"720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e","username":"test","email":"test@mail.com","password":"Azertyuiop&amp;11"}
-[Wed Sep 24 09:01:46 2025] Current user: test / test@mail.com
-[Wed Sep 24 09:01:46 2025] Checking username: test
-[Wed Sep 24 09:01:46 2025] Username same as current user, skipping check
-[Wed Sep 24 09:01:46 2025] Checking email: test@mail.com
-[Wed Sep 24 09:01:46 2025] Email same as current user, skipping check
-[Wed Sep 24 09:01:46 2025] [::1]:53999 [200]: POST /api/register
-[Wed Sep 24 09:01:46 2025] [::1]:53999 Closing
-[Wed Sep 24 09:05:05 2025] [::1]:54212 Accepted
-[Wed Sep 24 09:05:06 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 09:05:06 2025] Variables d'environnement chargées:
-[Wed Sep 24 09:05:06 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:05:06 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:05:06 2025] DB_HOST: localhost
-[Wed Sep 24 09:05:06 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 09:05:06 2025] [::1]:54212 [200]: GET /api/valider-email?token=2a35c28622ca893497a951c1a80b1e10d877314554b65c11e28ca073be546114
-[Wed Sep 24 09:05:06 2025] [::1]:54212 Closing
-[Wed Sep 24 09:05:22 2025] [::1]:54241 Accepted
-[Wed Sep 24 09:05:22 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 09:05:23 2025] Variables d'environnement chargées:
-[Wed Sep 24 09:05:23 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:05:23 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:05:23 2025] DB_HOST: localhost
-[Wed Sep 24 09:05:23 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 09:05:23 2025] Erreur inscription: Utilisateur non trouvé
-[Wed Sep 24 09:05:23 2025] [::1]:54241 [400]: GET /api/valider-email?token=2a35c28622ca893497a951c1a80b1e10d877314554b65c11e28ca073be546114
-[Wed Sep 24 09:05:23 2025] [::1]:54241 Closing
-[Wed Sep 24 09:05:55 2025] [::1]:54315 Accepted
-[Wed Sep 24 09:05:55 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 09:05:55 2025] Variables d'environnement chargées:
-[Wed Sep 24 09:05:55 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:05:55 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:05:55 2025] DB_HOST: localhost
-[Wed Sep 24 09:05:55 2025] Route /api/login : pas de vérification CSRF
-[Wed Sep 24 09:05:56 2025] [::1]:54315 [200]: POST /api/login
-[Wed Sep 24 09:05:56 2025] [::1]:54315 Closing
-[Wed Sep 24 09:05:57 2025] [::1]:54358 Accepted
-[Wed Sep 24 09:05:58 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 09:05:58 2025] Variables d'environnement chargées:
-[Wed Sep 24 09:05:58 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:05:58 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:05:58 2025] DB_HOST: localhost
-[Wed Sep 24 09:05:58 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 09:05:58 2025] [::1]:54358 [200]: GET /api/articles?page=1&limit=3
-[Wed Sep 24 09:05:58 2025] [::1]:54358 Closing
-[Wed Sep 24 09:06:31 2025] [::1]:54420 Accepted
-[Wed Sep 24 09:06:31 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 09:06:31 2025] Variables d'environnement chargées:
-[Wed Sep 24 09:06:31 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:06:31 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:06:31 2025] DB_HOST: localhost
-[Wed Sep 24 09:06:31 2025] Route /api/login : pas de vérification CSRF
-[Wed Sep 24 09:06:31 2025] [::1]:54420 [200]: POST /api/login
-[Wed Sep 24 09:06:31 2025] [::1]:54420 Closing
-[Wed Sep 24 09:06:33 2025] [::1]:54462 Accepted
-[Wed Sep 24 09:06:33 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 09:06:33 2025] Variables d'environnement chargées:
-[Wed Sep 24 09:06:33 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:06:33 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:06:33 2025] DB_HOST: localhost
-[Wed Sep 24 09:06:33 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 09:06:33 2025] [::1]:54462 [200]: GET /api/articles?page=1&limit=3
-[Wed Sep 24 09:06:33 2025] [::1]:54462 Closing
-[Wed Sep 24 09:07:36 2025] [::1]:54502 Accepted
-[Wed Sep 24 09:07:37 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 09:07:37 2025] Variables d'environnement chargées:
-[Wed Sep 24 09:07:37 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:07:37 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:07:37 2025] DB_HOST: localhost
-[Wed Sep 24 09:07:37 2025] Route /api/articles : vérification CSRF
-[Wed Sep 24 09:07:37 2025] Vérification CSRF...
-[Wed Sep 24 09:07:37 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:07:37 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:07:37 2025] Toutes les variables d'env: Array
-(
-    [DB_HOST] => localhost
-    [DB_NAME] => infodotgame
-    [DB_USER] => db_user
-    [DB_PASSWORD] => 12345
-    [DB_PORT] => 3315
-    [JWT_SECRET_KEY] => f982da955f9c94f234e8f05971d9f170b7118da9250399c9009f97c5483b90c8
-    [RECAPTCHA_SECRET_KEY] => 6LdPrM4rAAAAAEAQehIF1pwgQc5Y4AW-6YUkhiRU
-    [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-)
-
-[Wed Sep 24 09:07:37 2025] Vérification CSRF...
-[Wed Sep 24 09:07:37 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:07:37 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:07:37 2025] Toutes les variables d'env: Array
-(
-    [DB_HOST] => localhost
-    [DB_NAME] => infodotgame
-    [DB_USER] => db_user
-    [DB_PASSWORD] => 12345
-    [DB_PORT] => 3315
-    [JWT_SECRET_KEY] => f982da955f9c94f234e8f05971d9f170b7118da9250399c9009f97c5483b90c8
-    [RECAPTCHA_SECRET_KEY] => 6LdPrM4rAAAAAEAQehIF1pwgQc5Y4AW-6YUkhiRU
-    [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-)
-
-[Wed Sep 24 09:07:37 2025] [::1]:54502 [201]: POST /api/articles
-[Wed Sep 24 09:07:37 2025] [::1]:54502 Closing
-[Wed Sep 24 09:07:37 2025] [::1]:54506 Accepted
-[Wed Sep 24 09:07:37 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 09:07:37 2025] Variables d'environnement chargées:
-[Wed Sep 24 09:07:37 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:07:37 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:07:37 2025] DB_HOST: localhost
-[Wed Sep 24 09:07:37 2025] Route /api/articles/8/image : vérification CSRF
-[Wed Sep 24 09:07:37 2025] Vérification CSRF...
-[Wed Sep 24 09:07:37 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:07:37 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:07:37 2025] Toutes les variables d'env: Array
-(
-    [DB_HOST] => localhost
-    [DB_NAME] => infodotgame
-    [DB_USER] => db_user
-    [DB_PASSWORD] => 12345
-    [DB_PORT] => 3315
-    [JWT_SECRET_KEY] => f982da955f9c94f234e8f05971d9f170b7118da9250399c9009f97c5483b90c8
-    [RECAPTCHA_SECRET_KEY] => 6LdPrM4rAAAAAEAQehIF1pwgQc5Y4AW-6YUkhiRU
-    [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-)
-
-[Wed Sep 24 09:07:37 2025] Vérification CSRF...
-[Wed Sep 24 09:07:37 2025] Token CSRF reçu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:07:37 2025] Token CSRF attendu: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:07:37 2025] Toutes les variables d'env: Array
-(
-    [DB_HOST] => localhost
-    [DB_NAME] => infodotgame
-    [DB_USER] => db_user
-    [DB_PASSWORD] => 12345
-    [DB_PORT] => 3315
-    [JWT_SECRET_KEY] => f982da955f9c94f234e8f05971d9f170b7118da9250399c9009f97c5483b90c8
-    [RECAPTCHA_SECRET_KEY] => 6LdPrM4rAAAAAEAQehIF1pwgQc5Y4AW-6YUkhiRU
-    [CSRF_SECRET] => 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-)
-
-[Wed Sep 24 09:07:37 2025] Article récupéré : App\model\Article Object
-(
-    [id_article:App\model\Article:private] => 8
-    [cover_image:App\model\Article:private] => 
-    [published_at:App\model\Article:private] => 2025-09-24 07:07:37
-    [created_at:App\model\Article:private] => 2025-09-24 07:07:37
-    [title:App\model\Article:private] => test article
-    [slug:App\model\Article:private] => test-article-7657
-    [content:App\model\Article:private] => Hello, si tu vois cela, alors ca veut dire que
-l'article s'affiche bien et que mon code fonctione.
-
-Sinon va cherché de l'aide et on vavoir 
-
-ffzeoghzgrbgbrjbgkjbfsgbj
-    [introduction:App\model\Article:private] => 
-    [id_user:App\model\Article:private] => 1
-    [categories:App\model\Article:private] => Array
-        (
-        )
-
-    [tags:App\model\Article:private] => Array
-        (
-            [0] => news
-            [1] => test
-            [2] => blala
-        )
-
-)
-
-[Wed Sep 24 09:07:37 2025] Chemin de l'image à sauvegarder : /uploads/articles/article_8_68d398b9bc151.png
-[Wed Sep 24 09:07:37 2025] Article avant update : App\model\Article Object
-(
-    [id_article:App\model\Article:private] => 8
-    [cover_image:App\model\Article:private] => /uploads/articles/article_8_68d398b9bc151.png
-    [published_at:App\model\Article:private] => 2025-09-24 07:07:37
-    [created_at:App\model\Article:private] => 2025-09-24 07:07:37
-    [title:App\model\Article:private] => test article
-    [slug:App\model\Article:private] => test-article-7657
-    [content:App\model\Article:private] => Hello, si tu vois cela, alors ca veut dire que
-l'article s'affiche bien et que mon code fonctione.
-
-Sinon va cherché de l'aide et on vavoir 
-
-ffzeoghzgrbgbrjbgkjbfsgbj
-    [introduction:App\model\Article:private] => 
-    [id_user:App\model\Article:private] => 1
-    [categories:App\model\Article:private] => Array
-        (
-        )
-
-    [tags:App\model\Article:private] => Array
-        (
-            [0] => news
-            [1] => test
-            [2] => blala
-        )
-
-)
-
-[Wed Sep 24 09:07:37 2025] Tentative de mise à jour de l'article : App\model\Article Object
-(
-    [id_article:App\model\Article:private] => 8
-    [cover_image:App\model\Article:private] => /uploads/articles/article_8_68d398b9bc151.png
-    [published_at:App\model\Article:private] => 2025-09-24 07:07:37
-    [created_at:App\model\Article:private] => 2025-09-24 07:07:37
-    [title:App\model\Article:private] => test article
-    [slug:App\model\Article:private] => test-article-7657
-    [content:App\model\Article:private] => Hello, si tu vois cela, alors ca veut dire que
-l'article s'affiche bien et que mon code fonctione.
-
-Sinon va cherché de l'aide et on vavoir 
-
-ffzeoghzgrbgbrjbgkjbfsgbj
-    [introduction:App\model\Article:private] => 
-    [id_user:App\model\Article:private] => 1
-    [categories:App\model\Article:private] => Array
-        (
-        )
-
-    [tags:App\model\Article:private] => Array
-        (
-            [0] => news
-            [1] => test
-            [2] => blala
-        )
-
-)
-
-[Wed Sep 24 09:07:37 2025] Paramètres de la requête de mise à jour : Array
-(
-    [id] => 8
-    [cover_image] => /uploads/articles/article_8_68d398b9bc151.png
-    [title] => test article
-    [slug] => test-article-7657
-    [introduction] => 
-    [content] => Hello, si tu vois cela, alors ca veut dire que
-l'article s'affiche bien et que mon code fonctione.
-
-Sinon va cherché de l'aide et on vavoir 
-
-ffzeoghzgrbgbrjbgkjbfsgbj
-    [published_at] => 2025-09-24 07:07:37
-    [tags] => ["news","test","blala"]
-)
-
-[Wed Sep 24 09:07:37 2025] Mise à jour des catégories pour l'article ID 8
-[Wed Sep 24 09:07:37 2025] Anciennes catégories supprimées
-[Wed Sep 24 09:07:37 2025] Toutes les nouvelles catégories ont été ajoutées
-[Wed Sep 24 09:07:37 2025] Résultat de la mise à jour : succès
-[Wed Sep 24 09:07:37 2025] [::1]:54506 [200]: POST /api/articles/8/image
-[Wed Sep 24 09:07:37 2025] [::1]:54506 Closing
-[Wed Sep 24 09:07:38 2025] [::1]:54531 Accepted
-[Wed Sep 24 09:07:38 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 09:07:38 2025] Variables d'environnement chargées:
-[Wed Sep 24 09:07:38 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:07:38 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:07:38 2025] DB_HOST: localhost
-[Wed Sep 24 09:07:38 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 09:07:38 2025] [::1]:54531 [200]: GET /api/articles/id/8
-[Wed Sep 24 09:07:38 2025] [::1]:54531 Closing
-[Wed Sep 24 09:07:38 2025] [::1]:54537 Accepted
-[Wed Sep 24 09:07:38 2025] [::1]:54537 [200]: GET /uploads/articles/article_8_68d398b9bc151.png
-[Wed Sep 24 09:07:38 2025] [::1]:54537 Closing
-[Wed Sep 24 09:07:57 2025] [::1]:54593 Accepted
-[Wed Sep 24 09:07:58 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 09:07:58 2025] Variables d'environnement chargées:
-[Wed Sep 24 09:07:58 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:07:58 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:07:58 2025] DB_HOST: localhost
-[Wed Sep 24 09:07:58 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 09:07:58 2025] [::1]:54593 [200]: GET /api/articles?page=1&limit=3
-[Wed Sep 24 09:07:58 2025] [::1]:54593 Closing
-[Wed Sep 24 09:07:58 2025] [::1]:54599 Accepted
-[Wed Sep 24 09:07:58 2025] [::1]:54599 [200]: GET /uploads/articles/article_8_68d398b9bc151.png
-[Wed Sep 24 09:07:58 2025] [::1]:54599 Closing
-[Wed Sep 24 09:07:59 2025] [::1]:54619 Accepted
-[Wed Sep 24 09:07:59 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Sep 24 09:07:59 2025] Variables d'environnement chargées:
-[Wed Sep 24 09:07:59 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:07:59 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
-[Wed Sep 24 09:07:59 2025] DB_HOST: localhost
-[Wed Sep 24 09:07:59 2025] Méthode GET : pas de vérification CSRF nécessaire
-[Wed Sep 24 09:07:59 2025] [::1]:54619 [200]: GET /api/articles/id/8
-[Wed Sep 24 09:07:59 2025] [::1]:54619 Closing
-[Wed Sep 24 09:07:59 2025] [::1]:54625 Accepted
-[Wed Sep 24 09:07:59 2025] [::1]:54625 [200]: GET /uploads/articles/article_8_68d398b9bc151.png
-[Wed Sep 24 09:07:59 2025] [::1]:54625 Closing
+[Fri Sep 26 09:29:08 2025] Mise à jour des catégories pour l'article ID 10
+[Fri Sep 26 09:29:08 2025] Anciennes catégories supprimées
+[Fri Sep 26 09:29:08 2025] Toutes les nouvelles catégories ont été ajoutées
+[Fri Sep 26 09:29:08 2025] Résultat de la mise à jour : succès
+[Fri Sep 26 09:29:08 2025] [::1]:51843 [200]: POST /api/articles/10/image
+[Fri Sep 26 09:29:08 2025] [::1]:51843 Closing
+[Fri Sep 26 09:29:09 2025] [::1]:51868 Accepted
+[Fri Sep 26 09:29:09 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Sep 26 09:29:09 2025] Variables d'environnement chargées:
+[Fri Sep 26 09:29:09 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Fri Sep 26 09:29:09 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Fri Sep 26 09:29:09 2025] DB_HOST: localhost
+[Fri Sep 26 09:29:09 2025] Méthode GET : pas de vérification CSRF nécessaire
+[Fri Sep 26 09:29:09 2025] [::1]:51868 [200]: GET /api/articles/id/10
+[Fri Sep 26 09:29:09 2025] [::1]:51868 Closing
+[Fri Sep 26 09:29:09 2025] [::1]:51874 Accepted
+[Fri Sep 26 09:29:09 2025] [::1]:51874 [200]: GET /uploads/articles/article_10_68d640c4cefb6.png
+[Fri Sep 26 09:29:09 2025] [::1]:51874 Closing
+[Fri Sep 26 09:29:16 2025] [::1]:51898 Accepted
+[Fri Sep 26 09:29:16 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Sep 26 09:29:16 2025] Variables d'environnement chargées:
+[Fri Sep 26 09:29:16 2025] CSRF_SECRET via _ENV: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Fri Sep 26 09:29:16 2025] CSRF_SECRET via getenv: 720585fc3daae8f93a7ca63467e6260f3e4454ee7cd45e38de73fbccb35b524e
+[Fri Sep 26 09:29:16 2025] DB_HOST: localhost
+[Fri Sep 26 09:29:16 2025] Méthode GET : pas de vérification CSRF nécessaire
+[Fri Sep 26 09:29:16 2025] [::1]:51898 [200]: GET /api/articles?page=1&limit=3
+[Fri Sep 26 09:29:16 2025] [::1]:51898 Closing
+[Fri Sep 26 09:29:16 2025] [::1]:51904 Accepted
+[Fri Sep 26 09:29:16 2025] [::1]:51905 Accepted
+[Fri Sep 26 09:29:16 2025] [::1]:51906 Accepted
+[Fri Sep 26 09:29:16 2025] [::1]:51904 [200]: GET /uploads/articles/article_10_68d640c4cefb6.png
+[Fri Sep 26 09:29:16 2025] [::1]:51905 [200]: GET /uploads/articles/article_9_68d6403d6861d.png
+[Fri Sep 26 09:29:16 2025] [::1]:51904 Closing
+[Fri Sep 26 09:29:16 2025] [::1]:51905 Closing
+[Fri Sep 26 09:29:16 2025] [::1]:51906 [200]: GET /uploads/articles/article_8_68d398b9bc151.png
+[Fri Sep 26 09:29:16 2025] [::1]:51906 Closing

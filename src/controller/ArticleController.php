@@ -174,8 +174,14 @@ class ArticleController
             $article = new Article();
             $article->setTitle($data['title']);
             $article->setContent($data['content']);
-            $article->setUserId((int)$payload['id']); // Cast en int
+            $article->setUserId((int)$payload['id']);
             $article->setPublished_at((new DateTime())->format('Y-m-d H:i:s'));
+
+            // Ajout de l'introduction
+            if (isset($data['introduction'])) {
+                $article->setIntroduction($data['introduction']);
+            }
+
             if (isset($data['tags'])) {
                 $article->setTags($data['tags']);
             }
